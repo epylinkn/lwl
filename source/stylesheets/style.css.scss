@@ -1,0 +1,194 @@
+/* === Colors and shit === */
+
+$black: #000000;
+$white: #FFFFFF;
+$purple: #261C1F;
+$dark_purple: #0F0B0C;
+
+/* === Helpers and ish === */
+
+.f8 { font-size: 8px; }
+.f9 { font-size: 9px; }
+.f10 { font-size: 10px; }
+.f11 { font-size: 11px; }
+.f12 { font-size: 12px; }
+.f13 { font-size: 13px; }
+.f14 { font-size: 14px; }
+.f15 { font-size: 15px; }
+.f16 { font-size: 16px; }
+.blocky { display: block; }
+.underline { text-decoration: underline; }
+
+h2 {
+  padding: 4px 5px;
+  color: $white;
+  font-size: 20px;
+  font-weight: normal;
+  display: inline;
+  background: $black;
+}
+
+  
+  
+
+
+/* === Layout === */
+
+html, body {
+  height: 100%;
+  overflow-y: auto;
+}
+
+body {
+  width: 100%;
+  min-width: 960px;
+  background: $purple;
+}
+
+#content-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -255px; // not sure why this wont match
+}
+
+#header {
+  color: $white;
+  
+  #logo {
+    padding: 34px 0 0 30px;
+    position: relative;
+    float: left;
+//     outline: 1px solid red;
+  }
+  
+  #navigation {
+    margin-top: 36px;
+    margin-left: 29px;
+    color: $white;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+    ul {
+      float: left;
+      margin: 0;
+      padding: 0;
+//       outline: 1px solid yellow;
+      li {
+        padding: 5px;
+        list-style: none;
+//         outline: 1px solid green;
+        
+        a {
+          padding: 2px 4px;
+          color: $white;
+          display: inline;
+          text-decoration: none;
+          background: $black;
+        }
+      }
+    }
+  }
+  
+  #social {
+    margin-top: 36px;
+    float: right;
+    
+    .social-icons {
+      height: 32px;
+      clear: both;
+      
+      .icon {
+        padding-right: 15px;
+        float: left;
+      }
+      
+    }
+    
+    .contact {
+      float: left;
+      
+      p {
+        margin: 0;
+        padding: 0 20px 0 0; //right
+        
+        
+        &.office {
+          font-size: 14px;
+          line-height: 14px;
+        }
+        &.phone-number {
+          font-size: 26px;
+          font-weight: bold;
+          line-height: 26px;
+        }
+      }  
+    }
+    
+    
+  }
+}
+
+.projects-list {
+  ul {
+    li {
+      width: 300px;
+      position: relative;
+      
+      .project-background {
+        position: absolute;
+        width: 600px;
+        height: 300px;
+        border: 3px solid green;
+        z-index: 9999;
+        
+        .ribbon {
+          padding-left: 100px;
+          outline: 1px solid orange;
+        }
+      }
+        
+    }
+  }
+}
+
+.status-feed {
+  ul {
+    li {
+      width: 238px;
+      height: 104px;
+      //outline: 1px solid orange;
+
+      &.twitter {
+        background: url("/images/bg_social_tw.png");      
+      }
+      &.facebook {
+        background: url("/images/bg_social_fb.png");      
+      }
+    }    
+  }
+}
+
+#push, #footer {
+  height: 255px;
+  clear: both;
+}
+  
+#footer {
+  color: $white;
+  background: $dark_purple;
+}
+
+#footer table {
+  color: $white;
+}
+
+#footer td {
+  vertical-align: top;
+  border: 1px solid orange;
+}
+
+
+
+
+

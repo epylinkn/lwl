@@ -1,0 +1,13 @@
+---
+projects:
+  lacy:
+    title: Lacy Lofts
+    small_image: /images/properties_lacy_sm.png
+    large_image: /images/properties_lacy.png
+    theme: green
+  melrose:
+    title: Melrose
+    small_image: /images/properties_melrose_sm.png
+    large_image: /images/properties_melrose.png
+    theme: yellow
+---

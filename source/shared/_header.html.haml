@@ -1,27 +1,38 @@
-#header
+#header.clearfix
   #logo
     %img{src: '/images/logo.png', alt: 'Live Work Lofts Logo'}
   #navigation
     %ul
       %li 
-        %a{href: '#'} About.
+        %a{href: "about.html"} About.
       %li 
-        %a{href: '#'} Our Properties.
+        %a{href: 'our-properties.html'} Our Properties.
     %ul
       %li 
-        %a{href: '#'} About.
+        %a{href: 'events.html'} Events.
       %li 
-        %a{href: '#'} Our Properties.
+        %a{href: 'film-here.html'} Film Here.
     %ul
       %li 
-        %a{href: '#'} About.
+        %a{href: 'press-room.html'} Press Room.
       %li 
-        %a{href: '#'} Our Properties.    
+        %a{href: 'schedule-a-viewing.html'} Schedule a Viewing.    
   #social
-    #social-icons
+    .social-icons
+      #fb-root
+      .icon
+        .fb-like{'data-href' => "http://www.facebook.com/liveworkloft", "data-send" => "false", "data-layout" => "button_count", "data-width" => "450", "data-show-faces" => "false" }
+      .icon
+        %a{:href => "https://twitter.com/liveworkloft", :class => "twitter-follow-button", "data-show-count" => "false", "data-show-screen-name" => "false"}Follow @liveworkloft
+      .icon
+        %img{src: "/images/sb_youtube.png"}
+      .icon
+        %img{src: "/images/sb_pinterest.png"}
+      .icon
+        %img{src: "/images/sb_instagram.png"}
     .contact
-      %p LEASE
-      %p 919.929.9292
+      %p.office LEASING OFFICE
+      %p.phone-number 323.441.8694
     .contact
-      %p LEASE
-      %p 919.929.9292
+      %p.office MAINTENANCE
+      %p.phone-number 323.441.8694

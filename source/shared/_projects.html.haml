@@ -1,0 +1,12 @@
+.projects-list
+
+  %h2 Your Next Canvas.
+
+  %ul
+  - data.projects.projects.each do |p|
+    %li.project{:class => "project-#{p}"}
+      .project-background
+        %img.ribbon{src: "/images/ribbon_#{p.last[:theme]}_sm.png"}
+        %img{src: "/images/properties_#{p.first}_sm.png", alt: "property image"}
+      %span.f15= p.last[:title]
+    
