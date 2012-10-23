@@ -1,10 +1,16 @@
----
-title: LiveWorkLofts // Our Properties
----
-
-.welcome
-  %h1 Middleman is Watching
-  %p.doc
-    = link_to "Read Online Documentation", "http://middlemanapp.com/"
-  / .doc
-/ .welcome
+.content.clearfix
+  .content-left
+    %span.title
+      Our Properties
+    
+    .properties-list
+      %ul
+        - data.projects.projects.each do |p|
+          %li.project{:class => "project-#{p}"}
+            %a{href: '/properties/seeley-studios.html'}
+              .project-background
+                %img{src: "/images/properties_#{p.first}.png", alt: "property image"}
+              .project-foreground
+                %img.ribbon-end{src: "/images/ribbon_#{p.last[:theme]}.png"}
+                .ribbon{:class => "#{p.last[:theme]}"}
+                  %span= p.last[:title]

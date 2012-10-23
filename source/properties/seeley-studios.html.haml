@@ -1,0 +1,55 @@
+.content.clearfix
+  .content-left
+    .property-carousel
+      .property-carousel-images
+        %img{src: "/images/properties/seeley01.jpg"}
+      .property-carousel-controls
+        %img#prev-slide{src: '/images/slider_left.png', alt: 'Previous Slide'}
+        %img#next-slide{src: '/images/slider_right.png', alt: 'Next Slide'}
+        %span.property-carousel-title.yellow= data.projects.projects.seeley.title
+  
+  
+    %p
+      %span.title
+        Historical Landmark Meets Urban Chic
+    %p
+      %span.body
+        = data.projects.projects.seeley.description
+      
+    %p
+      %span.title
+        Amenities.
+    %ul
+      - data.projects.projects.seeley.amenities.each do |item|
+        %li
+          = item
+
+    %p
+      %span.title
+        Incentives.
+    %ul
+      - data.projects.projects.seeley.incentives.each do |item|
+        %li
+          = item
+    
+  = partial "shared/projects"
+  
+  .bottom.clearfix
+    .bottom-schedule-a-viewing
+      SCHEDULE A VIEWING
+    .bottom-property-map
+      PUT GOOGLE MAP HERE
+    .bottom-social-buttons
+      %a{href: '#'}
+        .button.facebook
+          Meet our Community
+      %a{href: '#'}
+        .button.twitter
+          Tweet Love from @SeeleyStudios
+      %a{href: '#'}
+        .button.yelp
+          Check out Seeley on Yelp
+      
+      
+      
+  

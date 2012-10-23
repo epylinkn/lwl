@@ -1,13 +1,48 @@
 ---
 projects:
   lacy:
-    title: Lacy Lofts
+    title: Lacy Studio Lofts
     small_image: /images/properties_lacy_sm.png
     large_image: /images/properties_lacy.png
     theme: green
+  seeley:
+    title: Seeley Studios
+    small_image: /images/properties_seeley_sm.png
+    large_image: /images/properties_seeley.png
+    theme: yellow
+    description: "Seeley Studios was converted from an old furniture warehouse into prime real estate for office space and retail businesses. The Seeley building is historically one of Glendale’s landmarks, and the face of the building was preserved for the nostalgia and modern-chic look and feel. The units range from small live/work spaces to full scale entire floors with floor to ceiling windows, and perfect for any creative business."
+    amenities:
+      - "Creative office in the heart of Glendale"
+      - "800 sq ft offices up to 4400 sq ft"
+      - "Creative lofts starting at $2100/mo!"
+      - "Retail units starting at 1000 sqft!"
+      - "Brand New! Gorgeous! Spacious Creative Lofts!"
+      - "Creative Spacious Bright Residential lofts 1250 sq ft for $2850/mo"
+    incentives:
+      - "100% Tax Deductible"
+      - "Creative Corridor Program with City of Glendale"
+  cosmo:
+    title: Cosmo Lofts
+    small_image: /images/properties_cosmo_sm.png
+    large_image: /images/properties_cosmo.png
+    theme: red
+  beverly:
+    title: Beverly Union Lofts
+    small_image: /images/properties_beverly_sm.png
+    large_image: /images/properties_beverly.png
+    theme: purple
   melrose:
-    title: Melrose
+    title: Melrose Studios
     small_image: /images/properties_melrose_sm.png
     large_image: /images/properties_melrose.png
-    theme: yellow
+    theme: blue
+  warehouse:
+    title: Retail &amp; Warehouse Space
+    small_image: /images/properties_retail_sm.png
+    large_image: /images/properties_retail.png
+    theme: black
+    description: "In addition to our live/work loft spaces, we also have several other retail, office and warehouse properties available for lease. For more information, get in touch with us at <span class='fyellow'>323.441.8694</span> or email us at leasing@liveworkloft.net."
+    incentives:
+      - "100% Tax Deductible"
+      - "Creative Corridor Program with City of Glendale"
 ---
