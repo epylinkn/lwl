@@ -1,50 +1,50 @@
 .content.clearfix
-  .content-left
-    .property-carousel
-      .property-carousel-images
-        %img{src: "/images/properties/warehouse01.jpg"}
-      .property-carousel-controls
+  .content-left.our-properties-detail
+    .property-detail
+      .carousel
+        .carousel-images
+          %img{src: "/images/properties/warehouse01.jpg"}
         %img#prev-slide{src: '/images/slider_left.png', alt: 'Previous Slide'}
         %img#next-slide{src: '/images/slider_right.png', alt: 'Next Slide'}
-        %span.property-carousel-title.black= data.projects.projects.warehouse.title
+        %span.carousel-title.black= data.projects.projects.warehouse.title
   
   
-    %p
-      %span.title
-        Go Beyond the Loft
-    %p
-      %span.body
-        = data.projects.projects.warehouse.description
+      %p
+        %span.title
+          Go Beyond the Loft
+      %p
+        %span.body
+          = data.projects.projects.warehouse.description
 
-    %p
-      %span.title
-        Incentives.
-    %ul
-      - data.projects.projects.warehouse.incentives.each do |item|
-        %li
-          = item
+      %p
+        %span.title
+          Incentives.
+      %ul
+        - data.projects.projects.warehouse.incentives.each do |item|
+          %li
+            = item
     
-  = partial "shared/projects"
+    = partial "shared/projects"
   
-  .bottom.clearfix
-    .bottom-box
-      %a{href: '#'}
-        .bottom-box-square.blue
-          MELROSE STUDIOS
-      %p.bottom-box-body
-        Lorem ipsum dolor sit amet con ibe, consectetur adipiscing elit por das. Vestibulum rutrum, ante at pretium hendrerit, dolor nibh ullamcorper diam, ut volutpat diam odio ac lacus.
-      %a{href: '#'}
-        .bottom-box-button.blue
-          SCHEDULE A VIEWING
-    .bottom-box
-      %a{href: '#'}
-        .bottom-box-square.orange
-          SPRING
-      %p.bottom-box-body
-        Lorem ipsum dolor sit amet con ibe, consectetur adipiscing elit por das. Vestibulum rutrum, ante at pretium hendrerit, dolor nibh ullamcorper diam, ut volutpat diam odio ac lacus.
-      %a{href: '#'}
-        .bottom-box-button.orange
-          SCHEDULE A VIEWING
+    .bottom.clearfix
+      .bottom-box
+        %a{href: '#'}
+          .bottom-box-square.blue
+            MELROSE STUDIOS
+        %p.bottom-box-body
+          Lorem ipsum dolor sit amet con ibe, consectetur adipiscing elit por das. Vestibulum rutrum, ante at pretium hendrerit, dolor nibh ullamcorper diam, ut volutpat diam odio ac lacus.
+        %a{href: '#'}
+          .bottom-box-button.blue
+            SCHEDULE A VIEWING
+      .bottom-box
+        %a{href: '#'}
+          .bottom-box-square.orange
+            SPRING
+        %p.bottom-box-body
+          Lorem ipsum dolor sit amet con ibe, consectetur adipiscing elit por das. Vestibulum rutrum, ante at pretium hendrerit, dolor nibh ullamcorper diam, ut volutpat diam odio ac lacus.
+        %a{href: '#'}
+          .bottom-box-button.orange
+            SCHEDULE A VIEWING
       
       
       

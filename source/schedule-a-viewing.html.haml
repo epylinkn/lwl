@@ -1,69 +1,84 @@
 .content.clearfix
-  .content-left
+  .content-left.schedule-a-viewing
     .page-1
-      %span.title
+      %span.title.black
         Interested? Let's Chat!
-      %span.title.f15
+      %br
+      %span.title.black.tiny
         *Indicates Required Field
         
       .schedule-form
       
-        %input#name
-        %input#email
-        %input#mobile_phone
-        %input#other_phone
+        .group-info
+          %input#name
+          %input#email
+          %input#mobile_phone
+          %input#other_phone
         
         .line
         %p.title.green Best way to reach you:
         
-        %input{type: "radio", name: "contact_method", value: "email"} Email
-        %input{type: "radio", name: "contact_method", value: "phone"} Phone
-        %input{type: "radio", name: "contact_method", value: "text"} Text Message
+        .group-contact
+          %input{type: "radio", name: "contact_method", value: "email"} Email
+          %input{type: "radio", name: "contact_method", value: "phone"} Phone
+          %input{type: "radio", name: "contact_method", value: "text"} Text Message
         
         .line
         
-        %select#square_footage
-        %select#budget
-        %select#move_date
+        .group-criteria
+          %select#square_footage
+          %select#budget
+          %select#move_date
         
         .line
         
         %p.title.yellow Area you're looking in:
         
-        %input{type: "checkbox"} Close to downtown LA
-        %input{type: "checkbox"} Hollywood
-        %input{type: "checkbox"} Glendale
+        .group-area.fulljustify
+          %input{type: "checkbox"} Close to downtown LA
+          %input{type: "checkbox"} Hollywood
+          %input{type: "checkbox"} Glendale
+          
         .line
         
         %p.title.red Looking for:
         
-        %input{type: "checkbox"} Short-term lease
-        %input{type: "checkbox"} 1-year lease
-        %input{type: "checkbox"} Multi-year lease
+        .group-lease.fulljustify
+          %input{type: "checkbox"} Short-term lease
+          %input{type: "checkbox"} 1-year lease
+          %input{type: "checkbox"} Multi-year lease
+          
         .line
         
         %p.title.purple Properties you're interested in:
         
-        %input{type: "checkbox"} Lacy Studio Lofts
-        %input{type: "checkbox"} Beverly Union Lofts
-        %input{type: "checkbox"} Spring
-        %input{type: "checkbox"} Cosmo Lofts
-        %input{type: "checkbox"} Melrose Studios
-        %input{type: "checkbox"} Seeley Studios
+        .group-lofts-1.fulljustify
+          %input{type: "checkbox"} Lacy Studio Lofts
+          %input{type: "checkbox"} Beverly Union Lofts
+          %input{type: "checkbox"} Spring
+        .group-lofts-2.fulljustify
+          %input{type: "checkbox"} Cosmo Lofts
+          %input{type: "checkbox"} Melrose Studios
+          %input{type: "checkbox"} Seeley Studios
+          
         .line
         
         %p.title.blue How did you hear about us?
         
-        %input{type: "checkbox"} Search Engine
-        %input{type: "checkbox"} Tenant Referral
-        %input{type: "checkbox"} Craigslist.com
-        %input{type: "checkbox"} Advertisement
+        .group-hear
+          %input{type: "checkbox"} Search Engine
+          %input{type: "checkbox"} Tenant Referral
+        .group-hear
+          %input{type: "checkbox"} Craigslist.com
+          %input{type: "checkbox"} Advertisement
         
-        %input{type: "text"}
+        .group-who
+          %input{type: "text"}
         
         .line
         
-        %textarea
+        .group-textarea
+          %textarea
         
         %input{type: "image", src: "/images/sendbutton.png", alt: "Send now"}
       

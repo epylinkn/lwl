@@ -1,6 +1,7 @@
 .content.clearfix
-  .content-left
-    %span.title
+  .content-left.press-room
+  
+    %span.title.black
       Press Room
     
     .press-list
@@ -8,13 +9,12 @@
         - data.press.pressitems.each do |p|
           %li.pressitem
             .pressitem-date
-              = p.day
-              %br
-              = p.month
+              %p.pressitem-date-day= p.day
+              %p.pressitem-date-month= p.month
             %p.pressitem-title
               = p.title
             .pressitem-line
-            .pressitem-body
+            %p.pressitem-body
               %span.pressitem-location= p.location
               = p.description
               %a.link-blue{href: "#{p.link}"}

@@ -1,36 +1,36 @@
 .content.clearfix
-  .content-left
-    .property-carousel
-      .property-carousel-images
-        %img{src: "/images/properties/seeley01.jpg"}
-      .property-carousel-controls
+  .content-left.our-properties-detail
+    .property-detail
+      .carousel
+        .carousel-images
+          %img{src: "/images/properties/seeley01.jpg"}
         %img#prev-slide{src: '/images/slider_left.png', alt: 'Previous Slide'}
         %img#next-slide{src: '/images/slider_right.png', alt: 'Next Slide'}
-        %span.property-carousel-title.yellow= data.projects.projects.seeley.title
+        .carousel-title
+          %span.title.yellow= data.projects.projects.seeley.title
   
   
-    %p
-      %span.title
-        Historical Landmark Meets Urban Chic
-    %p
-      %span.body
+      %p
+        %span.title.black
+          Historical Landmark Meets Urban Chic
+      %p.body
         = data.projects.projects.seeley.description
       
-    %p
-      %span.title
-        Amenities.
-    %ul
-      - data.projects.projects.seeley.amenities.each do |item|
-        %li
-          = item
+      %p
+        %span.title.black
+          Amenities.
+      %ul
+        - data.projects.projects.seeley.amenities.each do |item|
+          %li
+            = item
 
-    %p
-      %span.title
-        Incentives.
-    %ul
-      - data.projects.projects.seeley.incentives.each do |item|
-        %li
-          = item
+      %p
+        %span.title.black
+          Incentives.
+      %ul
+        - data.projects.projects.seeley.incentives.each do |item|
+          %li
+            = item
     
   = partial "shared/projects"
   

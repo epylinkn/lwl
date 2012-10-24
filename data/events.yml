@@ -1,16 +1,68 @@
 ---
 upcoming:
-  1 :
+  -
     title: LOFT PARTY
     day: '08'
     month: 'nov'
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    image: "/images/upcoming_placeholder.jpg"
+    image_alt: "Upcoming Event 1"
     link: www.facebook.com
-  2 :
+  -
     title: LOFT PARTY
     day: '08'
     month: 'nov'
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    image: "/images/upcoming_placeholder.jpg"
+    image_alt: "Upcoming Event 1"
     link: www.facebook.com
-past: none
+  -
+    title: LOFT PARTY
+    day: '08'
+    month: 'nov'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    image: "/images/upcoming_placeholder.jpg"
+    image_alt: "Upcoming Event 1"
+    link: www.facebook.com
+  -
+    title: LOFT PARTY
+    day: '12'
+    month: 'nov'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    image: "/images/upcoming_placeholder.jpg"
+    image_alt: "Upcoming Event 1"
+    link: www.facebook.com
+past:
+  -
+    title: OPEN HOUSE
+    day: '22'
+    month: 'sep'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    image: "/images/past_placeholder.jpg"
+    image_alt: "Past Event 1"
+    link: www.facebook.com
+  -
+    title: OPEN HOUSE
+    day: '21'
+    month: 'sep'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    image: "/images/past_placeholder.jpg"
+    image_alt: "Past Event 1"
+    link: www.facebook.com
+  -
+    title: OPEN HOUSE
+    day: '01'
+    month: 'oct'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    image: "/images/past_placeholder.jpg"
+    image_alt: "Past Event 1"
+    link: www.facebook.com
+  -
+    title: OPEN HOUSE
+    day: '11'
+    month: 'may'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    image: "/images/past_placeholder.jpg"
+    image_alt: "Past Event 1"
+    link: www.facebook.com
 ---

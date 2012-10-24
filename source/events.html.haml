@@ -1,49 +1,42 @@
 .content.clearfix
   .content-left
-    %span.title
+    %span.title.black
       Events
     
-    .events-list    
+    .events-list.first
       %p
         %span.title.purple
           Upcoming.
       %ul
-        %li
-          .event-container
-            .event-image
-              %img{src: "/images/upcoming_placeholder.jpg", alt: "Upcoming Event 1"}
-            .event-image-overlay
-              RSVP
-            .event-detail.clearfix
-              .event-detail-date
-                08
-                %br
-                nov
-              .event-detail-description
-                %p.event-detail-title
-                  LOFT PARTY
-                %span
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              
-        %li
-          .event-container.active
-            .event-image
-              %img{src: "/images/upcoming_placeholder.jpg", alt: "Upcoming Event 1"}
-            .event-image-overlay
-              RSVP
-            .event-detail.clearfix
-              .event-detail-date
-                08
-                %br
-                nov
-              .event-detail-description
-                %p.event-detail-title
-                  LOFT PARTY
-                %span
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
+        - data.events.upcoming.each do |e|
+          %li
+            .event-container.upcoming
+              .event-image
+                %img{src: e.image, alt: e.image_alt}
+              .event-image-overlay
+                RSVP
+              .event-detail.clearfix
+                .event-detail-date
+                  %p.event-detail-date-day= e.day
+                  %p.event-detail-date-month= e.month
+                .event-detail-description
+                  %p.event-detail-title= e.title
+                  %span= e.description
               
     .events-list
       %p
         %span.title.yellow
           Past.
+      %ul
+        - data.events.past.each do |e|
+          %li
+            .event-container
+              .event-image
+                %img{src: e.image, alt: e.image_alt}
+              .event-detail.clearfix
+                .event-detail-date
+                  %p.event-detail-date-day= e.day
+                  %p.event-detail-date-month= e.month
+                .event-detail-description
+                  %p.event-detail-title.past= e.title
+                  %span= e.description

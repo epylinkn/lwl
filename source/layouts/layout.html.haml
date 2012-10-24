@@ -12,12 +12,15 @@
       try{Typekit.load();}catch(e){}
       
   %body{:class => page_classes}
-    #content-wrapper
-      = partial "shared/header"
+    #bg-gradient
+    #minsize
+      #bg-solid      
+      #content-wrapper
+        = partial "shared/header"
     
-      = yield
+        = yield
         
-      #push
+        #push
       
     = partial "shared/footer"
 
