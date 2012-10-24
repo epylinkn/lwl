@@ -1,0 +1,16 @@
+---
+upcoming:
+  1 :
+    title: LOFT PARTY
+    day: '08'
+    month: 'nov'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    link: www.facebook.com
+  2 :
+    title: LOFT PARTY
+    day: '08'
+    month: 'nov'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+    link: www.facebook.com
+past: none
+---

@@ -5,7 +5,14 @@ $white: #FFFFFF;
 $purple: #261C1F;
 
 $grey: #d0d0d0;
+
 $tenant_blue: #32ebfb;
+$tenant_black: #000000;
+$tenant_bggrey: #131313;
+$tenant_grey: #1F1F1F;
+
+$bg_event_detail: #050505;
+$event_overlay: #d24dff;
 
 $dark_purple: #0F0B0C;
 $light_blue: #5CACC1;
@@ -33,8 +40,9 @@ $theme_black: #1e1e1e;
 $theme_orange: #f86f00;
 
 
-$sans_serif: Helvetica, Arial, sans-serif;
-$museo: 'Museo', Helvetica, Arial, sans-serif;
+$helvetica: "HelveticaNeue", Helvetica, Arial, sans-serif;
+$museo: "museo-sans", Helvetica, Arial, sans-serif;
+$arial: Arial, sans-serif;
 
 /* === Helpers and ish === */
 
@@ -61,9 +69,62 @@ h2 {
   background: $black;
 }
 
-  
-  
+p {
+  margin: 0;
+  padding: 0;
+}
 
+a {
+  text-decoration: none;
+  
+  &.underline {
+    text-decoration: underline;
+  }
+  
+  &.link-yellow {
+    color: $theme_yellow;
+     
+    &:hover {
+      
+    }
+  }
+  
+  &.link-blue {
+    color: $theme_blue;
+    
+    &:hover {
+      
+    }
+  }
+}
+
+span.title {
+  &.green { background: $theme_green; }
+  &.yellow { background: $theme_yellow; }
+  &.red { background: $theme_red; }
+  &.purple { background: $theme_purple; }
+  &.blue { background: $theme_blue; }
+  &.orange { background: $theme_orange; }
+  &.black { background: $theme_black; }}
+
+p.title {
+  &.green { background: $theme_green; }
+  &.yellow { background: $theme_yellow; }
+  &.red { background: $theme_red; }
+  &.purple { background: $theme_purple; }
+  &.blue { background: $theme_blue; }
+  &.orange { background: $theme_orange; }
+  &.black { background: $theme_black; }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
 
 /* === Layout === */
 
@@ -89,33 +150,29 @@ body {
   color: $white;
   
   #logo {
-    padding: 34px 0 0 30px;
+    padding: 35px 0 0 31px;
     position: relative;
     float: left;
-//     outline: 1px solid red;
   }
   
   #navigation {
-    margin-top: 36px;
-    margin-left: 29px;
-    color: $white;
-    font-size: 14px;
-    font-weight: bold;
+    margin: 44px 0 0 40px;
     float: left;
+    
     ul {
+      margin-right: 12px;
       float: left;
-      margin: 0;
-      padding: 0;
-//       outline: 1px solid yellow;
+      
       li {
-        padding: 5px;
+        margin-bottom: 10px;
         list-style: none;
-//         outline: 1px solid green;
         
-        a {
-          padding: 2px 4px;
+        a, a:hover, a:active, a:visited {
+          padding: 0px 4px 2px 4px;
           color: $white;
-          display: inline;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: $helvetica;
           text-decoration: none;
           background: $black;
         }
@@ -124,18 +181,17 @@ body {
   }
   
   #social {
-    margin-top: 36px;
+    margin: 45px 20px 0 0;
     float: right;
     
     .social-icons {
-      height: 32px;
+      height: 30px;
       clear: both;
       
       .icon {
-        padding-right: 15px;
+        padding-right: 10px;
         float: left;
       }
-      
     }
     
     .contact {
@@ -143,8 +199,8 @@ body {
       
       p {
         margin: 0;
-        padding: 0 20px 0 0; //right
-        
+        padding-right: 20px;
+        font-family: $helvetica;
         
         &.office {
           font-size: 14px;
@@ -157,8 +213,6 @@ body {
         }
       }  
     }
-    
-    
   }
 }
 
@@ -181,8 +235,18 @@ body {
     
     &.body {
       font-size: 19px;
-      font-family: $sans-serif;
+      font-family: $helvetica;
     }
+  }
+  
+  p {
+    &.green { background: $theme_green; }
+    &.yellow { background: $theme_yellow; }
+    &.red { background: $theme_red; }
+    &.purple { background: $theme_purple; }
+    &.blue { background: $theme_blue; }
+    &.orange { background: $theme_orange; }
+    &.black { background: $black; }
   }
   
   ul li {
@@ -280,6 +344,88 @@ body {
   }
   
 
+}
+
+.events-list {
+  p {
+    clear: both;
+  }
+  
+  ul {
+    li {
+      display: inline-block;
+      float: left;
+    
+      .event-container {
+        width: 217px;
+        position: relative;
+
+        .event-image {
+          width: 217px;
+          height: 150px;
+          position: relative;
+          top: 0; left: 0;
+          overflow: hidden;
+        }
+
+        .event-image-overlay {
+          display: none;
+          width: 217px;
+          height: 150px;
+          position: absolute;
+          top: 0; left: 0;
+          overflow: hidden;
+//           background: $event_overlay;
+//           opacity: .76;
+        }
+
+        .event-detail {
+          background: $bg_event_detail;
+          
+          .event-detail-date {
+            width: 50px;
+            height: 60px;
+            color: $white;
+            float: left;
+          }
+          
+          .event-detail-description {
+            width: 167px;
+            float: left;
+          
+            p.event-detail-title {
+              color: $theme_purple;
+            }
+          
+            span {
+              color: $white;
+            }
+          }
+        }
+        
+        &:hover, &.active {
+
+          .event-image-overlay {
+            display: block;
+            background: $event_overlay;
+            opacity: .76;
+          }
+
+          .event-detail {
+            background: $white;
+            
+            .event-detail-date {
+              color: $theme_purple;
+            }
+            
+            span {
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .avatar {
@@ -494,108 +640,189 @@ body {
   }
 }
 
-#push, #footer {
-  height: 255px;
-  clear: both;
-}
-  
-#footer {
-  position: relative;
-  color: $white;
-  background: $dark_purple;
-  outline: 3px solid orange;
-}
-
-#footer table {
-  position: relative;
-  color: $white;
-  background: $dark_purple;
-  z-index: 1000;
-}
-
-#footer td {
-  vertical-align: top;
-  border: 1px solid orange;
-}
-
-#tenant-links {
-  position: absolute;
-//   top: -34px;
-  top: -130px;
-  left: 20px;
-  z-index: 20;
-  
-  .tenant-title {
-    width: 120px;
-    height: 34px;
-    font-size: 20px;
-    text-align: center;
-    background: url('/images/bg_tenant.jpg') repeat-x;
-  }
+.press-list {
   
   ul {
     margin: 0;
     padding: 0;
     
     li {
-      width: 220px;
-      height: 40px;
-      margin: 0;
-      padding: 0 0 0 15px;
+      width: 577px;
       list-style: none;
-      background: #131313;
-      border: 1px solid $black;
-      cursor: hand;
+      background: $black;
+      outline: 1px solid red;
       
-      &:hover {
-        background: black;
-        a {
-          color: $tenant_blue;
+      .pressitem-date {
+        color: $theme_blue;
+        float: left;
+      }
+      
+      .pressitem-title {
+        font-size: 22px;
+        float: left;
+      }
+      
+      .pressitem-line {
+        width: 500px;
+        height: 0;
+        margin: 0 auto;
+        border-top: 1px solid white;
+        clear: both;
+      }
+      
+      
+      .pressitem-body {
+        clear: both;
+        
+        span.pressitem-location {
+          font-weight: bold;
         }
       }
-      
-      a {
-        text-decoration: none;
-        color: $grey;
-      }
-    }
+
+
+    }    
   }
 }
 
-#hypelife {
-  width: 50px;
-  height: 28px;
-  padding: 4px 0 3px 0;
-  vertical-align: middle;
-  position: absolute;
-  top: -35px;
-  right: 0;
-  z-index: 9998;
-  background: rgb(32, 33, 35);
-  text-transform: uppercase;
-  font-size: 10px;
+.schedule-form {
+  width: 520px;
+  
+  p {
+    text-align: center;
+  }
+  
+  .line {
+    width: 520px;
+    height: 0;
+    border-top: 1px solid rgba(255, 255, 255, .38);
+  }
 }
 
-#hypelife:hover #popup {
-  display: block;
+#push, #footer {
+  height: 255px;
+  clear: both;
+}
+  
+#footer {
+  width: 100%;
+  background: $dark_purple;
+  position: relative;
+  
+  .footer {
+    padding: 37px 0 0 0;
+    color: $white;
+    font-family: $helvetica;
+    line-height: 120%;
+    background: $dark_purple;
+    position: relative;
+    z-index: 1000;
+    
+    .footer-column {
+      width: 30%;
+      padding: 0 10px;
+      float: left;
+      
+      &:first-child { margin-left: 30px; }
+      &:last-child { margin-right: 30px; }
+    }
+    
+    .footer-row {
+      width: 100%;
+      padding-top: 53px;
+      text-align: center;
+      clear: both;
+    }
+  }
+      
+  #tenant-links {
+    position: absolute;
+    top: -33px;
+//     top: -157px;
+    left: 40px;
+    z-index: 20;
+
+    .tenant-title {
+      width: 120px;
+      height: 34px;
+      padding: 0 2px;
+      color: $white;
+      font-size: 20px;
+      font-family: $museo;
+      text-align: center;
+      line-height: 34px;
+      vertical-align: middle;
+      background: url('/images/bg_tenant.jpg') repeat-x;
+    }
+
+    ul {
+
+      li {
+        list-style: none;
+        width: 218px;
+        height: 37px;
+        padding: 0 0 0 15px;
+        background: $tenant_bggrey;
+        outline: 1px solid $tenant_black;
+        border-top: 2px solid $tenant_grey;
+        &:first-child { border-top: 1px solid $tenant_grey; }
+        border-bottom: 2px solid $tenant_grey;
+        border-left: 1px solid $tenant_grey;
+        border-right: 1px solid $tenant_grey;
+        cursor: hand;
+        
+        a {
+          color: $grey;
+          font-size: 15px;
+          font-weight: bold;
+          font-family: $arial;
+          line-height: 37px;
+          vertical-align: middle;
+        }
+        
+        &:hover {
+          background: $tenant_black;
+          a {
+            color: $tenant_blue;
+          }
+        }
+      }
+    }
+  }
+
+  #hypelife {
+    height: 28px;
+    vertical-align: middle;
+    position: absolute;
+    top: -32px;
+    right: 0;
+    z-index: 9998;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+
+  #hypelife:hover #popup {
+    display: block;
+  }
+
+  #hypelife #popup {
+    color: #fff;
+    position: absolute;
+    top: -97px;
+    left: -130px;
+    width: 174px;
+    height: 78px;
+    padding: 20px 0 0 0;
+    background: url('/images/credits.png');
+    text-align: center;
+    display: none;
+  }
+
+  #hypelife #popup a {
+    color: #fff;
+  }    
 }
 
-#hypelife #popup {
-  color: #fff;
-  position: absolute;
-  top: -97px;
-  left: -130px;
-  width: 174px;
-  height: 78px;
-  padding: 20px 0 0 0;
-  background: url('/images/credits.png');
-  text-align: center;
-  display: none;
-}
 
-#hypelife #popup a {
-  color: #fff;
-}
 
 
 

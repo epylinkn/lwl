@@ -1,22 +1,23 @@
 #header.clearfix
   #logo
-    %img{src: '/images/logo.png', alt: 'Live Work Lofts Logo'}
+    %a{href: "/"}
+      %img{src: "/images/logo.png", alt: "Live Work Lofts"}
   #navigation
     %ul
       %li 
-        %a{href: "about.html"} About.
+        %a{href: "/about.html"} About.
       %li 
-        %a{href: 'our-properties.html'} Our Properties.
+        %a{href: "/our-properties.html"} Our Properties.
     %ul
       %li 
-        %a{href: 'events.html'} Events.
+        %a{href: "/events.html"} Events.
       %li 
-        %a{href: 'film-here.html'} Film Here.
+        %a{href: "/film-here.html"} Film Here.
     %ul
       %li 
-        %a{href: 'press-room.html'} Press Room.
+        %a{href: "/press-room.html"} Press Room.
       %li 
-        %a{href: 'schedule-a-viewing.html'} Schedule a Viewing.    
+        %a{href: "/schedule-a-viewing.html"} Schedule a Viewing.    
   #social
     .social-icons
       #fb-root
@@ -25,11 +26,14 @@
       .icon
         %a{:href => "https://twitter.com/liveworkloft", :class => "twitter-follow-button", "data-show-count" => "false", "data-show-screen-name" => "false"}Follow @liveworkloft
       .icon
-        %img{src: "/images/sb_youtube.png"}
+        %a{href: '#'}
+          %img{src: "/images/sb_youtube.png"}
       .icon
-        %img{src: "/images/sb_pinterest.png"}
+        %a{href: '#'}
+          %img{src: "/images/sb_pinterest.png"}
       .icon
-        %img{src: "/images/sb_instagram.png"}
+        %a{href: '#'}
+          %img{src: "/images/sb_instagram.png"}
     .contact
       %p.office LEASING OFFICE
       %p.phone-number 323.441.8694

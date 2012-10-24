@@ -1,0 +1,24 @@
+---
+pressitems:
+  -
+    title: Title of this sweet press release will go right in this spot.
+    day: '08'
+    month: 'nov'
+    location: 'Los Angeles, California'
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec erat magna, at consectetur mauris. Nulla felis urna, facilisis at lobortis eget, gravida ut tellus. Morbi varius ornare enim eget aliquet. Aenean egestas convallis varius. Suspendisse eget lacinia dui. Pellentesque volutpat pellentesque accumsan. Morbi eget aliquet. Aenean sipen egestas convallis varius. Suspendisse eget lacinia dui."
+  -
+    title: Another super rad news post title is going to live right up here.
+    day: '12'
+    month: 'oct'
+    location: 'Los Angeles, California'
+    description: "Aenean commodo elit sit amet odio convallis volutpat. Proin feugiat tincidunt elit in suscipit. Vestibulum nibh nibh, congue nec varius at, lacinia vitae sem. Sed condimentum augue quis sapien scelerisque sed blandit orci dictum. Sed non neque nibh. Sed urna lacus, placerat vitae lacinia eu, semper vitae metus. Donec at dui et felis dictum malesuada. Nulla non pulvinar orci. Mauris in nunc lectus, eget malesuada quam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras porta tempus dapibus. Vestibulum malesuada ultrices nibh sit amet rutrum."
+  -
+    title: Title of this sweet press release will go right in this spot.
+    day: '18'
+    month: 'sep'
+    location: 'Los Angeles, California'
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec erat magna, at consectetur mauris. Nulla felis urna, facilisis at lobortis eget, gravida ut tellus. Morbi varius ornare enim eget aliquet. Aenean egestas convallis varius. Suspendisse eget lacinia dui. Pellentesque volutpat pellentesque accumsan. Morbi varius ornare enim eget aliquet. Aenean egestas convallis varius. Suspendisse lorem dui."
+  
+
+
+---

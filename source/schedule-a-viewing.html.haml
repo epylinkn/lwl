@@ -1,0 +1,76 @@
+.content.clearfix
+  .content-left
+    .page-1
+      %span.title
+        Interested? Let's Chat!
+      %span.title.f15
+        *Indicates Required Field
+        
+      .schedule-form
+      
+        %input#name
+        %input#email
+        %input#mobile_phone
+        %input#other_phone
+        
+        .line
+        %p.title.green Best way to reach you:
+        
+        %input{type: "radio", name: "contact_method", value: "email"} Email
+        %input{type: "radio", name: "contact_method", value: "phone"} Phone
+        %input{type: "radio", name: "contact_method", value: "text"} Text Message
+        
+        .line
+        
+        %select#square_footage
+        %select#budget
+        %select#move_date
+        
+        .line
+        
+        %p.title.yellow Area you're looking in:
+        
+        %input{type: "checkbox"} Close to downtown LA
+        %input{type: "checkbox"} Hollywood
+        %input{type: "checkbox"} Glendale
+        .line
+        
+        %p.title.red Looking for:
+        
+        %input{type: "checkbox"} Short-term lease
+        %input{type: "checkbox"} 1-year lease
+        %input{type: "checkbox"} Multi-year lease
+        .line
+        
+        %p.title.purple Properties you're interested in:
+        
+        %input{type: "checkbox"} Lacy Studio Lofts
+        %input{type: "checkbox"} Beverly Union Lofts
+        %input{type: "checkbox"} Spring
+        %input{type: "checkbox"} Cosmo Lofts
+        %input{type: "checkbox"} Melrose Studios
+        %input{type: "checkbox"} Seeley Studios
+        .line
+        
+        %p.title.blue How did you hear about us?
+        
+        %input{type: "checkbox"} Search Engine
+        %input{type: "checkbox"} Tenant Referral
+        %input{type: "checkbox"} Craigslist.com
+        %input{type: "checkbox"} Advertisement
+        
+        %input{type: "text"}
+        
+        .line
+        
+        %textarea
+        
+        %input{type: "image", src: "/images/sendbutton.png", alt: "Send now"}
+      
+    
+    
+/    .page-2
+/      %p.black
+/        Thanks for your pre-application submission to Live Work Loft. One of our leasing agents will review your submission and get in touch with you shortly! If you have any further questions, don't hesitate to 
+/        %a{href: '#'}
+/          %span.fblue.underline get in touch with us!

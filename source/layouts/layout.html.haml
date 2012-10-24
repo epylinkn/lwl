@@ -7,6 +7,10 @@
     %title= data.page.title || "LiveWorkLofts"
     %meta{:name => "viewport", :content => "width=device-width"}
     = stylesheet_link_tag "normalize", "bp", "style"
+    %script{:src => "//use.typekit.net/cpj5inm.js", :type => "text/javascript"}
+    :javascript
+      try{Typekit.load();}catch(e){}
+      
   %body{:class => page_classes}
     #content-wrapper
       = partial "shared/header"

@@ -1,0 +1,21 @@
+.content.clearfix
+  .content-left
+    %span.title
+      Press Room
+    
+    .press-list
+      %ul
+        - data.press.pressitems.each do |p|
+          %li.pressitem
+            .pressitem-date
+              = p.day
+              %br
+              = p.month
+            %p.pressitem-title
+              = p.title
+            .pressitem-line
+            .pressitem-body
+              %span.pressitem-location= p.location
+              = p.description
+              %a.link-blue{href: "#{p.link}"}
+                \- Read Full Press Release
