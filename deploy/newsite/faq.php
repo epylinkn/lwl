@@ -1,5 +1,9 @@
 <?php
 include('config/config.inc.php');
+
+$title = 'FAQ | ' . $meta_array['title'];
+
+
 include('includes/_header.inc.php');
 ?>
 

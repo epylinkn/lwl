@@ -7,144 +7,126 @@ if (isset($_GET['key']) && array_key_exists($_GET['key'], $project_array)) {
   $this_key = '';
 }
 
-if (isset($_POST['_submitted'])) {
+$title = 'Schedule a Viewing | ' . $meta_array['title'];
+
+if (!empty($_POST['_submitted'])) {
   
   $mail_body = array();
   $form_errors = array();
   
   //validate fields
-  if(isset($_POST['name']) && !empty($_POST['name'])) {
-    array_push($mail_body, "Name: ".$_POST['name']);
+  if(!empty($_POST['name'])) {
+    array_push($mail_body, "<strong>Name:</strong> ".$_POST['name']);
   } else {
     array_push($form_errors, "Please enter your name.");
   }
-  if(isset($_POST['email']) && !empty($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    array_push($mail_body, "Email: ".$_POST['email']);
+  if(!empty($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    array_push($mail_body, "<strong>Email:</strong> ".$_POST['email']);
   } else {
     array_push($form_errors, "Please enter a valid email address.");
   }
   
   // phone numbers
-  if(isset($_POST['mobile_phone']) && !empty($_POST['mobile_phone'])) {
-    array_push($mail_body, "Mobile Phone: ".$_POST['mobile_phone']);
+  if(!empty($_POST['mobile_phone'])) {
+    array_push($mail_body, "<strong>Mobile Phone:</strong> ".$_POST['mobile_phone']);
   }  
-  if(isset($_POST['other_phone']) && !empty($_POST['other_phone'])) {
-    array_push($mail_body, "Other Phone: ".$_POST['other_phone']);
+  if(!empty($_POST['other_phone'])) {
+    array_push($mail_body, "<strong>Other Phone:</strong> ".$_POST['other_phone']);
   }
   
   // contact method
-  if(isset($_POST['contact_method']) && !empty($_POST['contact_method'])) {
-    array_push($mail_body, "Contact Method: ".$_POST['contact_method']);
+  if(!empty($_POST['contact_method'])) {
+    array_push($mail_body, "<strong>Contact Method:</strong> ".$_POST['contact_method']);
   }
   
   // criteria
-  if(isset($_POST['square_footage']) && !empty($_POST['square_footage'])) {
-    array_push($mail_body, "Desired square footage: ".$_POST['square_footage']);
+  if(!empty($_POST['square_footage'])) {
+    array_push($mail_body, "<strong>Desired square footage:</strong> ".$_POST['square_footage']);
   }
-  if(isset($_POST['budget']) && !empty($_POST['budget'])) {
-    array_push($mail_body, "Budget: ".$_POST['budget']);
+  if(!empty($_POST['budget'])) {
+    array_push($mail_body, "<strong>Budget:</strong> ".$_POST['budget']);
   }
-  if(isset($_POST['move_date']) && !empty($_POST['move_date'])) {
-    array_push($mail_body, "Target move-in date: ".$_POST['move_date']);
+  if(!empty($_POST['move_date'])) {
+    array_push($mail_body, "<strong>Target move-in date:</strong> ".$_POST['move_date']);
   }
   
   // area of interest
-  if(isset($_POST['downtownla']) && !empty($_POST['downtownla'])) {
-    array_push($mail_body, "Downtown LA: Yes");
-  } else {
-    array_push($mail_body, "Downtown LA: No");
+  $areas = array();
+  if(!empty($_POST['downtownla'])) {
+    array_push($areas, "Downtown LA");
   }
-  if(isset($_POST['hollywood']) && !empty($_POST['hollywood'])) {
-    array_push($mail_body, "Hollywood: Yes");
-  } else {
-    array_push($mail_body, "Hollywood: No");
+  if(!empty($_POST['hollywood'])) {
+    array_push($areas, "Hollywood");
   }
-  if(isset($_POST['glendale']) && !empty($_POST['glendale'])) {
-    array_push($mail_body, "Glendale: Yes");
-  } else {
-    array_push($mail_body, "Glendale: No");
+  if(!empty($_POST['glendale'])) {
+    array_push($areas, "Glendale");
   }
+  array_push($mail_body, "<strong>Area they're looking in:</strong> ".(!empty($areas)) ? implode(', ', $areas) : "None selected");
   
   // lease desired
-  if(isset($_POST['short']) && !empty($_POST['short'])) {
-    array_push($mail_body, "Short-term Lease: Yes");
-  } else {
-    array_push($mail_body, "Short-term Lease: No");
+  $leases = array();
+  if(!empty($_POST['short'])) {
+    array_push($leases, "Short-term Lease");
   }
-  if(isset($_POST['one_year']) && !empty($_POST['one_year'])) {
-    array_push($mail_body, "One Year Lease: Yes");
-  } else {
-    array_push($mail_body, "One Year Lease: No");
+  if(!empty($_POST['one_year'])) {
+    array_push($leases, "One Year Lease");
   }
-  if(isset($_POST['multi_year']) && !empty($_POST['multi_year'])) {
-    array_push($mail_body, "Multi-year Lease: Yes");
-  } else {
-    array_push($mail_body, "Multi-year Lease: No");
+  if(!empty($_POST['multi_year'])) {
+    array_push($leases, "Multi-year Lease");
   }
+  array_push($mail_body, "<strong>Looking for:</strong> ".(!empty($leases)) ? implode(', ', $leases) : "None selected");
 
   // buildings of interest
-  if(isset($_POST['lacy']) && !empty($_POST['lacy'])) {
-    array_push($mail_body, "Lacy Lofts: Yes");
-  } else {
-    array_push($mail_body, "Lacy Lofts: No");
+  $properties = array();
+  if(!empty($_POST['lacy'])) {
+    array_push($properties, "Lacy Lofts");
   }
-  if(isset($_POST['beverly']) && !empty($_POST['beverly'])) {
-    array_push($mail_body, "Beverly: Yes");
-  } else {
-    array_push($mail_body, "Beverly: No");
+  if(!empty($_POST['beverly'])) {
+    array_push($properties, "Beverly");
   }
-  if(isset($_POST['spring']) && !empty($_POST['spring'])) {
-    array_push($mail_body, "Spring: Yes");
-  } else {
-    array_push($mail_body, "Spring: No");
+  if(!empty($_POST['spring'])) {
+    array_push($properties, "Spring");
   }
-  if(isset($_POST['cosmo']) && !empty($_POST['cosmo'])) {
-    array_push($mail_body, "Cosmo: Yes");
-  } else {
-    array_push($mail_body, "Cosmo: No");
+  if(!empty($_POST['cosmo'])) {
+    array_push($properties, "Cosmo");
   }
-  if(isset($_POST['melrose']) && !empty($_POST['melrose'])) {
-    array_push($mail_body, "Melrose: Yes");
-  } else {
-    array_push($mail_body, "Melrose: No");
+  if(!empty($_POST['melrose'])) {
+    array_push($properties, "Melrose");
   }
-  if(isset($_POST['seeley']) && !empty($_POST['seeley'])) {
-    array_push($mail_body, "Seeley: Yes");
-  } else {
-    array_push($mail_body, "Seeley: No");
+  if(!empty($_POST['seeley'])) {
+    array_push($properties, "Seeley");
   }
+  array_push($mail_body, 
+    "<strong>Properties they're interested in:</strong> ".(!empty($properties)) ? implode(', ', $properties) : "None selected");
   
   // referral source?
-  if(isset($_POST['search']) && !empty($_POST['search'])) {
-    array_push($mail_body, "Referral Type: Search");
+  if(!empty($_POST['search'])) {
+    array_push($mail_body, "<strong>Referral Type:</strong> Search");
   }
-  if(isset($_POST['referral']) && !empty($_POST['referral'])) {
-    array_push($mail_body, "Referral Type: Tenant Referral");
-    
-    // referral name?
-    if(isset($_POST['referral_name']) && !empty($_POST['referral_name'])) {
-      array_push($mail_body, "Referrer: ".$_POST['referral_name']);
-    } else {
-      array_push($form_errors, "Please enter your referrer's name so we can thank them!");
-    }
+  if(!empty($_POST['referral'])) {
+    array_push($mail_body, "<strong>Referral Type:</strong> Tenant Referral");
   }
-  if(isset($_POST['craigslist']) && !empty($_POST['craigslist'])) {
-    array_push($mail_body, "Referral Type: Craigslist");
+  // referral name?
+  if(!empty($_POST['referral_name'])) {
+    array_push($mail_body, "<strong>Referrer:</strong> ".$_POST['referral_name']);
   }
-  if(isset($_POST['advertisement']) && !empty($_POST['advertisement'])) {
-    array_push($mail_body, "Referral Type: Advertisement");
+  if(!empty($_POST['craigslist'])) {
+    array_push($mail_body, "<strong>Referral Type:</strong> Craigslist");
+  }
+  if(!empty($_POST['advertisement'])) {
+    array_push($mail_body, "<strong>Referral Type:</strong> Advertisement");
   }
 
   // message
-  if(isset($_POST['message']) && !empty($_POST['message'])) {
-    array_push($mail_body, "Message: ".$_POST['message']);
+  if(!empty($_POST['message'])) {
+    array_push($mail_body, "<strong>Other Comments:</strong> ".$_POST['message']);
   }
   
   // email opt-in
-  if(isset($_POST['option']) && !empty($_POST['option'])) {
-    array_push($mail_body, "Email Opt-in: Yes");
+  if(!empty($_POST['option'])) {
+    array_push($mail_body, "<strong>Email Opt-in Permission:</strong> Yes");
   } else {
-    array_push($mail_body, "Email Opt-in: No");
+    array_push($mail_body, "<strong>Email Opt-in Permission:</strong> No");
   }
   
   if(count($form_errors) == 0) {
@@ -153,9 +135,11 @@ if (isset($_POST['_submitted'])) {
     $subject = "New Pre-Application from LiveWorkLoft.net";
     $body = "";
     foreach($mail_body as $msg) {
-      $body .= $msg . "\n";
+      $body .= stripslashes($msg) . "\n";
     }
-    mail($to, $subject, $body);
+    $headers = 'From: LiveWorkLoft.net <do-not-reply@liveworkloft.net>';
+        
+    mail($to, $subject, $body, $headers);
   } 
 }
 
@@ -232,76 +216,117 @@ include('includes/_header.inc.php');
           <div class='line'></div>
           <p class='title yellow'>Area you're looking in:</p>
           <div class='group-area'>
-            <label class='checkbox'>
-              <input name='downtownla' type='checkbox' value='1' <?php if(isset($_POST['downtownla']) && $_POST['downtownla'] == '1') echo 'checked="checked"'; ?> />
-              <span></span>
-            </label>
-            <label for='downtownla'>Close to downtown LA</label>
-            <label class='checkbox'>
-              <input name='hollywood' type='checkbox' value='1' <?php if(isset($_POST['hollywood']) && $_POST['hollywood'] == '1') echo 'checked="checked"'; ?> />
-              <span></span>
-            </label>
-            <label for='hollywood'>Hollywood</label>
-            <label class='checkbox'>
-              <input name='glendale' type='checkbox' value='1' <?php if(isset($_POST['glendale']) && $_POST['glendale'] == '1') echo 'checked="checked"'; ?> />
-              <span></span>
-            </label>
-            <label for='glendale'>Glendale</label>
+            <table>
+              <tr>
+                <td>
+                  <label class='checkbox'>
+                    <input name='downtownla' type='checkbox' value='1' <?php if(isset($_POST['downtownla']) && $_POST['downtownla'] == '1') echo 'checked="checked"'; ?> />
+                    <span></span>
+                  </label>
+                  <label for='downtownla'>Close to downtown LA</label>
+                </td>
+                <td>
+                  <label class='checkbox'>
+                    <input name='hollywood' type='checkbox' value='1' <?php if(isset($_POST['hollywood']) && $_POST['hollywood'] == '1') echo 'checked="checked"'; ?> />
+                    <span></span>
+                  </label>
+                  <label for='hollywood'>Hollywood</label>
+                </td>
+                <td>
+                  <label class='checkbox'>
+                    <input name='glendale' type='checkbox' value='1' <?php if(isset($_POST['glendale']) && $_POST['glendale'] == '1') echo 'checked="checked"'; ?> />
+                    <span></span>
+                  </label>
+                  <label for='glendale'>Glendale</label>
+                </td>
+              </tr>
+            </table>
           </div>
           <div class='line'></div>
           <p class='title red'>Looking for:</p>
           <div class='group-lease'>
-            <label class='checkbox'>
-              <input name='short' type='checkbox' value='1' <?php if(isset($_POST['short']) && $_POST['short'] == '1') echo 'checked="checked"'; ?> />
-              <span></span>
-            </label>
-            <label for='short'>Short-term lease</label>
-            <label class='checkbox'>
-              <input name='one_year' type='checkbox' value='1' <?php if(isset($_POST['one_year']) && $_POST['one_year'] == '1') echo 'checked="checked"'; ?> />
-              <span></span>
-            </label>
-            <label for='one_year'>1-year lease</label>
-            <label class='checkbox'>
-              <input name='multi_year' type='checkbox' value='1' <?php if(isset($_POST['multi_year']) && $_POST['multi_year'] == '1') echo 'checked="checked"'; ?> />
-              <span></span>
-            </label>
-            <label for='multi_year'>Multi-year lease</label>
+            <table>
+              <tr>
+                <td>
+                  <label class='checkbox'>
+                    <input name='short' type='checkbox' value='1' <?php if(isset($_POST['short']) && $_POST['short'] == '1') echo 'checked="checked"'; ?> />
+                    <span></span>
+                  </label>
+                  <label for='short'>Short-term lease</label>
+                </td>
+                <td>
+                  <label class='checkbox'>
+                    <input name='one_year' type='checkbox' value='1' <?php if(isset($_POST['one_year']) && $_POST['one_year'] == '1') echo 'checked="checked"'; ?> />
+                    <span></span>
+                  </label>
+                  <label for='one_year'>1-year lease</label>
+                </td>
+                <td>
+                  <label class='checkbox'>
+                    <input name='multi_year' type='checkbox' value='1' <?php if(isset($_POST['multi_year']) && $_POST['multi_year'] == '1') echo 'checked="checked"'; ?> />
+                    <span></span>
+                  </label>
+                  <label for='multi_year'>Multi-year lease</label>
+                </td>
+              </tr>
+            </table>
           </div>
           <div class='line'></div>
+          
           <p class='title purple'>Properties you're interested in:</p>
           <div class='group-lofts-1'>
-            <label class='checkbox'>
-              <input name='lacy' type='checkbox' <?php if($this_key=='lacy') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['lacy']) && $_POST['lacy'] == '1') echo 'checked="checked"'; ?> />
-              <span></span>
-            </label>
-            <label for='lacy'>Lacy Studio Lofts</label>
-            <label class='checkbox'>
-              <input name='beverly' type='checkbox' <?php if($this_key=='beverly') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['beverly']) && $_POST['beverly'] == '1') echo 'checked="checked"'; ?> />
-              <span></span>
-            </label>
-            <label for='beverly'>Beverly Union Lofts</label>
-            <label class='checkbox'>
-              <input name='spring' type='checkbox' <?php if($this_key=='spring') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['spring']) && $_POST['spring'] == '1') echo 'checked="checked"'; ?> />
-              <span></span>
-            </label>
-            <label for='spring'>Spring</label>
+            <table>
+              <tr>
+                <td>
+                  <label class='checkbox'>
+                    <input name='lacy' type='checkbox' <?php if($this_key=='lacy') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['lacy']) && $_POST['lacy'] == '1') echo 'checked="checked"'; ?> />
+                    <span></span>
+                  </label>
+                  <label for='lacy'>Lacy Studio Lofts</label>
+                </td>
+                <td>
+                  <label class='checkbox'>
+                    <input name='seeley' type='checkbox' <?php if($this_key=='seeley') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['seeley']) && $_POST['seeley'] == '1') echo 'checked="checked"'; ?> />
+                    <span></span>
+                  </label>
+                  <label for='seeley'>Seeley Studios</label>
+                </td>
+                <td>
+                  <label class='checkbox'>
+                    <input name='spring' type='checkbox' <?php if($this_key=='spring') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['spring']) && $_POST['spring'] == '1') echo 'checked="checked"'; ?> />
+                    <span></span>
+                  </label>
+                  <label for='spring'>Spring</label>
+                </td>
+              </tr>
+            </table>
           </div>
           <div class='group-lofts-2'>
-            <label class='checkbox'>
-              <input name='cosmo' type='checkbox' <?php if($this_key=='cosmo') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['cosmo']) && $_POST['cosmo'] == '1') echo 'checked="checked"'; ?> />
-              <span></span>
-            </label>
-            <label for='cosmo'>Cosmo Lofts</label>
-            <label class='checkbox'>
-              <input name='melrose' type='checkbox' <?php if($this_key=='melrose') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['melrose']) && $_POST['melrose'] == '1') echo 'checked="checked"'; ?> />
-              <span></span>
-            </label>
-            <label for='melrose'>Melrose Studios</label>
-            <label class='checkbox'>
-              <input name='seeley' type='checkbox' <?php if($this_key=='seeley') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['seeley']) && $_POST['seeley'] == '1') echo 'checked="checked"'; ?> />
-              <span></span>
-            </label>
-            <label for='seeley'>Seeley Studios</label>
+            <table>
+              <tr>
+                <td>
+                  <label class='checkbox'>
+                    <input name='beverly' type='checkbox' <?php if($this_key=='beverly') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['beverly']) && $_POST['beverly'] == '1') echo 'checked="checked"'; ?> />
+                    <span></span>
+                  </label>
+                  <label for='beverly'>Beverly Union Lofts</label>
+                </td>
+                <td>
+                  <label class='checkbox'>
+                    <input name='melrose' type='checkbox' <?php if($this_key=='melrose') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['melrose']) && $_POST['melrose'] == '1') echo 'checked="checked"'; ?> />
+                    <span></span>
+                  </label>
+                  <label for='melrose'>Melrose Studios</label>
+                </td>
+                <td>
+                  <label class='checkbox'>
+                    <input name='cosmo' type='checkbox' <?php if($this_key=='cosmo') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['cosmo']) && $_POST['cosmo'] == '1') echo 'checked="checked"'; ?> />
+                    <span></span>
+                  </label>
+                  <label for='cosmo'>Cosmo Lofts</label>
+                </td>
+              </tr>
+            </table>
           </div>
           <div class='line'></div>
           <p class='title blue'>How did you hear about us?</p>

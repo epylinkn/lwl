@@ -1,5 +1,9 @@
 <?php
 include('config/config.inc.php');
+
+$title = 'Press Room | ' . $meta_array['title'];
+
+
 include('includes/_header.inc.php');
 ?>
 

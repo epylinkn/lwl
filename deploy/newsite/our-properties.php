@@ -1,5 +1,9 @@
 <?php
 include('config/config.inc.php');
+
+$title = 'Our Properties | ' . $meta_array['title'];
+
+
 include('includes/_header.inc.php');
 ?>
 
@@ -19,8 +23,7 @@ include('includes/_header.inc.php');
               <div class='project-foreground'>
                 <img class='ribbon-end' src="/newsite/images/ribbon_<?= $project['theme'] ?>.png" />
                 <div class="<?= $project['theme'] ?> ribbon">
-                  <!-- removes the period from title -->
-                  <span><?php echo substr($project['title'],0,-1); ?></span>
+                  <span><?= $project['title']; ?>.</span>
                 </div>
               </div>
             </a>

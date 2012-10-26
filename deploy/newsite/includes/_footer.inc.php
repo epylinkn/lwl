@@ -63,7 +63,9 @@
       </div>
       <div class='footer-row'>
         <p class='f11'>&copy; 2012 Live Work Loft. All rights reserved. In other words, stealing is very uncool.</p>
-        <strong class='f9'>Branding Development by Hypelife Brands (Los Angeles | Kansas City | NYC)</strong>
+        <a href='http://www.hypelifebrands.com/' target='_blank'>
+          <span class="branding-development">Branding Development by Hypelife Brands (Los Angeles | Kansas City | NYC)</span>
+        </a>
       </div>
     </div>
   </div>

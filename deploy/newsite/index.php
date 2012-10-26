@@ -1,5 +1,8 @@
 <?php
 include('config/config.inc.php');
+
+$title = $meta_array['title'];
+
 include('includes/_header.inc.php');
 ?>
 
@@ -13,7 +16,9 @@ include('includes/_header.inc.php');
     </span>
     <p class='body'>
       Live Work Loft is dedicated to delivering
-      <span class='fblue underline'>top notch creative spaces</span>
+      <a href="/newsite/about.php">
+        <span class='fblue underline'>top notch creative spaces</span>
+      </a>
       in Los Angeles to the thought leaders of the world. We aim
       for the unique; anything that is comparable
       to the status quo is unacceptable.
@@ -60,14 +65,14 @@ include('includes/_header.inc.php');
         <a href='https://twitter.com/liveworkloft' target='_blank'>
           <img alt='Follow us on Twitter!' src='/newsite/images/social_twitter.png' />
         </a>
-        <a href='#'>
+        <a href='http://www.youtube.com/user/liveworkloft' target='_blank'>
           <img alt='Watch us on YouTube!' src='/newsite/images/social_youtube.png' />
         </a>
-        <a href='#'>
+        <a href='http://www.pinterest.com/liveworkloft' target='_blank'>
           <img alt='Connect with us on Pinterest!' src='/newsite/images/social_pinterest.png' />
         </a>
-        <a href='#'>
-          <img alt='Connect with us on Instgram!' src='/newsite/images/social_instagram.png' />
+        <a href='http://www.instagram.com/liveworkloft' target='_blank'>
+          <img alt='Connect with us on Instagram!' src='/newsite/images/social_instagram.png' />
         </a>
       </div>
     </div>

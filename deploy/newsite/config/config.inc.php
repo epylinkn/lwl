@@ -1,13 +1,13 @@
 <?php
   $rootdir = (isset($rootdir)) ? $rootdir : '';
   $meta_array = array(
-    'title' => "LiveWorkLofts",
+    'title' => "The most stunning live/work spaces in Los Angeles // Live Work Loft",
     'description' => "LiveWorkLofts"
   );
   
   $project_array = array(
     'lacy' => array(
-      'title' => "Lacy Studio Lofts.",
+      'title' => "Lacy Studio Lofts",
       'small_image' => "/newsite/images/properties_lacy_sm.png",
       'large_image' => "/newsite/images/properties_lacy.png",
       'theme' => 'green',
@@ -37,7 +37,7 @@
       )
     ),
     'seeley' => array(
-      'title' =>  "Seeley Studios.",
+      'title' =>  "Seeley Studios",
       'small_image' => "/newsite/images/properties_seeley_sm.png",
       'large_image' => "/newsite/images/properties_seeley.png",
       'theme' => "yellow",
@@ -97,7 +97,7 @@
       )
     ),
     'beverly' => array(
-      'title' =>  "Beverly Union Lofts.",
+      'title' =>  "Beverly Union Lofts",
       'small_image' => "/newsite/images/properties_beverly_sm.png",
       'large_image' => "/newsite/images/properties_beverly.png",
       'theme' => "purple",
@@ -127,7 +127,7 @@
       )
     ),
     'melrose' => array(
-      'title' =>  "Melrose Studios.",
+      'title' =>  "Melrose Studios",
       'small_image' => "/newsite/images/properties_melrose_sm.png",
       'large_image' => "/newsite/images/properties_melrose.png",
       'theme' => "blue",
@@ -150,16 +150,17 @@
     )
   );
   
+  // hint: jun / jul works better with a preceding space, ie ' jul'
   $event_array = array(
     'upcoming' => array(
       array(
-        'title' => "LOFT PARTY",
-        'day' => '08',
+        'title' => "SEELEY ARTWALK",
+        'day' => '03',
         'month' => 'nov',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        'description' => 'Where the creative communities of Atwater Village, Los Feliz, Silverlake and Glendale meet.',
         'image' => "/newsite/images/upcoming_placeholder.jpg",
-        'image_alt' => "Upcoming Event 1",
-        'link' => "http://www.facebook.com"
+        'image_alt' => "Seeley Artwalk",
+        'link' => "https://www.facebook.com/events/357779994311344/"
       ),
       array(
         'title' => "LOFT PARTY",
@@ -191,40 +192,22 @@
     ),
     'past' => array(
       array(
-        'title' => "OPEN HOUSE",
-        'day' => '22',
-        'month' => 'sep',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'image' => "/newsite/images/past_placeholder.jpg",
-        'image_alt' => "Past Event 1",
-        'link' => "http://www.facebook.com"
+        'title' => "MID-SUMMER NIGHTS AT LACY STUDIO LOFTS",
+        'day' => '04',
+        'month' => 'aug',
+        'description' => 'This past Saturday we hosted a FANTASTIC event at Lacy Studios. the Mid-summer nights event had live music, food trucks, a DJ, and a ton of awesome people.',
+        'image' => "/newsite/images/past_midsummer.jpg",
+        'image_alt' => "Mid-Summer Nights at Lacy Studio Lofts",
+        'link' => "http://liveworkloft.net/mid-summer-nights-at-lacy-studio-lofts/"
       ),
       array(
-        'title' => "OPEN HOUSE",
-        'day' => '21',
-        'month' => 'sep',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'image' => "/newsite/images/past_placeholder.jpg",
-        'image_alt' => "Past Event 1",
-        'link' => "http://www.facebook.com"
-      ),
-      array(
-        'title' => "OPEN HOUSE",
-        'day' => '01',
-        'month' => 'oct',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'image' => "/newsite/images/past_placeholder.jpg",
-        'image_alt' => "Past Event 1",
-        'link' => "http://www.facebook.com"
-      ),
-      array(
-        'title' => "OPEN HOUSE",
-        'day' => '11',
-        'month' => 'may',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'image' => "/newsite/images/past_placeholder.jpg",
-        'image_alt' => "Past Event 1",
-        'link' => "http://www.facebook.com"
+        'title' => "LACY STUDIO LOFTS BBQ KICK-OFF",
+        'day' => '06',
+        'month' => '&nbsp;jul',
+        'description' => 'The afternoon was off to a great start with residents, family and friends in attendance as LW Lofts hosted a celebration of the community at Lacy Studio Lofts. It was just one among many barbeques for which the community joins together throughout the year. Held in the newly upgraded courtyard, the barbeque featured freshly prepared food and an array of delicious snacks.',
+        'image' => "/newsite/images/past_bbq.jpg",
+        'image_alt' => "Lacy Studio Lofts BBQ Kick-Off",
+        'link' => "http://liveworkloft.net/lacy-studio-lofts-bbq-kick-off/"
       )
     )
   );

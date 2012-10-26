@@ -1,5 +1,8 @@
 <?php
 include('config/config.inc.php');
+
+$title = 'Events | ' . $meta_array['title'];
+
 include('includes/_header.inc.php');
 ?>
 

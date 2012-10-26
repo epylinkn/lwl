@@ -1,5 +1,9 @@
 <?php
 include('config/config.inc.php');
+
+$title = 'About | ' . $meta_array['title'];
+
+
 include('includes/_header.inc.php');
 ?>
 
@@ -20,7 +24,7 @@ include('includes/_header.inc.php');
       <br />
       <p>
         <span class='title yellow'>
-          100% TAX DEDUCTIBLE
+          100% tax deductible
         </span>
       </p>
       <p class='body'>
@@ -29,7 +33,7 @@ include('includes/_header.inc.php');
       <br />
       <p>
         <span class='title red'>
-          MODERN SPACES
+          Modern spaces
         </span>
       </p>
       <p class='body'>
@@ -38,7 +42,7 @@ include('includes/_header.inc.php');
       <br />
       <p>
         <span class='title purple'>
-          FRIENDLY, AVAILABLE STAFF
+          Friendly, available staff
         </span>
       </p>
       <p class='body'>

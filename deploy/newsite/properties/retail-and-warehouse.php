@@ -1,6 +1,21 @@
 <?php
 $rootdir = '../';
 include($rootdir.'config/config.inc.php');
+
+$title = 'Retail and Warehouse | ' . $meta_array['title'];
+$this_key = 'retail';
+
+$file_exts = 'jpg|jpeg|png|gif';
+$slides = array();
+if($fh = scandir($rootdir.'images/properties/'.$this_key)) {
+  foreach($fh as $image) {
+    $arr = explode('.', $image);
+    $ext = array_pop($arr);
+    if($ext && stristr($file_exts, $ext)) {
+      $slides []= $image;
+    }
+  }
+}
 include($rootdir.'includes/_header.inc.php');
 ?>
 
@@ -9,9 +24,15 @@ include($rootdir.'includes/_header.inc.php');
     <div class='property-detail'>
       <div class='carousel'>
         <div class='carousel-images'>
-          <div class='item-1 item active'>
-            <img src='/newsite/images/properties/warehouse01.jpg' />
-          </div>
+          <?php for($i = 1; $i <= count($slides); $i++) { ?>
+            <?php if(1 == $i) { ?>
+              <div class='item-1 item active'>
+            <?php } else { ?>
+              <div class="item-<?= $i ?> item">
+            <?php } ?>
+                <img src="/newsite/images/properties/<?= $this_key ?>/<?= $slides[$i-1] ?>" />
+              </div>
+          <?php } ?>
         </div>
         <img alt='Previous Slide' id='prev-slide' src='/newsite/images/slider_left.png' />
         <img alt='Next Slide' id='next-slide' src='/newsite/images/slider_right.png' />

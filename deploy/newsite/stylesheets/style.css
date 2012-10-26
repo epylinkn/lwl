@@ -529,9 +529,8 @@ body {
             line-height: 16px; }
         /* line 575, style.css.scss */
         .events-list ul li .event-container .event-detail .event-detail-description {
-          width: 150px;
-          padding-top: 13px;
-          padding-bottom: 13px;
+          width: 145px;
+          padding: 13px 5px 13px 0;
           float: left; }
           /* line 581, style.css.scss */
           .events-list ul li .event-container .event-detail .event-detail-description p.event-detail-title {
@@ -934,7 +933,32 @@ body {
     /* line 985, style.css.scss */
     .schedule-a-viewing .schedule-form .group-criteria select:nth-child(odd) {
       margin-right: 10px; }
+      
+  .schedule-a-viewing .schedule-form .group-area td {
+    width: 136px;
+  }
+  .schedule-a-viewing .schedule-form .group-area td:first-child {
+    width: 240px;
+  }
+  .schedule-a-viewing .schedule-form .group-lease td {
+    width: 164px;
+  }
+  .schedule-a-viewing .schedule-form .group-lease td:first-child {
+    width: 185px;
+  }
   /* line 991, style.css.scss */
+  .schedule-a-viewing .schedule-form .group-lofts-1 td:nth-child(1),
+  .schedule-a-viewing .schedule-form .group-lofts-2 td:nth-child(1) {
+    width: 200px;
+  }
+  .schedule-a-viewing .schedule-form .group-lofts-1 td:nth-child(2),
+  .schedule-a-viewing .schedule-form .group-lofts-2 td:nth-child(2) {
+    width: 170px;
+  } 
+  .schedule-a-viewing .schedule-form .group-lofts-1 td:nth-child(3),
+  .schedule-a-viewing .schedule-form .group-lofts-2 td:nth-child(3) {
+    width: 142px;
+  }
   .schedule-a-viewing .schedule-form .group-hear {
     text-align: left;
     clear: both; }
@@ -1043,11 +1067,19 @@ body {
         padding-top: 53px;
         text-align: center;
         clear: both; }
+      #footer .footer-wrap .footer .footer-row span.branding-development {
+        color: white;
+        font-size: 9px;
+        font-weight: bold;
+        text-decoration: none;
+      }
   /* line 1110, style.css.scss */
   #footer #tenant-links {
     position: absolute;
     top: -33px;
-    left: 40px;
+/*    left: 40px;*/
+    left: 50%;
+    margin-left: -471px;
     z-index: 20; }
     /* line 1117, style.css.scss */
     #footer #tenant-links .tenant-title {

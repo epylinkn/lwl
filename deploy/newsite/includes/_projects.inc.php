@@ -12,7 +12,7 @@
              <img class='ribbon-end' src="/newsite/images/ribbon_<?= $p['theme'] ?>_sm.png" />
              <div class="<?= $p['theme'] ?> ribbon">
                <!-- removes the period from title -->
-               <span class='f15'><?php echo substr($p['title'],0,-1); ?></span>
+               <span class='f15'><?= $p['title']; ?>.</span>
              </div>
            </div>
          </a>

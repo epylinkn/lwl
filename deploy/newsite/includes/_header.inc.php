@@ -5,7 +5,7 @@
   <!-- Always force latest IE rendering engine or request Chrome Frame -->
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
   <!-- Use title if it's in the page YAML frontmatter -->
-  <title>LiveWorkLofts</title>
+  <title><?php echo (isset($title)) ? $title : $meta_array['title']; ?></title>
   <meta content='width=device-width' name='viewport' />
   <link href="/newsite/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="/newsite/stylesheets/bp.css" media="screen" rel="stylesheet" type="text/css" />
@@ -24,7 +24,7 @@
     <div id='content-wrapper'>
       <div class='clearfix' id='header'>
         <div id='logo'>
-          <a href='/'>
+          <a href='/newsite/'>
             <img alt='Live Work Lofts' src='/newsite/images/logo.png' />
           </a>
         </div>
@@ -64,17 +64,17 @@
               <a class='twitter-follow-button' data-show-count='false' data-show-screen-name='false' href='https://twitter.com/liveworkloft'>Follow @liveworkloft</a>
             </div>
             <div class='icon'>
-              <a href='#'>
+              <a href='http://www.youtube.com/user/liveworkloft' target='_blank'>
                 <img src='/newsite/images/sb_youtube.png' />
               </a>
             </div>
             <div class='icon'>
-              <a href='#'>
+              <a href='http://www.pinterest.com/liveworkloft' target='_blank'>
                 <img src='/newsite/images/sb_pinterest.png' />
               </a>
             </div>
             <div class='icon'>
-              <a href='#'>
+              <a href='http://www.instagram.com/liveworkloft' target='_blank'>
                 <img src='/newsite/images/sb_instagram.png' />
               </a>
             </div>
