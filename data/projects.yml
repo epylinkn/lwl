@@ -6,7 +6,7 @@ projects:
     large_image: /images/properties_lacy.png
     theme: green
   seeley:
-    title: Seeley Studios
+    title: Seeley Studios.
     small_image: /images/properties_seeley_sm.png
     large_image: /images/properties_seeley.png
     theme: yellow

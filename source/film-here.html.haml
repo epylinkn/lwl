@@ -7,7 +7,10 @@
     .films
       .carousel
         .carousel-images
-          %img{src: "/images/properties/filmhere01.jpg"}
+          .item-1.item.active
+            %img{src: "/images/properties/filmhere01.jpg"}
+          .item-2.item
+            %img{src: "/images/properties/filmhere02.jpg"}
         %img#prev-slide{src: '/images/slider_left.png', alt: 'Previous Slide'}
         %img#next-slide{src: '/images/slider_right.png', alt: 'Next Slide'}
         
@@ -19,10 +22,10 @@
           %strong retail and warehouse locations 
         available for filming and photo shoots.
       %p.body
-        Call one of our leasing agents for rats and more information at 323.441.8694, or email us at 
-        %a.link-yellow.underline.secure{href: '#'} 
-          %strong film@liveworkloft.net.
-        
+        Call one of our leasing agents for rats and more information at 323.441.8694, or email us at
+        = succeed '.' do
+          %a.link-yellow.underline.fbold.secure
+            film(secure)liveworkloft{secure}net        
   = partial "shared/clients"
 
   

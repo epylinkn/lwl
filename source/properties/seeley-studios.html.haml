@@ -3,7 +3,14 @@
     .property-detail
       .carousel
         .carousel-images
-          %img{src: "/images/properties/seeley01.jpg"}
+          .item-1.item.active
+            %img{src: "/images/properties/seeley01.jpg"}
+          .item-2.item
+            %img{src: "/images/properties/seeley02.jpg"}
+          .item-3.item
+            %img{src: "/images/properties/seeley03.jpg"}
+          .item-4.item
+            %img{src: "/images/properties/seeley04.jpg"}
         %img#prev-slide{src: '/images/slider_left.png', alt: 'Previous Slide'}
         %img#next-slide{src: '/images/slider_right.png', alt: 'Next Slide'}
         .carousel-title
@@ -35,18 +42,19 @@
   = partial "shared/projects"
   
   .bottom.clearfix
-    .bottom-schedule-a-viewing
-      SCHEDULE A VIEWING
+    %a{href: '/schedule-a-viewing.html'}
+      .bottom-schedule-a-viewing
+        SCHEDULE A VIEWING
     .bottom-property-map
-      PUT GOOGLE MAP HERE
+      %iframe{:frameborder => "0", :height => "240", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "https://maps.google.com/maps?f=q&hl=en&geocode=&q=1800+s++brand+blvd+glendale,+ca&sll=37.509726,-107.446289&sspn=23.662416,34.848633&ie=UTF8&om=0&s=AARTsJpFPb2uBZup11ul1GyIXjUi1gYUwg&view=map&hq=&hnear=1800+S+Brand+Blvd,+Glendale,+Los+Angeles,+California+91204&t=m&ll=34.132481,-118.250999&spn=0.017051,0.034246&z=14&iwloc=A&output=embed", :width => "398"}
     .bottom-social-buttons
-      %a{href: '#'}
+      %a{href: '#', target: "_blank"}
         .button.facebook
           Meet our Community
-      %a{href: '#'}
+      %a{href: '#', target: "_blank"}
         .button.twitter
           Tweet Love from @SeeleyStudios
-      %a{href: '#'}
+      %a{href: 'http://www.yelp.com/biz/seeley-studios-glendale', target: "_blank"}
         .button.yelp
           Check out Seeley on Yelp
       

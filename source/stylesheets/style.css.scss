@@ -1,11 +1,10 @@
 /* === Colors and shit === */
 $main_width: 1020px;
 
-
+$sendbutton: #404040;
 $black: #000000;
 $white: #FFFFFF;
 $purple: #261C1F;
-
 $grey: #d0d0d0;
 
 $tenant_blue: #32ebfb;
@@ -42,11 +41,17 @@ $theme_blue: #5cacc1;
 $theme_orange: #f86f00;
 $theme_black: #1e1e1e;
 
-
-
 $helvetica: "HelveticaNeue", Helvetica, Arial, sans-serif;
 $museo: "museo-sans", Helvetica, Arial, sans-serif;
 $arial: Arial, sans-serif;
+
+/* === mixins === */
+@mixin rounded-borders($pix) {
+  border-radius: $pix;
+  -moz-border-radius: $pix;
+  -webkit-border-radius: $pix;
+}
+
 
 /* === Helpers and ish === */
 
@@ -61,6 +66,7 @@ $arial: Arial, sans-serif;
 .f16 { font-size: 16px; }
 .blocky { display: block; }
 .underline { text-decoration: underline; }
+.fbold { font-weight: bold; }
 .fblue { color: $light_blue; }
 .fyellow { color: $title_yellow; }
 
@@ -137,6 +143,13 @@ ul {
   }
 }
 
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d3d3d3;
+  @include rounded-borders(3px);
+}
+
 .fulljustify {
   text-align: justify;
 }
@@ -146,6 +159,42 @@ ul {
   width: 100%;
 }
 
+.checkbox {
+  input {
+    display: none;
+  }
+  span {
+    width: 23px;
+    height: 23px;
+//     margin-left: 10px;
+//     padding: 10px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    background: url("/images/cb_unchecked.png") no-repeat;
+  }
+  input:checked + span {
+    background: url("/images/cb_checked.png") no-repeat;
+  }
+}
+
+.radio {
+  input {
+    display: none;
+  }
+  span {
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    background: url("/images/rad_unselected.png") no-repeat;
+  }
+  input:checked + span {
+    background: url("/images/rad_selected.png") no-repeat;
+  }
+}
+
 /* === Layout === */
 
 html, body {
@@ -153,8 +202,11 @@ html, body {
 //   overflow-y: auto;
 }
 
-html { overflow: hidden; }
-body { overflow: auto; }
+// html { overflow: hidden; }
+// body { overflow: auto; }
+
+html {  }
+body { overflow-y: auto; }
 
 body {
   width: 100%;
@@ -224,7 +276,7 @@ body {
         margin-bottom: 10px;
         list-style: none;
         
-        a, a:hover, a:active, a:visited {
+        a, a:visited {
           padding: 0px 4px 2px 4px;
           color: $white;
           font-size: 14px;
@@ -232,13 +284,17 @@ body {
           font-family: $helvetica;
           text-decoration: none;
           background: $black;
+          
+//           &:hover, &:active {
+//             color: $theme_blue;
+//           }
         }
       }
     }
   }
   
   #social {
-    margin: 45px 20px 0 0;
+    margin: 45px 17px 0 0;
     float: right;
     
     .social-icons {
@@ -275,48 +331,95 @@ body {
 
 .content {
   padding: 55px 30px 40px 30px;
-  outline: 1px solid red;
   
   .content-left {
     float: left;
     color: $white;
-  
-    &.home {
-      width: 380px;
-      padding: 185px 10px 0 10px;
-    }
-    &.our-properties {
-      width: 960px;
-    }
-    &.our-properties-detail {
-      width: 580px;
-      padding: 0 3px;
-    }
-    &.about {
-      width: 590px;
-      padding: 0 10px;
-    }
-    &.film-here {
-      width: 600px;
-      padding: 0 3px;
-    }
-  
+    
     span {
       &.title { 
 //         font-size: 43px;
       }
     }
-    
+
     p.body {
       padding: 15px 5px;
       font-size: 19px;
       font-family: $helvetica;
+    }
+  
+    &.home {
+      width: 380px;
+      padding: 180px 10px 0 10px;
+    }
+    &.our-properties {
+      width: 960px;
+    }
+    &.our-properties-detail {
+      width: 600px;
+      padding: 0 3px;
+      
+      p.body {
+        margin-left: 7px;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    &.about {
+      width: 590px;
+      padding: 0 10px;
+      
+      .about-body {
+        padding-top: 55px;
+        
+        p.body {
+          padding-top: 20px;
+          padding-bottom: 25px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+    &.film-here {
+      width: 600px;
+      padding: 0 3px;
+      
+      .carousel {
+        margin-left: -5px;
+        margin-bottom: 0px;
+      }
+      
+      p.body {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    &.faq {
+      width: 600px;
+      
+      .faq-list {
+        padding-top: 55px;
+        span.title {
+          padding: 1px 5px;
+          font-size: 19px;
+          font-weight: bold;
+          font-family: $helvetica;
+          line-height: 28px;
+        }
+        
+        p.body {
+          padding-bottom: 30px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
     }
   }
 }
 
 //   individual properties
 .property-detail {
+  margin-top: -7px;
   
   span.title {
     margin: 0 7px;
@@ -326,20 +429,23 @@ body {
   }
   
   ul {
-    padding: 15px 5px;
+    padding: 15px 5px 25px 5px;
     li {
-      margin-left: 15px;
-      font-size: 19px;
+      list-style: none;
+      margin-left: 10px;
+      font-size: 16px;
       font-family: $helvetica;
-      list-style-image: url('/images/list_bullet.png');
+      line-height: 24px;
+      vertical-align: bottom;
+//       list-style-image: url('/images/list_bullet.png');
+      background: url('/images/list_bullet.png') no-repeat left;
+      padding: 3px 0 3px 21px;
     }
   }
-  
-
 }
 
 .properties-list {
-  margin-top: 40px;
+  margin-top: 47px;
   
   ul {
     li {
@@ -347,7 +453,6 @@ body {
       list-style: none;
       position: relative;
       padding: 5px 0 10px 5px;
-      outline: 1px solid green;
       float: left;
 
       .project-background {
@@ -381,6 +486,7 @@ body {
           vertical-align: middle;
           position: relative;
           top: 14px; left: 0;
+          text-shadow: 1px 1px 1px rgba(0,0,0,.5);
 
           &.green { background: $ribbon_green; }
           &.yellow { background: $ribbon_yellow; }
@@ -415,6 +521,7 @@ body {
       .event-container {
         width: 217px;
         position: relative;
+        cursor: pointer; cursor: hand;
 
         .event-image {
           width: 217px;
@@ -521,6 +628,7 @@ body {
       
       .avatar-image {}
       .avatar-name {
+        padding-top: 10px;
         color: $title_purple;
         font-size: 16px;
         font-weight: 700;
@@ -543,6 +651,7 @@ body {
   .bottom-schedule-a-viewing {
     width: 280px;
     height: 240px;
+    margin: 0 10px;
     color: $white;
     font-size: 24px;
     font-weight: 500;
@@ -556,10 +665,12 @@ body {
   .bottom-property-map {
     width: 398px;
     height: 240px;
+    margin: 0 10px;
     background: $white;
     float: left;
   }
   .bottom-social-buttons {
+    margin-left: 8px;
     text-align: left;
     float: left;
     
@@ -568,13 +679,12 @@ body {
     }
     
     .button {
-      width: 200px;
+      width: 190px;
       height: 30px;
       padding: 10px 0 3px 40px;
       color: $white;
       font-size: 11px;
       font-family: Arial, sans-serif;
-      outline: 1px solid red;
       
       &.facebook { background: url('/images/button_facebook.png') no-repeat; }
       &.twitter { background: url('/images/button_twitter.png') no-repeat; }
@@ -588,7 +698,6 @@ body {
     text-align: center;
     vertical-align: middle;
     float: left;
-    outline: 1px solid yellow;
     
     a {
       text-decoration: none;
@@ -632,7 +741,7 @@ body {
 
 
 .projects-list {
-  padding: 0 20px;
+  padding: 0 30px;
   float: left;
   
   span.title {
@@ -656,7 +765,7 @@ body {
       .project-foreground {
         position: absolute;
         top: 70px;
-        left: 0;
+        left: -2px;
         vertical-align: top;
         z-index: 200;
         
@@ -677,6 +786,7 @@ body {
           position: relative;
           top: 8px; left: 0;
           float: left;
+          text-shadow: 1px 1px 1px rgba(0,0,0,.5);
           
           &.green { background: $ribbon_green; }
           &.yellow { background: $ribbon_yellow; }
@@ -721,7 +831,7 @@ body {
     color: $white;
     
     p.are-you {
-      padding: 10px 15px;
+      padding: 10px 15px 5px 15px;
     }
     
     .social-icons {
@@ -765,7 +875,8 @@ body {
       }
       
       .pressitem-title {
-        width: 465px;
+        width: 450px;
+        padding-left: 15px;
         font-size: 22px;
         font-weight: 700;
         font-family: $museo;
@@ -799,13 +910,16 @@ body {
 
 .schedule-a-viewing {
   
-  span.title {
-    &.tiny {
+  .indicates {
+    padding: 7px 0;
+    margin-bottom: 26px;
+    span.title.tiny {
       font-size: 15px;
     }
   }
   
   p.title {
+    margin: 8px 0;
     font-size: 23px;
     font-weight: 300;
     font-family: $museo;
@@ -816,9 +930,26 @@ body {
     font-size: 19px;
     font-family: $helvetica;
     
+    input[type="text"], 
+    input[type="email"],
+    input[type="number"],
+    select {
+      font-size: 13px;
+      padding: 0 10px;
+    }
+    
+    textarea {
+      font-size: 13px;
+      padding: 10px;
+    }
+    
     .group-info {
       input {
-        width: 250px;
+        width: 248px;
+        height: 30px;
+        margin: 8px 0;
+        border: 1px solid #d3d3d3;
+        @include rounded-borders(3px);
         
         &:nth-child(even) {
           margin-left: 5px;
@@ -831,11 +962,19 @@ body {
     
     .group-contact {
       text-align: center;
+      
+      span:not(:first-child) {
+        margin-left: 5px;
+      }
     }
     
     .group-criteria {
       select {
-        width: 250px;
+        width: 248px;
+        height: 30px;
+        margin: 8px 0;
+        border: 1px solid #d3d3d3;
+        @include rounded-borders(3px);
         
         &:nth-child(even) {
           margin-left: 5px;
@@ -847,34 +986,63 @@ body {
     }
     
     .group-hear {
+      
       text-align: left;
-      input {
+      .control {
         margin-left: 70px;
+        float: left;
       }
       clear: both;
     }
     
     .group-who {
+      display: none;
       input {
         width: 100%;
+        height: 30px;
+        margin: 8px 0;
       }
     }
     
     .group-textarea {
       textarea {
         width: 100%;
+        height: 100px;
+        margin: 8px 0;
       }
     }
-      
     
+    table.group-option {
+      color: $white;
+      td {
+        padding-right: 10px;
+        line-height: 16px;
+        vertical-align: top;
+      }
+    }
+    
+    .group-submit {
+      width: 166px;
+      height: 53px;
+      margin: 0 auto;
+      color: $sendbutton;
+      font-size: 18px;
+      font-family: $helvetica;
+      text-align: center;
+      line-height: 53px;
+      vertical-align: middle;
+      background: url("/images/sendbutton.png") no-repeat;
+      cursor: hand;
+    }
+
     p {
       text-align: center;
     }
   
     .line {
       width: 520px;
-      height: 20px; //above line
-      margin-top: 20px; //below line
+      height: 6px; //below line
+      margin-top: 8px; //above line
       border-top: 1px solid rgba(255, 255, 255, .38);
     }
   }
@@ -890,7 +1058,7 @@ body {
   min-width: $main_width;
   background: $dark_purple;
   position: relative;
-  z-index: 10;
+  z-index: 9999;
   
   .footer-wrap {
     width: 100%;
@@ -906,13 +1074,25 @@ body {
       font-family: $helvetica;
       line-height: 120%;
     
-      .footer-column {
-        width: 30%;
-        padding: 0 10px;
+      .footer-column1 {
+        width: 280px;
+        padding-left: 40px;
         float: left;
       
-        &:first-child { margin-left: 30px; }
-        &:last-child { margin-right: 30px; }
+//         &:first-child { margin-left: 30px; }
+//         &:last-child { margin-right: 30px; }
+      }
+      
+      .footer-column2 {
+        width: 340px;
+        padding-left: 20px;
+        float: left;
+      }
+      
+      .footer-column3 {
+        width: 280px;
+        padding-left: 20px;
+        float: left;
       }
     
       .footer-row {
@@ -927,7 +1107,7 @@ body {
   #tenant-links {
     position: absolute;
     top: -33px;
-//     top: -157px;
+//     top: -157px; up state
     left: 40px;
     z-index: 20;
 
@@ -942,6 +1122,7 @@ body {
       line-height: 34px;
       vertical-align: middle;
       background: url('/images/bg_tenant.jpg') repeat-x;
+      cursor: pointer;
     }
 
     ul {
@@ -1013,11 +1194,6 @@ body {
 }
 
 
-
-
-
-
-
 .carousel {
   width: 600px;
   height: 280px;
@@ -1026,9 +1202,22 @@ body {
   position: relative;
 
   .carousel-images {
+//     width: 600px;
+//     height: 280px;
+    background: black;
     position: relative;
     top: 14px;
     left: 8px;
+    
+    .item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      &.item-1 {
+        display: block;
+      }
+    }
   }
 
   #prev-slide {
@@ -1044,10 +1233,13 @@ body {
   
   .carousel-title {
     position: absolute;
-    left: 8px;
+    left: 1px;
     bottom: 13px;
     
     span.title {
+      font-size: 43px;
+      font-weight: 100;
+      font-family: $museo;
       &.yellow { background: rgba(248, 175, 0, .77); }
       &.black { background: rgba(0, 0, 0, .77); }
       // others
@@ -1062,8 +1254,8 @@ body {
 }
 
 .clients {
-  width: 310px;
-  padding: 120px 20px;
+  width: 250px;
+  padding: 120px 40px;
   float: left;
 
   span.title {

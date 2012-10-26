@@ -2,59 +2,43 @@
   .content-left.about
     %span.title.black
       Live Work Lofts is...
-      
-    %p
-      %span.title.blue
-        A creative community.
-    %p.body
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vest rutrum, ante at pretium hendrerit, doloris ullamcorper diam, volutpat diam odio ac lacus s. Morbi lobortis tempor dolor, eu pulvinar velit accumsan vel.
-    %br
+    
+    .about-body  
+      %p
+        %span.title.blue
+          A creative community.
+      %p.body
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vest rutrum, ante at pretium hendrerit, doloris ullamcorper diam, volutpat diam odio ac lacus s. Morbi lobortis tempor dolor, eu pulvinar velit accumsan vel.
+      %br
 
-    %p
-      %span.title.yellow
-        100% TAX DEDUCTIBLE
-    %p.body
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vest rutrum, ante at pretium hendrerit, doloris ullamcorper diam, volutpat diam odio ac lacus s. Morbi lobortis tempor dolor, eu pulvinar velit accumsan vel.
-    %br
+      %p
+        %span.title.yellow
+          100% TAX DEDUCTIBLE
+      %p.body
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vest rutrum, ante at pretium hendrerit, doloris ullamcorper diam, volutpat diam odio ac lacus s. Morbi lobortis tempor dolor, eu pulvinar velit accumsan vel.
+      %br
     
-    %p
-      %span.title.red
-        MODERN SPACES
-    %p.body
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vest rutrum, ante at pretium hendrerit, doloris ullamcorper diam, volutpat diam odio ac lacus s. Morbi lobortis tempor dolor, eu pulvinar velit accumsan vel.
-    %br
+      %p
+        %span.title.red
+          MODERN SPACES
+      %p.body
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vest rutrum, ante at pretium hendrerit, doloris ullamcorper diam, volutpat diam odio ac lacus s. Morbi lobortis tempor dolor, eu pulvinar velit accumsan vel.
+      %br
     
-    %p
-      %span.title.purple
-        FRIENDLY, AVAILABLE STAFF
-    %p.body
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vest rutrum, ante at pretium hendrerit, doloris ullamcorper diam, volutpat diam odio ac lacus s. Morbi lobortis tempor dolor, eu.
+      %p
+        %span.title.purple
+          FRIENDLY, AVAILABLE STAFF
+      %p.body
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vest rutrum, ante at pretium hendrerit, doloris ullamcorper diam, volutpat diam odio ac lacus s. Morbi lobortis tempor dolor, eu.
         
-    .avatar
-      %ul
-        %li
-          %img.avatar-img{src: "/images/avatar.jpg"}
-          %p.avatar-name
-            Rad Name
-          %p.avatar-desc
-            Title Goes Here
-        %li
-          %img.avatar-img{src: "/images/avatar.jpg"}
-          %p.avatar-name
-            Rad Name
-          %p.avatar-desc
-            Title Goes Here
-        %li
-          %img.avatar-img{src: "/images/avatar.jpg"}
-          %p.avatar-name
-            Rad Name
-          %p.avatar-desc
-            Title Goes Here
-        %li
-          %img.avatar-img{src: "/images/avatar.jpg"}
-          %p.avatar-name
-            Rad Name
-          %p.avatar-desc
-            Title Goes Here
+      .avatar
+        %ul
+          - data.staff.each do |s|
+            %li
+              %img.avatar-img{src: s.image}
+              %p.avatar-name
+                = s.name
+              %p.avatar-desc
+                = s.title
     
   = partial "shared/projects"

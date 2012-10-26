@@ -1,0 +1,1197 @@
+/* === Colors and shit === */
+/* === mixins === */
+/* === Helpers and ish === */
+/* line 61, style.css.scss */
+.f8 {
+  font-size: 8px; }
+
+/* line 62, style.css.scss */
+.f9 {
+  font-size: 9px; }
+
+/* line 63, style.css.scss */
+.f10 {
+  font-size: 10px; }
+
+/* line 64, style.css.scss */
+.f11 {
+  font-size: 11px; }
+
+/* line 65, style.css.scss */
+.f12 {
+  font-size: 12px; }
+
+/* line 66, style.css.scss */
+.f13 {
+  font-size: 13px; }
+
+/* line 67, style.css.scss */
+.f14 {
+  font-size: 14px; }
+
+/* line 68, style.css.scss */
+.f15 {
+  font-size: 15px; }
+
+/* line 69, style.css.scss */
+.f16 {
+  font-size: 16px; }
+
+/* line 70, style.css.scss */
+.blocky {
+  display: block; }
+
+/* line 71, style.css.scss */
+.underline {
+  text-decoration: underline; }
+
+/* line 72, style.css.scss */
+.fbold {
+  font-weight: bold; }
+
+/* line 73, style.css.scss */
+.fblue {
+  color: #5cacc1; }
+
+/* line 74, style.css.scss */
+.fyellow {
+  color: #f8af00; }
+
+/* line 76, style.css.scss */
+h2 {
+  padding: 4px 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  display: inline;
+  background: black; }
+
+/* line 85, style.css.scss */
+p {
+  margin: 0;
+  padding: 0; }
+
+/* line 90, style.css.scss */
+a {
+  text-decoration: none; }
+  /* line 93, style.css.scss */
+  a.underline {
+    text-decoration: underline; }
+  /* line 97, style.css.scss */
+  a.link-yellow {
+    color: #f8af00; }
+  /* line 105, style.css.scss */
+  a.link-blue {
+    color: #5cacc1; }
+
+/* line 114, style.css.scss */
+span.title {
+  padding: 3px 5px;
+  color: white;
+  font-size: 43px;
+  font-weight: 100;
+  font-family: "museo-sans", Helvetica, Arial, sans-serif; }
+  /* line 121, style.css.scss */
+  span.title.green {
+    background: #8a9b0f; }
+  /* line 122, style.css.scss */
+  span.title.yellow {
+    background: #f8af00; }
+  /* line 123, style.css.scss */
+  span.title.red {
+    background: #d53f4d; }
+  /* line 124, style.css.scss */
+  span.title.purple {
+    background: #d24dff; }
+  /* line 125, style.css.scss */
+  span.title.blue {
+    background: #5cacc1; }
+  /* line 126, style.css.scss */
+  span.title.orange {
+    background: #f86f00; }
+  /* line 127, style.css.scss */
+  span.title.black {
+    background: #0d0d0d; }
+
+/* line 131, style.css.scss */
+p.title.green {
+  background: #8a9b0f; }
+/* line 132, style.css.scss */
+p.title.yellow {
+  background: #f8af00; }
+/* line 133, style.css.scss */
+p.title.red {
+  background: #d53f4d; }
+/* line 134, style.css.scss */
+p.title.purple {
+  background: #d24dff; }
+/* line 135, style.css.scss */
+p.title.blue {
+  background: #5cacc1; }
+/* line 136, style.css.scss */
+p.title.orange {
+  background: #f86f00; }
+/* line 137, style.css.scss */
+p.title.black {
+  background: #0d0d0d; }
+
+/* line 140, style.css.scss */
+ul {
+  margin: 0;
+  padding: 0; }
+  /* line 143, style.css.scss */
+  ul li {
+    margin: 0;
+    padding: 0; }
+
+/* line 149, style.css.scss */
+input[type='checkbox'] {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d3d3d3;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px; }
+
+/* line 156, style.css.scss */
+.fulljustify {
+  text-align: justify; }
+
+/* line 159, style.css.scss */
+.fulljustify:after {
+  content: "";
+  display: inline-block;
+  width: 100%; }
+
+/* line 166, style.css.scss */
+.checkbox input {
+  display: none; }
+/* line 169, style.css.scss */
+.checkbox span {
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  background: url("/images/cb_unchecked.png") no-repeat; }
+/* line 179, style.css.scss */
+.checkbox input:checked + span {
+  background: url("/images/cb_checked.png") no-repeat; }
+
+/* line 185, style.css.scss */
+.radio input {
+  display: none; }
+/* line 188, style.css.scss */
+.radio span {
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  background: url("/images/rad_unselected.png") no-repeat; }
+/* line 196, style.css.scss */
+.radio input:checked + span {
+  background: url("/images/rad_selected.png") no-repeat; }
+
+/* === Layout === */
+/* line 203, style.css.scss */
+html, body {
+  height: 100%; }
+
+/* line 212, style.css.scss */
+body {
+  overflow-y: auto; }
+
+/* line 214, style.css.scss */
+body {
+  width: 100%;
+  background: url("/images/bg.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1; }
+
+/* line 223, style.css.scss */
+#bg-gradient {
+  width: 100%;
+  min-width: 1020px;
+  height: 285px;
+  position: absolute;
+  top: 330px;
+  background: url("/images/bg_gradient.png") repeat-x;
+  z-index: 2; }
+
+/* line 233, style.css.scss */
+#minsize {
+  width: 100%;
+  min-width: 1020px;
+  position: relative; }
+  /* line 238, style.css.scss */
+  #minsize #bg-solid {
+    width: 100%;
+    position: absolute;
+    top: 615px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #261c1f;
+    z-index: 5; }
+
+/* line 250, style.css.scss */
+#content-wrapper {
+  width: 1020px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -255px;
+  position: relative;
+  z-index: 300; }
+
+/* line 260, style.css.scss */
+#header {
+  color: white;
+  width: 1020px; }
+  /* line 264, style.css.scss */
+  #header #logo {
+    padding: 35px 0 0 31px;
+    position: relative;
+    float: left; }
+  /* line 270, style.css.scss */
+  #header #navigation {
+    margin: 44px 0 0 40px;
+    float: left; }
+    /* line 274, style.css.scss */
+    #header #navigation ul {
+      margin-right: 12px;
+      float: left; }
+      /* line 278, style.css.scss */
+      #header #navigation ul li {
+        margin-bottom: 10px;
+        list-style: none; }
+        /* line 282, style.css.scss */
+        #header #navigation ul li a, #header #navigation ul li a:visited {
+          padding: 0px 4px 2px 4px;
+          color: white;
+          font-size: 14px;
+          font-weight: bold;
+          font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+          text-decoration: none;
+          background: black; }
+  /* line 299, style.css.scss */
+  #header #social {
+    margin: 45px 17px 0 0;
+    float: right; }
+    /* line 303, style.css.scss */
+    #header #social .social-icons {
+      height: 30px;
+      clear: both; }
+      /* line 307, style.css.scss */
+      #header #social .social-icons .icon {
+        padding-right: 10px;
+        float: left; }
+    /* line 313, style.css.scss */
+    #header #social .contact {
+      float: left; }
+      /* line 316, style.css.scss */
+      #header #social .contact p {
+        margin: 0;
+        padding-right: 20px;
+        font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; }
+        /* line 321, style.css.scss */
+        #header #social .contact p.office {
+          font-size: 14px;
+          line-height: 14px; }
+        /* line 325, style.css.scss */
+        #header #social .contact p.phone-number {
+          font-size: 26px;
+          font-weight: bold;
+          line-height: 26px; }
+
+/* line 335, style.css.scss */
+.content {
+  padding: 55px 30px 40px 30px; }
+  /* line 338, style.css.scss */
+  .content .content-left {
+    float: left;
+    color: white; }
+    /* line 348, style.css.scss */
+    .content .content-left p.body {
+      padding: 15px 5px;
+      font-size: 19px;
+      font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; }
+    /* line 354, style.css.scss */
+    .content .content-left.home {
+      width: 394px;
+      padding: 180px 10px 0 10px; }
+    /* line 358, style.css.scss */
+    .content .content-left.our-properties {
+      width: 960px; }
+    /* line 361, style.css.scss */
+    .content .content-left.our-properties-detail {
+      width: 600px;
+      padding: 0 3px; }
+      /* line 365, style.css.scss */
+      .content .content-left.our-properties-detail p.body {
+        margin-left: 7px;
+        font-size: 16px;
+        line-height: 24px; }
+    /* line 371, style.css.scss */
+    .content .content-left.about {
+      width: 590px;
+      padding: 0 10px; }
+      /* line 375, style.css.scss */
+      .content .content-left.about .about-body {
+        padding-top: 55px; }
+        /* line 378, style.css.scss */
+        .content .content-left.about .about-body p.body {
+          padding-top: 20px;
+          padding-bottom: 25px;
+          font-size: 16px;
+          line-height: 24px; }
+    /* line 386, style.css.scss */
+    .content .content-left.film-here {
+      width: 600px;
+      padding: 0 3px; }
+      /* line 390, style.css.scss */
+      .content .content-left.film-here .carousel {
+        margin-left: -5px;
+        margin-bottom: 0px; }
+      /* line 395, style.css.scss */
+      .content .content-left.film-here p.body {
+        font-size: 16px;
+        line-height: 24px; }
+    /* line 400, style.css.scss */
+    .content .content-left.faq {
+      width: 600px; }
+      /* line 403, style.css.scss */
+      .content .content-left.faq .faq-list {
+        padding-top: 55px; }
+        /* line 405, style.css.scss */
+        .content .content-left.faq .faq-list span.title {
+          padding: 1px 5px;
+          font-size: 19px;
+          font-weight: bold;
+          font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+          line-height: 28px; }
+        /* line 413, style.css.scss */
+        .content .content-left.faq .faq-list p.body {
+          padding-bottom: 30px;
+          font-size: 16px;
+          line-height: 24px; }
+
+/* line 424, style.css.scss */
+.property-detail {
+  margin-top: -7px; }
+  /* line 427, style.css.scss */
+  .property-detail span.title {
+    margin: 0 7px;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; }
+  /* line 434, style.css.scss */
+  .property-detail ul {
+    padding: 15px 5px 25px 5px; }
+    /* line 436, style.css.scss */
+    .property-detail ul li {
+      list-style: none;
+      margin-left: 10px;
+      font-size: 16px;
+      font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+      line-height: 24px;
+      vertical-align: bottom;
+      background: url("/images/list_bullet.png") no-repeat left;
+      padding: 3px 0 3px 21px; }
+
+/* line 450, style.css.scss */
+.properties-list {
+  margin-top: 47px; }
+  /* line 454, style.css.scss */
+  .properties-list ul li {
+    height: 150px;
+    list-style: none;
+    position: relative;
+    padding: 5px 0 10px 5px;
+    float: left; }
+    /* line 461, style.css.scss */
+    .properties-list ul li .project-background {
+      padding-left: 5px;
+      z-index: 100;
+      position: relative;
+      top: 0;
+      left: 0; }
+    /* line 468, style.css.scss */
+    .properties-list ul li .project-foreground {
+      vertical-align: top;
+      z-index: 200;
+      position: absolute;
+      top: 90px;
+      left: 0; }
+      /* line 475, style.css.scss */
+      .properties-list ul li .project-foreground .ribbon-end {
+        float: left;
+        margin-right: -2px; }
+      /* line 480, style.css.scss */
+      .properties-list ul li .project-foreground .ribbon {
+        height: 40px;
+        padding: 0 10px;
+        float: left;
+        color: white;
+        font-size: 24px;
+        font-weight: 300;
+        font-family: "museo-sans", Helvetica, Arial, sans-serif;
+        line-height: 40px;
+        vertical-align: middle;
+        position: relative;
+        top: 14px;
+        left: 0;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+        /* line 494, style.css.scss */
+        .properties-list ul li .project-foreground .ribbon.green {
+          background: #8a9b0f; }
+        /* line 495, style.css.scss */
+        .properties-list ul li .project-foreground .ribbon.yellow {
+          background: #f8af00; }
+        /* line 496, style.css.scss */
+        .properties-list ul li .project-foreground .ribbon.red {
+          background: #d53f4d; }
+        /* line 497, style.css.scss */
+        .properties-list ul li .project-foreground .ribbon.purple {
+          background: #d24dff; }
+        /* line 498, style.css.scss */
+        .properties-list ul li .project-foreground .ribbon.blue {
+          background: #5cacc1; }
+        /* line 499, style.css.scss */
+        .properties-list ul li .project-foreground .ribbon.black {
+          background: #1e1e1e; }
+
+/* line 506, style.css.scss */
+.events-list {
+  margin-top: 30px; }
+  /* line 508, style.css.scss */
+  .events-list.first {
+    margin-top: 55px; }
+  /* line 512, style.css.scss */
+  .events-list span.title {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; }
+  /* line 519, style.css.scss */
+  .events-list ul li {
+    padding: 25px 22px 25px 0;
+    display: inline-block;
+    float: left; }
+    /* line 524, style.css.scss */
+    .events-list ul li .event-container {
+      width: 217px;
+      position: relative;
+      cursor: pointer;
+      cursor: hand; }
+      /* line 529, style.css.scss */
+      .events-list ul li .event-container .event-image {
+        width: 217px;
+        height: 150px;
+        position: relative;
+        top: 0;
+        left: 0;
+        overflow: hidden; }
+      /* line 537, style.css.scss */
+      .events-list ul li .event-container .event-image-overlay {
+        display: none;
+        width: 217px;
+        height: 150px;
+        color: white;
+        font-size: 66px;
+        font-weight: 100;
+        font-family: "museo-sans", Helvetica, Arial, sans-serif;
+        text-align: center;
+        line-height: 150px;
+        vertical-align: middle;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden; }
+      /* line 553, style.css.scss */
+      .events-list ul li .event-container .event-detail {
+        background: #050505; }
+        /* line 556, style.css.scss */
+        .events-list ul li .event-container .event-detail .event-detail-date {
+          width: 50px;
+          height: 60px;
+          padding: 12px 0 0 15px;
+          color: white;
+          float: left; }
+          /* line 564, style.css.scss */
+          .events-list ul li .event-container .event-detail .event-detail-date p.event-detail-date-day {
+            font-size: 35px;
+            line-height: 35px; }
+          /* line 568, style.css.scss */
+          .events-list ul li .event-container .event-detail .event-detail-date p.event-detail-date-month {
+            font-size: 22px;
+            line-height: 16px; }
+        /* line 575, style.css.scss */
+        .events-list ul li .event-container .event-detail .event-detail-description {
+          width: 150px;
+          padding-top: 13px;
+          padding-bottom: 13px;
+          float: left; }
+          /* line 581, style.css.scss */
+          .events-list ul li .event-container .event-detail .event-detail-description p.event-detail-title {
+            color: #d24dff;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; }
+            /* line 587, style.css.scss */
+            .events-list ul li .event-container .event-detail .event-detail-description p.event-detail-title.past {
+              color: #f8af00; }
+          /* line 592, style.css.scss */
+          .events-list ul li .event-container .event-detail .event-detail-description span {
+            color: white;
+            font-size: 11px;
+            line-height: 11px;
+            font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; }
+      /* line 603, style.css.scss */
+      .events-list ul li .event-container.upcoming:hover .event-image-overlay, .events-list ul li .event-container.upcoming.active .event-image-overlay {
+        display: block;
+        background: rgba(210, 77, 255, 0.76); }
+      /* line 608, style.css.scss */
+      .events-list ul li .event-container.upcoming:hover .event-detail, .events-list ul li .event-container.upcoming.active .event-detail {
+        background: white; }
+        /* line 611, style.css.scss */
+        .events-list ul li .event-container.upcoming:hover .event-detail .event-detail-date, .events-list ul li .event-container.upcoming.active .event-detail .event-detail-date {
+          color: #d24dff; }
+        /* line 615, style.css.scss */
+        .events-list ul li .event-container.upcoming:hover .event-detail span, .events-list ul li .event-container.upcoming.active .event-detail span {
+          color: black; }
+
+/* line 628, style.css.scss */
+.avatar ul li {
+  display: inline-block;
+  margin-right: 17px; }
+  /* line 633, style.css.scss */
+  .avatar ul li .avatar-name {
+    padding-top: 10px;
+    color: #d24dff;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "museo-sans", Helvetica, Arial, sans-serif; }
+  /* line 640, style.css.scss */
+  .avatar ul li .avatar-desc {
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: italic;
+    font-family: "museo-sans", Helvetica, Arial, sans-serif; }
+
+/* line 651, style.css.scss */
+.bottom {
+  clear: both; }
+  /* line 654, style.css.scss */
+  .bottom .bottom-schedule-a-viewing {
+    width: 280px;
+    height: 240px;
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: "museo-sans", Helvetica, Arial, sans-serif;
+    text-align: center;
+    line-height: 240px;
+    vertical-align: middle;
+    background: #f8af00;
+    float: left; }
+  /* line 668, style.css.scss */
+  .bottom .bottom-property-map {
+    width: 398px;
+    height: 240px;
+    margin: 0 10px;
+    background: white;
+    float: left; }
+  /* line 675, style.css.scss */
+  .bottom .bottom-social-buttons {
+    margin-left: 8px;
+    text-align: left;
+    float: left; }
+    /* line 680, style.css.scss */
+    .bottom .bottom-social-buttons a {
+      text-decoration: none; }
+    /* line 684, style.css.scss */
+    .bottom .bottom-social-buttons .button {
+      width: 190px;
+      height: 30px;
+      padding: 10px 0 3px 40px;
+      color: white;
+      font-size: 11px;
+      font-family: Arial, sans-serif; }
+      /* line 692, style.css.scss */
+      .bottom .bottom-social-buttons .button.facebook {
+        background: url("/images/button_facebook.png") no-repeat; }
+      /* line 693, style.css.scss */
+      .bottom .bottom-social-buttons .button.twitter {
+        background: url("/images/button_twitter.png") no-repeat; }
+      /* line 694, style.css.scss */
+      .bottom .bottom-social-buttons .button.yelp {
+        background: url("/images/button_yelp.png") no-repeat; }
+  /* line 698, style.css.scss */
+  .bottom .bottom-box {
+    width: 300px;
+    font-size: 24px;
+    text-align: center;
+    vertical-align: middle;
+    float: left; }
+    /* line 705, style.css.scss */
+    .bottom .bottom-box a {
+      text-decoration: none; }
+    /* line 709, style.css.scss */
+    .bottom .bottom-box .bottom-box-square {
+      width: 280px;
+      height: 240px;
+      margin: 0 10px;
+      color: white;
+      font-size: 24px;
+      font-weight: 500;
+      font-family: "museo-sans", Helvetica, Arial, sans-serif;
+      text-align: center;
+      line-height: 240px;
+      vertical-align: middle;
+      background: #f8af00; }
+      /* line 714, style.css.scss */
+      .bottom .bottom-box .bottom-box-square.green {
+        background: #8a9b0f; }
+      /* line 715, style.css.scss */
+      .bottom .bottom-box .bottom-box-square.yellow {
+        background: #f8af00; }
+      /* line 716, style.css.scss */
+      .bottom .bottom-box .bottom-box-square.red {
+        background: #d53f4d; }
+      /* line 717, style.css.scss */
+      .bottom .bottom-box .bottom-box-square.purple {
+        background: #d24dff; }
+      /* line 718, style.css.scss */
+      .bottom .bottom-box .bottom-box-square.blue {
+        background: #5cacc1; }
+      /* line 719, style.css.scss */
+      .bottom .bottom-box .bottom-box-square.orange {
+        background: #f86f00; }
+      /* line 720, style.css.scss */
+      .bottom .bottom-box .bottom-box-square.black {
+        background: #1e1e1e; }
+    /* line 723, style.css.scss */
+    .bottom .bottom-box .bottom-box-button {
+      width: 280px;
+      height: 82px;
+      margin: 0 10px;
+      color: white;
+      font-size: 24px;
+      font-weight: 500;
+      font-family: "museo-sans", Helvetica, Arial, sans-serif;
+      text-align: center;
+      line-height: 82px;
+      vertical-align: middle;
+      background: #f8af00; }
+      /* line 728, style.css.scss */
+      .bottom .bottom-box .bottom-box-button.green {
+        background: #8a9b0f; }
+      /* line 729, style.css.scss */
+      .bottom .bottom-box .bottom-box-button.yellow {
+        background: #f8af00; }
+      /* line 730, style.css.scss */
+      .bottom .bottom-box .bottom-box-button.red {
+        background: #d53f4d; }
+      /* line 731, style.css.scss */
+      .bottom .bottom-box .bottom-box-button.purple {
+        background: #d24dff; }
+      /* line 732, style.css.scss */
+      .bottom .bottom-box .bottom-box-button.blue {
+        background: #5cacc1; }
+      /* line 733, style.css.scss */
+      .bottom .bottom-box .bottom-box-button.orange {
+        background: #f86f00; }
+      /* line 734, style.css.scss */
+      .bottom .bottom-box .bottom-box-button.black {
+        background: #1e1e1e; }
+    /* line 737, style.css.scss */
+    .bottom .bottom-box p.bottom-box-body {
+      margin: 0 10px;
+      padding: 30px 0;
+      color: white;
+      font-size: 16px;
+      text-align: left; }
+
+/* line 746, style.css.scss */
+.projects-list {
+  padding: 0 30px;
+  float: left; }
+  /* line 750, style.css.scss */
+  .projects-list span.title {
+    font-size: 21px;
+    margin: 0 0 0 5px; }
+  /* line 755, style.css.scss */
+  .projects-list ul {
+    padding-top: 2px; }
+    /* line 757, style.css.scss */
+    .projects-list ul li {
+      list-style: none;
+      position: relative;
+      padding: 1px 0 0 5px; }
+      /* line 762, style.css.scss */
+      .projects-list ul li .project-background {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 100; }
+      /* line 768, style.css.scss */
+      .projects-list ul li .project-foreground {
+        position: absolute;
+        top: 70px;
+        left: -2px;
+        vertical-align: top;
+        z-index: 200; }
+        /* line 775, style.css.scss */
+        .projects-list ul li .project-foreground .ribbon-end {
+          float: left;
+          margin-right: -2px; }
+        /* line 780, style.css.scss */
+        .projects-list ul li .project-foreground .ribbon {
+          height: 24px;
+          padding: 0 5px;
+          color: white;
+          font-size: 15px;
+          font-weight: 300;
+          font-family: "museo-sans", Helvetica, Arial, sans-serif;
+          line-height: 24px;
+          vertical-align: middle;
+          position: relative;
+          top: 8px;
+          left: 0;
+          float: left;
+          text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); }
+          /* line 794, style.css.scss */
+          .projects-list ul li .project-foreground .ribbon.green {
+            background: #8a9b0f; }
+          /* line 795, style.css.scss */
+          .projects-list ul li .project-foreground .ribbon.yellow {
+            background: #f8af00; }
+          /* line 796, style.css.scss */
+          .projects-list ul li .project-foreground .ribbon.red {
+            background: #d53f4d; }
+          /* line 797, style.css.scss */
+          .projects-list ul li .project-foreground .ribbon.purple {
+            background: #d24dff; }
+          /* line 798, style.css.scss */
+          .projects-list ul li .project-foreground .ribbon.blue {
+            background: #5cacc1; }
+          /* line 799, style.css.scss */
+          .projects-list ul li .project-foreground .ribbon.black {
+            background: #1e1e1e; }
+
+/* line 806, style.css.scss */
+.status-feed {
+  padding: 0;
+  float: right; }
+  /* line 810, style.css.scss */
+  .status-feed span.title {
+    font-size: 21px;
+    margin-left: 15px; }
+  /* line 816, style.css.scss */
+  .status-feed ul li {
+    list-style: none;
+    width: 185px;
+    height: 66px;
+    padding: 23px 20px 10px 33px;
+    font-size: 12px;
+    line-height: 20px; }
+    /* line 824, style.css.scss */
+    .status-feed ul li.twitter {
+      background: url("/images/bg_social_tw.png"); }
+    /* line 827, style.css.scss */
+    .status-feed ul li.facebook {
+      background: url("/images/bg_social_fb.png"); }
+  /* line 833, style.css.scss */
+  .status-feed .social-buttons {
+    color: white; }
+    /* line 836, style.css.scss */
+    .status-feed .social-buttons p.are-you {
+      padding: 10px 15px 5px 15px; }
+    /* line 840, style.css.scss */
+    .status-feed .social-buttons .social-icons {
+      margin-left: 5px; }
+      /* line 843, style.css.scss */
+      .status-feed .social-buttons .social-icons img {
+        margin-left: 10px;
+        float: left; }
+
+/* line 853, style.css.scss */
+.press-list ul {
+  margin-top: 55px; }
+  /* line 855, style.css.scss */
+  .press-list ul li {
+    list-style: none;
+    width: 517px;
+    margin-bottom: 18px;
+    padding: 30px;
+    background: black; }
+    /* line 862, style.css.scss */
+    .press-list ul li .pressitem-date {
+      width: 50px;
+      height: 60px;
+      color: #5cacc1;
+      float: left; }
+      /* line 869, style.css.scss */
+      .press-list ul li .pressitem-date p.pressitem-date-day {
+        font-size: 35px;
+        line-height: 35px; }
+      /* line 873, style.css.scss */
+      .press-list ul li .pressitem-date p.pressitem-date-month {
+        font-size: 22px;
+        line-height: 16px; }
+    /* line 880, style.css.scss */
+    .press-list ul li .pressitem-title {
+      width: 450px;
+      padding-left: 15px;
+      font-size: 22px;
+      font-weight: 700;
+      font-family: "museo-sans", Helvetica, Arial, sans-serif;
+      float: left; }
+    /* line 889, style.css.scss */
+    .press-list ul li .pressitem-line {
+      width: 480px;
+      height: 22px;
+      margin: 0 auto 25px auto;
+      border-bottom: 1px solid white;
+      clear: both;
+      opacity: .7; }
+    /* line 898, style.css.scss */
+    .press-list ul li .pressitem-body {
+      font-size: 12px;
+      font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+      line-height: 200%;
+      clear: both; }
+      /* line 904, style.css.scss */
+      .press-list ul li .pressitem-body span.pressitem-location {
+        font-weight: bold; }
+
+/* line 916, style.css.scss */
+.schedule-a-viewing .indicates {
+  padding: 7px 0;
+  margin-bottom: 26px; }
+  /* line 919, style.css.scss */
+  .schedule-a-viewing .indicates span.title.tiny {
+    font-size: 15px; }
+/* line 924, style.css.scss */
+.schedule-a-viewing p.title {
+  margin: 8px 0;
+  font-size: 23px;
+  font-weight: 300;
+  font-family: "museo-sans", Helvetica, Arial, sans-serif; }
+/* line 931, style.css.scss */
+.schedule-a-viewing .schedule-form {
+  width: 520px;
+  font-size: 19px;
+  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; }
+  /* line 939, style.css.scss */
+  .schedule-a-viewing .schedule-form input[type="text"],
+  .schedule-a-viewing .schedule-form input[type="email"],
+  .schedule-a-viewing .schedule-form input[type="number"],
+  .schedule-a-viewing .schedule-form select {
+    font-size: 13px;
+    padding: 0 10px; }
+  /* line 944, style.css.scss */
+  .schedule-a-viewing .schedule-form textarea {
+    font-size: 13px;
+    padding: 10px; }
+  /* line 950, style.css.scss */
+  .schedule-a-viewing .schedule-form .group-info input {
+    width: 228px;
+    height: 30px;
+    margin: 8px 0;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px; }
+    /* line 957, style.css.scss */
+    .schedule-a-viewing .schedule-form .group-info input:nth-child(even) {
+      margin-left: 5px; }
+    /* line 960, style.css.scss */
+    .schedule-a-viewing .schedule-form .group-info input:nth-child(odd) {
+      margin-right: 10px; }
+  /* line 966, style.css.scss */
+  .schedule-a-viewing .schedule-form .group-contact {
+    text-align: center; }
+    /* line 969, style.css.scss */
+    .schedule-a-viewing .schedule-form .group-contact span:not(:first-child) {
+      margin-left: 5px; }
+  /* line 975, style.css.scss */
+  .schedule-a-viewing .schedule-form .group-criteria select {
+    width: 248px;
+    height: 30px;
+    margin: 8px 0;
+    border: 1px solid #d3d3d3;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px; }
+    /* line 982, style.css.scss */
+    .schedule-a-viewing .schedule-form .group-criteria select:nth-child(even) {
+      margin-left: 5px; }
+    /* line 985, style.css.scss */
+    .schedule-a-viewing .schedule-form .group-criteria select:nth-child(odd) {
+      margin-right: 10px; }
+  /* line 991, style.css.scss */
+  .schedule-a-viewing .schedule-form .group-hear {
+    text-align: left;
+    clear: both; }
+    .schedule-a-viewing .schedule-form .group-hear td {
+      width: 230px; }
+    /* line 994, style.css.scss */
+    .schedule-a-viewing .schedule-form .group-hear .control {
+      margin-left: 70px;
+      float: left; }
+  /* line 1001, style.css.scss */
+  .schedule-a-viewing .schedule-form .group-who {
+    display: none; }
+    /* line 1003, style.css.scss */
+    .schedule-a-viewing .schedule-form .group-who input {
+      width: 496px;
+      height: 30px;
+      margin: 8px 0; }
+  /* line 1011, style.css.scss */
+  .schedule-a-viewing .schedule-form .group-textarea textarea {
+    width: 498px;
+    height: 100px;
+    margin: 8px 0; }
+  /* line 1018, style.css.scss */
+  .schedule-a-viewing .schedule-form table.group-option {
+    color: white; }
+    /* line 1020, style.css.scss */
+    .schedule-a-viewing .schedule-form table.group-option td {
+      padding-right: 10px;
+      line-height: 16px;
+      vertical-align: top; }
+  /* line 1027, style.css.scss */
+  .schedule-a-viewing .schedule-form .group-submit {
+    width: 166px;
+    height: 53px;
+    margin: 0 auto;
+    color: #404040;
+    font-size: 18px;
+    font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+    text-align: center;
+    line-height: 53px;
+    vertical-align: middle;
+    background: url("/images/sendbutton.png") no-repeat;
+    cursor: pointer; cursor: hand; }
+  /* line 1041, style.css.scss */
+  .schedule-a-viewing .schedule-form p {
+    text-align: center; }
+  /* line 1045, style.css.scss */
+  .schedule-a-viewing .schedule-form .line {
+    width: 520px;
+    height: 6px;
+    margin-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.38); }
+
+.schedule-a-viewing .page-2 p.title {
+  width: 550px;
+  padding: 10px;
+  font-size: 19px;
+  font-weight: normal;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 1054, style.css.scss */
+#push, #footer {
+  height: 255px;
+  clear: both; }
+
+/* line 1059, style.css.scss */
+#footer {
+  width: 100%;
+  min-width: 1020px;
+  background: #0f0b0c;
+  position: relative;
+  z-index: 9999; }
+  /* line 1066, style.css.scss */
+  #footer .footer-wrap {
+    width: 100%;
+    background: #0f0b0c;
+    position: relative;
+    z-index: 1000; }
+    /* line 1072, style.css.scss */
+    #footer .footer-wrap .footer {
+      width: 1020px;
+      margin: 0 auto;
+      padding: 37px 0 0 0;
+      color: white;
+      font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
+      line-height: 120%; }
+      /* line 1080, style.css.scss */
+      #footer .footer-wrap .footer .footer-column1 {
+        width: 280px;
+        padding-left: 40px;
+        float: left; }
+      /* line 1089, style.css.scss */
+      #footer .footer-wrap .footer .footer-column2 {
+        width: 340px;
+        padding-left: 20px;
+        float: left; }
+      /* line 1095, style.css.scss */
+      #footer .footer-wrap .footer .footer-column3 {
+        width: 280px;
+        padding-left: 20px;
+        float: left; }
+      /* line 1101, style.css.scss */
+      #footer .footer-wrap .footer .footer-row {
+        width: 100%;
+        padding-top: 53px;
+        text-align: center;
+        clear: both; }
+  /* line 1110, style.css.scss */
+  #footer #tenant-links {
+    position: absolute;
+    top: -33px;
+    left: 40px;
+    z-index: 20; }
+    /* line 1117, style.css.scss */
+    #footer #tenant-links .tenant-title {
+      width: 120px;
+      height: 34px;
+      padding: 0 2px;
+      color: white;
+      font-size: 20px;
+      font-family: "museo-sans", Helvetica, Arial, sans-serif;
+      text-align: center;
+      line-height: 34px;
+      vertical-align: middle;
+      background: url("/images/bg_tenant.jpg") repeat-x;
+      cursor: pointer; }
+    /* line 1133, style.css.scss */
+    #footer #tenant-links ul li {
+      list-style: none;
+      width: 218px;
+      height: 37px;
+      padding: 0 0 0 15px;
+      background: #131313;
+      outline: 1px solid black;
+      border-top: 2px solid #1f1f1f;
+      border-bottom: 2px solid #1f1f1f;
+      border-left: 1px solid #1f1f1f;
+      border-right: 1px solid #1f1f1f;
+      cursor: hand; }
+      /* line 1141, style.css.scss */
+      #footer #tenant-links ul li:first-child {
+        border-top: 1px solid #1f1f1f; }
+      /* line 1147, style.css.scss */
+      #footer #tenant-links ul li a {
+        color: #d0d0d0;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        line-height: 37px;
+        vertical-align: middle; }
+      /* line 1156, style.css.scss */
+      #footer #tenant-links ul li:hover {
+        background: black; }
+        /* line 1158, style.css.scss */
+        #footer #tenant-links ul li:hover a {
+          color: #32ebfb; }
+  /* line 1166, style.css.scss */
+  #footer #hypelife {
+    height: 28px;
+    vertical-align: middle;
+    position: absolute;
+    top: -32px;
+    right: 0;
+    z-index: 9998;
+    text-transform: uppercase;
+    font-size: 10px; }
+  /* line 1177, style.css.scss */
+  #footer #hypelife:hover #popup {
+    display: block; }
+  /* line 1181, style.css.scss */
+  #footer #hypelife #popup {
+    color: #fff;
+    position: absolute;
+    top: -97px;
+    left: -130px;
+    width: 174px;
+    height: 78px;
+    padding: 20px 0 0 0;
+    background: url("/images/credits.png");
+    text-align: center;
+    display: none; }
+  /* line 1194, style.css.scss */
+  #footer #hypelife #popup a {
+    color: #fff; }
+
+/* line 1200, style.css.scss */
+.carousel {
+  width: 600px;
+  height: 280px;
+  margin-bottom: 20px;
+  background: url("/images/bg_carousel.png") no-repeat;
+  position: relative; }
+  /* line 1207, style.css.scss */
+  .carousel .carousel-images {
+    background: black;
+    position: relative;
+    top: 14px;
+    left: 8px; }
+    /* line 1215, style.css.scss */
+    .carousel .carousel-images .item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none; }
+      /* line 1220, style.css.scss */
+      .carousel .carousel-images .item.item-1 {
+        display: block; }
+  /* line 1226, style.css.scss */
+  .carousel #prev-slide {
+    position: absolute;
+    top: 120px;
+    left: 20px; }
+  /* line 1231, style.css.scss */
+  .carousel #next-slide {
+    position: absolute;
+    top: 120px;
+    right: 20px; }
+  /* line 1237, style.css.scss */
+  .carousel .carousel-title {
+    position: absolute;
+    left: 1px;
+    bottom: 13px; }
+    /* line 1242, style.css.scss */
+    .carousel .carousel-title span.title {
+      font-size: 43px;
+      font-weight: 100;
+      font-family: "museo-sans", Helvetica, Arial, sans-serif; }
+      /* line 1246, style.css.scss */
+      .carousel .carousel-title span.title.yellow {
+        background: rgba(248, 175, 0, 0.77); }
+      /* line 1247, style.css.scss */
+      .carousel .carousel-title span.title.black {
+        background: rgba(0, 0, 0, 0.77); }
+
+/* line 1253, style.css.scss */
+.films {
+  margin-top: 50px; }
+
+/* line 1259, style.css.scss */
+.clients {
+  width: 250px;
+  padding: 120px 40px;
+  float: left; }
+  /* line 1264, style.css.scss */
+  .clients span.title {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; }
+  /* line 1270, style.css.scss */
+  .clients ul {
+    margin-top: 20px; }
+    /* line 1273, style.css.scss */
+    .clients ul li {
+      padding: 10px;
+      list-style: none;
+      float: left; }
+      /* line 1278, style.css.scss */
+      .clients ul li img {
+        width: 100px; }

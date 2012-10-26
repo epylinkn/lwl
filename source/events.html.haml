@@ -12,7 +12,8 @@
           %li
             .event-container.upcoming
               .event-image
-                %img{src: e.image, alt: e.image_alt}
+                %a{href: e.link}
+                  %img{src: e.image, alt: e.image_alt}
               .event-image-overlay
                 RSVP
               .event-detail.clearfix

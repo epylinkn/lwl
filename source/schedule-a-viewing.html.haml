@@ -3,84 +3,183 @@
     .page-1
       %span.title.black
         Interested? Let's Chat!
-      %br
-      %span.title.black.tiny
-        *Indicates Required Field
         
-      .schedule-form
+      .indicates
+        %span.title.black.tiny
+          *Indicates Required Field
+      
+        
+      %form.schedule-form{method: "POST", action: "/schedule-a-viewing.php"}
       
         .group-info
-          %input#name
-          %input#email
-          %input#mobile_phone
-          %input#other_phone
+          %input#name{type: "text", placeholder: "Your name*"}
+          %input#email{type: "email", placeholder: "Your email*"}
+          %input#mobile_phone{type: "text", placeholder: "Phone (mobile)"}
+          %input#other_phone{type: "text", placeholder: "Phone (other)"}
         
         .line
         %p.title.green Best way to reach you:
         
         .group-contact
-          %input{type: "radio", name: "contact_method", value: "email"} Email
-          %input{type: "radio", name: "contact_method", value: "phone"} Phone
-          %input{type: "radio", name: "contact_method", value: "text"} Text Message
-        
+          %label.radio
+            %input#email{type: "radio", name: 'contact_method'}
+            %span
+          %label{:for => 'email'} Email
+
+          %label.radio
+            %input#phone{type: "radio", name: 'contact_method'}
+            %span
+          %label{:for => 'phone'} Phone
+
+          %label.radio
+            %input#text{type: "radio", name: 'contact_method'}
+            %span
+          %label{:for => 'text'} Text Message
+
         .line
         
         .group-criteria
           %select#square_footage
+            %option{:value => "", :selected => "selected"} Desired square footage
           %select#budget
+            %option{:value => "", :selected => "selected"} Budget
           %select#move_date
+            %option{:value => "", :selected => "selected"} Target move-in date
         
         .line
         
         %p.title.yellow Area you're looking in:
         
         .group-area.fulljustify
-          %input{type: "checkbox"} Close to downtown LA
-          %input{type: "checkbox"} Hollywood
-          %input{type: "checkbox"} Glendale
+          %label.checkbox
+            %input{type: "checkbox", name: 'downtownla'} 
+            %span
+          %label{:for => 'downtownla'} Close to downtown LA
+
+          %label.checkbox
+            %input{type: "checkbox", name: 'hollywood'} 
+            %span
+          %label{:for => 'hollywood'} Hollywood
+
+          %label.checkbox
+            %input{type: "checkbox", name: 'glendale'} 
+            %span
+          %label{:for => 'glendale'} Glendale
+          -# %input{type: "checkbox"} Hollywood
+          -# %input{type: "checkbox"} Glendale
           
         .line
         
         %p.title.red Looking for:
         
         .group-lease.fulljustify
-          %input{type: "checkbox"} Short-term lease
-          %input{type: "checkbox"} 1-year lease
-          %input{type: "checkbox"} Multi-year lease
+          %label.checkbox
+            %input{type: "checkbox", name: 'short'} 
+            %span
+          %label{:for => 'short'} Short-term lease
+          %label.checkbox
+            %input{type: "checkbox", name: 'one_year'} 
+            %span
+          %label{:for => 'one_year'} 1-year lease
+          %label.checkbox
+            %input{type: "checkbox", name: 'multi_year'} 
+            %span
+          %label{:for => 'multi_year'} Multi-year lease
+          -# %input{type: "checkbox"} Short-term lease
+          -# %input{type: "checkbox"} 1-year lease
+          -# %input{type: "checkbox"} Multi-year lease
           
         .line
         
         %p.title.purple Properties you're interested in:
         
         .group-lofts-1.fulljustify
-          %input{type: "checkbox"} Lacy Studio Lofts
-          %input{type: "checkbox"} Beverly Union Lofts
-          %input{type: "checkbox"} Spring
+          %label.checkbox
+            %input{type: "checkbox", name: 'lacy'} 
+            %span
+          %label{:for => 'lacy'} Lacy Studio Lofts
+          %label.checkbox
+            %input{type: "checkbox", name: 'beverly'} 
+            %span
+          %label{:for => 'beverly'} Beverly Union Lofts
+          %label.checkbox
+            %input{type: "checkbox", name: 'spring'} 
+            %span
+          %label{:for => 'spring'} Spring
+          -# %input{type: "checkbox"} Lacy Studio Lofts
+          -# %input{type: "checkbox"} Beverly Union Lofts
+          -# %input{type: "checkbox"} Spring
         .group-lofts-2.fulljustify
-          %input{type: "checkbox"} Cosmo Lofts
-          %input{type: "checkbox"} Melrose Studios
-          %input{type: "checkbox"} Seeley Studios
+          %label.checkbox
+            %input{type: "checkbox", name: 'cosmo'} 
+            %span
+          %label{:for => 'cosmo'} Cosmo Lofts
+          %label.checkbox
+            %input{type: "checkbox", name: 'melrose'} 
+            %span
+          %label{:for => 'melrose'} Melrose Studios
+          %label.checkbox
+            %input{type: "checkbox", name: 'seeley'} 
+            %span
+          %label{:for => 'seeley'} Seeley Studios
+          -# %input{type: "checkbox"} Cosmo Lofts
+          -# %input{type: "checkbox"} Melrose Studios
+          -# %input{type: "checkbox"} Seeley Studios
           
         .line
         
         %p.title.blue How did you hear about us?
         
         .group-hear
-          %input{type: "checkbox"} Search Engine
-          %input{type: "checkbox"} Tenant Referral
-        .group-hear
-          %input{type: "checkbox"} Craigslist.com
-          %input{type: "checkbox"} Advertisement
+          .control
+            %label.checkbox
+              %input#search{type: "checkbox", name: 'search'} 
+              %span
+            %label{:for => 'search'} Search Engine
+          .control
+            %label.checkbox
+              %input#referral{type: "checkbox", name: 'referral'} 
+              %span
+            %label{:for => 'referral'} Tenant Referral
+          -# %input{type: "checkbox"} Search Engine
+          -# %input{type: "checkbox"} Tenant Referral
+        .group-hear.clearfix
+          .control
+            %label.checkbox
+              %input#craigslist{type: "checkbox", name: 'craigslist'} 
+              %span
+            %label{:for => 'craigslist'} Craigslist.com
+          .control
+            %label.checkbox
+              %input#advertisement{type: "checkbox", name: 'advertisement'} 
+              %span
+            %label{:for => 'advertisement'} Advertisement
+          -# %input{type: "checkbox"} Craigslist.com
+          -# %input{type: "checkbox"} Advertisement
         
         .group-who
-          %input{type: "text"}
+          %input{type: "text", :placeholder => "Who referred you?"}
         
         .line
         
         .group-textarea
-          %textarea
+          %textarea{placeholder: "Anything else you’d like to mention?"}
+
+        %table.group-option
+          %tr
+            %td
+              %label.checkbox
+                %input{type: "checkbox", checked: 'checked', name: 'option'} 
+                %span
+            %td
+              %label.group-option-label{:for => 'option'}
+                %span.f12
+                  I'm ok with you sending me more information about upcoming events, news and updates related to our properties. I'm not ok with you selling my information to a third-party, and understand you know this is uncool too.
         
-        %input{type: "image", src: "/images/sendbutton.png", alt: "Send now"}
+        .group-submit
+          Send now
+          -# %input{type: "image", src: "/images/sendbutton.png", alt: "Send now"}
+          
       
     
     
