@@ -224,6 +224,9 @@ body {
 #minsize {
   width: 100%;
   min-width: 1020px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
   position: relative; }
   /* line 238, style.css.scss */
   #minsize #bg-solid {

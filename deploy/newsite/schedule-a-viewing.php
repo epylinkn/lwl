@@ -15,22 +15,26 @@ if (!empty($_POST['_submitted'])) {
   $form_errors = array();
   
   //validate fields
-  if(!empty($_POST['name'])) {
+  $name_default = "Your name*";
+  if(!empty($_POST['name']) && $_POST['name'] != $name_default) {
     array_push($mail_body, "<strong>Name:</strong> ".$_POST['name']);
   } else {
     array_push($form_errors, "Please enter your name.");
   }
-  if(!empty($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+  $email_default = "Your email*";
+  if(!empty($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) && $_POST['email'] != $email_default) {
     array_push($mail_body, "<strong>Email:</strong> ".$_POST['email']);
   } else {
     array_push($form_errors, "Please enter a valid email address.");
   }
   
   // phone numbers
-  if(!empty($_POST['mobile_phone'])) {
+  $mphone_default = "Phone (mobile)";
+  if(!empty($_POST['mobile_phone']) && $_POST['mobile_phone'] != $mphone_default) {
     array_push($mail_body, "<strong>Mobile Phone:</strong> ".$_POST['mobile_phone']);
-  }  
-  if(!empty($_POST['other_phone'])) {
+  }
+  $ophone_default = "Phone (other)";
+  if(!empty($_POST['other_phone']) && $_POST['other_phone'] != $ophone_default) {
     array_push($mail_body, "<strong>Other Phone:</strong> ".$_POST['other_phone']);
   }
   
@@ -61,7 +65,8 @@ if (!empty($_POST['_submitted'])) {
   if(!empty($_POST['glendale'])) {
     array_push($areas, "Glendale");
   }
-  array_push($mail_body, "<strong>Area they're looking in:</strong> ".(!empty($areas)) ? implode(', ', $areas) : "None selected");
+  $areas_selected = (empty($areas)) ? "None selected" : implode(', ', $areas);
+  array_push($mail_body, "<strong>Area they're looking in:</strong> ".$areas_selected);
   
   // lease desired
   $leases = array();
@@ -74,7 +79,8 @@ if (!empty($_POST['_submitted'])) {
   if(!empty($_POST['multi_year'])) {
     array_push($leases, "Multi-year Lease");
   }
-  array_push($mail_body, "<strong>Looking for:</strong> ".(!empty($leases)) ? implode(', ', $leases) : "None selected");
+  $leases_selected = (empty($leases)) ? "None selected" : implode(', ', $leases);
+  array_push($mail_body, "<strong>Looking for:</strong> ".$leases_selected);
 
   // buildings of interest
   $properties = array();
@@ -96,8 +102,8 @@ if (!empty($_POST['_submitted'])) {
   if(!empty($_POST['seeley'])) {
     array_push($properties, "Seeley");
   }
-  array_push($mail_body, 
-    "<strong>Properties they're interested in:</strong> ".(!empty($properties)) ? implode(', ', $properties) : "None selected");
+  $props_selected = (empty($properties)) ? "None selected" : implode(', ', $properties);
+  array_push($mail_body, "<strong>Properties they're interested in:</strong> ".$props_selected);
   
   // referral source?
   if(!empty($_POST['search'])) {
@@ -107,7 +113,8 @@ if (!empty($_POST['_submitted'])) {
     array_push($mail_body, "<strong>Referral Type:</strong> Tenant Referral");
   }
   // referral name?
-  if(!empty($_POST['referral_name'])) {
+  $referral_name_default = "Who referred you?";
+  if(!empty($_POST['referral_name']) && $_POST['referral_name'] != $referral_name_default) {
     array_push($mail_body, "<strong>Referrer:</strong> ".$_POST['referral_name']);
   }
   if(!empty($_POST['craigslist'])) {
@@ -118,7 +125,8 @@ if (!empty($_POST['_submitted'])) {
   }
 
   // message
-  if(!empty($_POST['message'])) {
+  $message_default = "Anything else you'd like to mention?";
+  if(!empty($_POST['message']) && $_POST['message'] != $message_default) {
     array_push($mail_body, "<strong>Other Comments:</strong> ".$_POST['message']);
   }
   
@@ -135,11 +143,23 @@ if (!empty($_POST['_submitted'])) {
     $subject = "New Pre-Application from LiveWorkLoft.net";
     $body = "";
     foreach($mail_body as $msg) {
-      $body .= stripslashes($msg) . "\n";
+      $body .= '<p>'.stripslashes($msg).'</p>' . "\n";
     }
-    $headers = 'From: LiveWorkLoft.net <do-not-reply@liveworkloft.net>';
+    $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+    $headers .= 'From: LiveWorkLoft.net <do-not-reply@liveworkloft.net>';
+    
+    $message = '
+    <html>
+      <head>
+        <title>New Pre-Application Form</title>
+      </head>
+      <body>'.
+        $body
+      .'</body>
+    </html>';
         
-    mail($to, $subject, $body, $headers);
+    mail($to, $subject, $message, $headers);
   } 
 }
 
@@ -176,17 +196,17 @@ include('includes/_header.inc.php');
           <p class='title green'>Best way to reach you:</p>
           <div class='group-contact'>
             <label class='radio'>
-              <input id='email' name='contact_method' type='radio' value="email" />
+              <input id='email' name='contact_method' type='radio' value="email" <?php if(!empty($_POST['contact_method']) && $_POST['contact_method'] == 'email') echo ' selected="selected" ' ?>/>
               <span></span>
             </label>
             <label for='email'>Email</label>
             <label class='radio'>
-              <input id='phone' name='contact_method' type='radio' value="phone" />
+              <input id='phone' name='contact_method' type='radio' value="phone" <?php if(!empty($_POST['contact_method']) && $_POST['contact_method'] == 'phone') echo ' selected="selected" ' ?>/>
               <span></span>
             </label>
             <label for='phone'>Phone</label>
             <label class='radio'>
-              <input id='text' name='contact_method' type='radio' value="text" />
+              <input id='text' name='contact_method' type='radio' value="text" <?php if(!empty($_POST['contact_method']) && $_POST['contact_method'] == 'text') echo ' selected="selected" ' ?>/>
               <span></span>
             </label>
             <label for='text'>Text Message</label>
@@ -194,23 +214,23 @@ include('includes/_header.inc.php');
           <div class='line'></div>
           <div class='group-criteria'>
             <select id='square_footage' name='square_footage'>
-              <option selected='selected' value=''>Desired square footage</option>
-              <option value='500'>500 sqft or less</option>
-              <option value='500-1000'>500 to 1000</option>
-              <option value='1000-2000'>1000 to 2000</option>
-              <option value='2000+'>2000+</option>
+              <option value='' <?php if(!empty($_POST['square_footage']) && $_POST['square_footage'] == '') echo ' selected="selected" ' ?> >Desired square footage</option>
+              <option value='500' <?php if(!empty($_POST['square_footage']) && $_POST['square_footage'] == '500') echo ' selected="selected" ' ?> >500 sqft or less</option>
+              <option value='500-1000' <?php if(!empty($_POST['square_footage']) && $_POST['square_footage'] == '500-1000') echo ' selected="selected" ' ?> >500 to 1000</option>
+              <option value='1000-2000' <?php if(!empty($_POST['square_footage']) && $_POST['square_footage'] == '1000-2000') echo ' selected="selected" ' ?> >1000 to 2000</option>
+              <option value='2000+' <?php if(!empty($_POST['square_footage']) && $_POST['square_footage'] == '2000+') echo ' selected="selected" ' ?> >2000+</option>
             </select>
             <select id='budget' name='budget'>
-              <option selected='selected' value=''>Budget</option>
-              <option value='750-1500'>$750 to $1500</option>
-              <option value='1500-2500'>$1500 to $2500</option>
-              <option value='2500+'>$2500 and up</option>
+              <option value='' <?php if(!empty($_POST['budget']) && $_POST['budget'] == '') echo ' selected="selected" ' ?>>Budget</option>
+              <option value='750-1500' <?php if(!empty($_POST['budget']) && $_POST['budget'] == '750-1500') echo ' selected="selected" ' ?>>$750 to $1500</option>
+              <option value='1500-2500' <?php if(!empty($_POST['budget']) && $_POST['budget'] == '1500-2500') echo ' selected="selected" ' ?>>$1500 to $2500</option>
+              <option value='2500+' <?php if(!empty($_POST['budget']) && $_POST['budget'] == '2500+') echo ' selected="selected" ' ?>>$2500 and up</option>
             </select>
             <select id='move_date' name='move_date'>
-              <option selected='selected' value=''>Target move-in date</option>
-              <option value='Immediately'>Immediately</option>
-              <option value='2 weeks to 1 month'>2 weeks to 1 month</option>
-              <option value='1 month or longer'>1 month or longer</option>
+              <option value='' <?php if(!empty($_POST['move_date']) && $_POST['move_date'] == '') echo ' selected="selected" ' ?>>Target move-in date</option>
+              <option value='Immediately' <?php if(!empty($_POST['move_date']) && $_POST['move_date'] == 'Immediately') echo ' selected="selected" ' ?>>Immediately</option>
+              <option value='2 weeks to 1 month' <?php if(!empty($_POST['move_date']) && $_POST['move_date'] == '2 weeks to 1 month') echo ' selected="selected" ' ?>>2 weeks to 1 month</option>
+              <option value='1 month or longer' <?php if(!empty($_POST['move_date']) && $_POST[''] == '1 month or longer') echo ' selected="selected" ' ?>>1 month or longer</option>
             </select>
           </div>
           <div class='line'></div>
@@ -407,8 +427,7 @@ include('includes/_header.inc.php');
           </div>
           <input type="hidden" id="_submitted" name="_submitted" value='1' />
         </form>
-      <div>
-    </div>
+      </div>
     <?php } else { ?>  
       <div class="page-2">
         <p class="title black f19">
