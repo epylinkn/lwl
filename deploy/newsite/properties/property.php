@@ -51,9 +51,9 @@ include($rootdir.'includes/_header.inc.php');
           Historical Landmark Meets Urban Chic
         </span>
       </p>
-      <p class='body'>
+      <div class='body'>
         <?= $project['description']; ?>
-      </p>
+      </div>
       <p>
         <span class='title black'>
           Amenities.

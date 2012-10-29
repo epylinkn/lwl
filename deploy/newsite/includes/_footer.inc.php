@@ -41,25 +41,25 @@
   <div class='footer-wrap'>
     <div class='footer'>
       <div class='footer-column1'>
-        <p class='f16'>LEASING OFFICE</p>
-        <p class='f13'>2664 Lacy Street</p>
-        <p class='f13'>
+        <p class='header'><strong>LEASING OFFICE</strong></p>
+        <p class='nonheader'>2664 Lacy Street</p>
+        <p class='nonheader'>
           Los Angeles, CA 90031&nbsp;&nbsp;
           <a class='link-yellow' href='https://maps.google.com/maps?q=2664+Lacy+Street,+Los+Angeles,+CA+90031&amp;hl=en&amp;sll=37.269174,-119.306607&amp;sspn=13.223431,16.040039&amp;hnear=2664+Lacy+St,+Los+Angeles,+California+90031&amp;t=m&amp;z=17' target='_blank'>
             <strong class='f11'>GET DIRECTIONS</strong>
           </a>
         </p>
-        <p class='f13'>Phone: 323.441.8694</p>
+        <p class='nonheader'>Phone: 323.441.8694</p>
       </div>
       <div class='footer-column2'>
-        <p class='f16'>HOURS &amp; APPOINTMENTS</p>
-        <span class='f13'>Open 9am to 6pm Monday - Friday. Weekend appointments available when scheduled in advance.</span>
+        <p class='header'><strong>HOURS &amp; APPOINTMENTS</strong></p>
+        <p class='nonheader'>Open 9am to 6pm Monday - Friday. Weekend appointments available when scheduled in advance.</p>
       </div>
       <div class='footer-column3'>
         <?php $qkey = array_rand($quote_array, 1); ?>
-        <p class='f16'>PEOPLE DIG US</p>
-        <span class='f13'>"<?= $quote_array[$qkey]['quote']; ?>"</span>
-        <p class='f13'>- <?= $quote_array[$qkey]['name']; ?></p>
+        <p class='header'><strong>PEOPLE DIG US</strong></p>
+        <p class='nonheader'>"<?= $quote_array[$qkey]['quote']; ?>"</p>
+        <p class='nonheader'>- <?= $quote_array[$qkey]['name']; ?></p>
       </div>
       <div class='footer-row'>
         <p class='f11'>&copy; 2012 Live Work Loft. All rights reserved. In other words, stealing is very uncool.</p>
@@ -80,8 +80,10 @@
   <script src="/newsite/javascripts/vendor/jquery.ui.effect.js" type="text/javascript"></script>
   <script src="/newsite/javascripts/main.ready.js" type="text/javascript"></script>
   <script src="/newsite/javascripts/main.load.js" type="text/javascript"></script>
+  <script src="/newsite/javascripts/vendor/jquery.jtruncate.js" type="text/javascript"></script>
   <script src="/newsite/javascripts/vendor/placeholder.js" type="text/javascript"></script>
   <script src="/newsite/javascripts/social.js" type="text/javascript"></script>
+
   <!-- Google Analytics -->
   <script type='text/javascript'>
     //<![CDATA[

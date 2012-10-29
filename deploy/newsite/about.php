@@ -53,37 +53,19 @@ include('includes/_header.inc.php');
           <li>
             <img class='avatar-img' src='/newsite/images/avatar.jpg' />
             <p class='avatar-name'>
-              Rad Name
+              Amie Childers
             </p>
             <p class='avatar-desc'>
-              Title Goes Here
+              Leasing Coordinator
             </p>
           </li>
           <li>
             <img class='avatar-img' src='/newsite/images/avatar.jpg' />
             <p class='avatar-name'>
-              Dick Tracy
+              Ellen Pauwels
             </p>
             <p class='avatar-desc'>
-              Detective
-            </p>
-          </li>
-          <li>
-            <img class='avatar-img' src='/newsite/images/avatar.jpg' />
-            <p class='avatar-name'>
-              Frank Lloyd
-            </p>
-            <p class='avatar-desc'>
-              Wrighter
-            </p>
-          </li>
-          <li>
-            <img class='avatar-img' src='/newsite/images/avatar.jpg' />
-            <p class='avatar-name'>
-              Rad Name
-            </p>
-            <p class='avatar-desc'>
-              Title Goes Here
+              Leasing Agent
             </p>
           </li>
         </ul>

@@ -45,10 +45,8 @@ include('includes/_header.inc.php');
       </p>
       <p class='body'>
         In addition to our live/work loft spaces, we also have several other
-        <a class='link-yellow underline' href='/newsite/properties/retail-and-warehouse.php'>
-          <strong>retail and warehouse locations</strong>
-        </a>
-        available for filming and photo shoots.
+        <a class='link-yellow underline' href='/newsite/properties/retail-and-warehouse.php'><strong>retail and warehouse locations</strong></a>
+        available for filming and photo shoots. Doritos, Chris Brown, CSI:NY, Bones, Maxim and Cracked.com are just a few of the productions and clients that have filmed here.
       </p>
       <p class='body'>
         Call one of our leasing agents for rats and more information at 323.441.8694, or email us at

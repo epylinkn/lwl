@@ -56,7 +56,11 @@
 /* line 74, style.css.scss */
 .fyellow {
   color: #f8af00; }
-
+.indent
+   {
+   text-indent: 20px;
+/*   padding-right: 50pt;*/
+   }
 /* line 76, style.css.scss */
 h2 {
   padding: 4px 5px;
@@ -281,6 +285,7 @@ body {
           background: black; }
   /* line 299, style.css.scss */
   #header #social {
+    width: 350px;
     margin: 45px 17px 0 0;
     float: right; }
     /* line 303, style.css.scss */
@@ -291,6 +296,8 @@ body {
       #header #social .social-icons .icon {
         padding-right: 10px;
         float: left; }
+      #header #social .social-icons .icon img {
+        vertical-align: top; }
     /* line 313, style.css.scss */
     #header #social .contact {
       float: left; }
@@ -333,10 +340,14 @@ body {
       width: 600px;
       padding: 0 3px; }
       /* line 365, style.css.scss */
-      .content .content-left.our-properties-detail p.body {
+      .content .content-left.our-properties-detail div.body {
+        padding: 15px 5px;
         margin-left: 7px;
         font-size: 16px;
+        font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
         line-height: 24px; }
+        .content .content-left.our-properties-detail div.body p {
+          padding: 10px 0; }
     /* line 371, style.css.scss */
     .content .content-left.about {
       width: 590px;
@@ -870,6 +881,8 @@ body {
       /* line 904, style.css.scss */
       .press-list ul li .pressitem-body span.pressitem-location {
         font-weight: bold; }
+      .press-list ul li .pressitem-body p {
+        padding: 5px 0; }
 
 /* line 916, style.css.scss */
 .schedule-a-viewing .indicates {
@@ -1064,6 +1077,16 @@ body {
         width: 280px;
         padding-left: 20px;
         float: left; }
+      #footer .footer-wrap .footer p.header {
+        font-size: 16px;
+        padding-bottom: 5px;
+      }
+      #footer .footer-wrap .footer p.nonheader {
+        font-size: 12px;
+        line-height: 16px;
+      }  
+        
+        
       /* line 1101, style.css.scss */
       #footer .footer-wrap .footer .footer-row {
         width: 100%;
@@ -1182,12 +1205,14 @@ body {
   .carousel #prev-slide {
     position: absolute;
     top: 120px;
-    left: 20px; }
+    left: 20px;
+    cursor: pointer; cursor: hand; }
   /* line 1231, style.css.scss */
   .carousel #next-slide {
     position: absolute;
     top: 120px;
-    right: 20px; }
+    right: 20px; 
+    cursor: pointer; cursor: hand; }
   /* line 1237, style.css.scss */
   .carousel .carousel-title {
     position: absolute;
@@ -1198,10 +1223,18 @@ body {
       font-size: 43px;
       font-weight: 100;
       font-family: "museo-sans", Helvetica, Arial, sans-serif; }
-      /* line 1246, style.css.scss */
+      .carousel .carousel-title span.title.green {
+        background: rgba(138, 155, 15, 0.77); }
       .carousel .carousel-title span.title.yellow {
         background: rgba(248, 175, 0, 0.77); }
-      /* line 1247, style.css.scss */
+      .carousel .carousel-title span.title.red {
+        background: rgba(213, 63, 77, 0.77); }
+      .carousel .carousel-title span.title.purple {
+        background: rgba(210, 77, 255, 0.77); }
+      .carousel .carousel-title span.title.blue {
+        background: rgba(92, 172, 193, 0.77); }
+      .carousel .carousel-title span.title.orange {
+        background: rgba(248, 111, 0, 0.77); }
       .carousel .carousel-title span.title.black {
         background: rgba(0, 0, 0, 0.77); }
 

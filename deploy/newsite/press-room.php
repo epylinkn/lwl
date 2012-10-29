@@ -24,13 +24,15 @@ include('includes/_header.inc.php');
               <?= $item['title'] ?>
             </p>
             <div class='pressitem-line'></div>
-            <p class='pressitem-body'>
+            <div class='pressitem-body'>
               <span class='pressitem-location'><?= $item['location'] ?></span>
-              <?= $item['description'] ?>
-              <a class='link-blue' href="<?= $item['link'] ?>" target="_blank">
-                - Read Full Press Release
-              </a>
-            </p>
+              &ndash; <?= $item['description'] ?>
+              <?php if(!empty($item['link'])) { ?>
+                <a class='link-blue' href="<?= $item['link'] ?>" target="_blank">
+                  - Read Full Press Release
+                </a>
+              <?php } ?>
+            </div>
           </li>
         <?php } ?>
       </ul>

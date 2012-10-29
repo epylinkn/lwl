@@ -112,16 +112,16 @@ if (!empty($_POST['_submitted'])) {
   if(!empty($_POST['referral'])) {
     array_push($mail_body, "<strong>Referral Type:</strong> Tenant Referral");
   }
-  // referral name?
-  $referral_name_default = "Who referred you?";
-  if(!empty($_POST['referral_name']) && $_POST['referral_name'] != $referral_name_default) {
-    array_push($mail_body, "<strong>Referrer:</strong> ".$_POST['referral_name']);
-  }
   if(!empty($_POST['craigslist'])) {
     array_push($mail_body, "<strong>Referral Type:</strong> Craigslist");
   }
   if(!empty($_POST['advertisement'])) {
     array_push($mail_body, "<strong>Referral Type:</strong> Advertisement");
+  }
+  // referral name?
+  $referral_name_default = "Who referred you?";
+  if(!empty($_POST['referral_name']) && $_POST['referral_name'] != $referral_name_default) {
+    array_push($mail_body, "<strong>Referrer Name:</strong> ".$_POST['referral_name']);
   }
 
   // message

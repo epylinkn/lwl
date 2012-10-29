@@ -58,10 +58,10 @@
           <div class='social-icons'>
             <div id='fb-root'></div>
             <div class='icon'>
-              <div class='fb-like' data-href='http://www.facebook.com/liveworkloft' data-layout='button_count' data-send='false' data-show-faces='false' data-width='450'></div>
+              <div class='fb-like' data-href='http://www.facebook.com/liveworkloft' data-layout='button_count' data-send='false' data-show-faces='false' data-width='120'></div>
             </div>
             <div class='icon'>
-              <a class='twitter-follow-button' data-show-count='false' data-show-screen-name='false' href='https://twitter.com/liveworkloft'>Follow @liveworkloft</a>
+              <a class='twitter-follow-button' data-show-count='true' data-width='138px' data-show-screen-name='false' href='https://twitter.com/liveworkloft'>Follow @liveworkloft</a>
             </div>
             <div class='icon'>
               <a href='http://www.youtube.com/user/liveworkloft' target='_blank'>
