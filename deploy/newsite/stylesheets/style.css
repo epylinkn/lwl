@@ -818,6 +818,8 @@ body {
     /* line 827, style.css.scss */
     .status-feed ul li.facebook {
       background: url("/newsite/images/bg_social_fb.png"); }
+      .status-feed ul li span.ellipsis_text {
+        color: black; }
   /* line 833, style.css.scss */
   .status-feed .social-buttons {
     color: white; }

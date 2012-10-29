@@ -80,7 +80,7 @@
   <script src="/newsite/javascripts/vendor/jquery.ui.effect.js" type="text/javascript"></script>
   <script src="/newsite/javascripts/main.ready.js" type="text/javascript"></script>
   <script src="/newsite/javascripts/main.load.js" type="text/javascript"></script>
-  <script src="/newsite/javascripts/vendor/jquery.jtruncate.js" type="text/javascript"></script>
+  <script src="/newsite/javascripts/vendor/jquery.threedots.min.js" type="text/javascript"></script>
   <script src="/newsite/javascripts/vendor/placeholder.js" type="text/javascript"></script>
   <script src="/newsite/javascripts/social.js" type="text/javascript"></script>
 

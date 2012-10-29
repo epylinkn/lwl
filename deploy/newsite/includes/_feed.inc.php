@@ -1,4 +1,6 @@
-<?php include("config/oauth.php"); ?>
+<?php 
+include("config/oauth.php"); 
+?>
 
 <div class='status-feed'>
   <span class='title black'>We're Social.</span>
@@ -6,7 +8,11 @@
     <?php
       foreach($combo_feed as $status) {
         echo '<li class="'.$status['type'].'">';
-        echo '<a href="'.$status['link'].'">'.$status['text'].'</a>';
+        echo '<a href="'.$status['link'].'">';
+        echo '<div class="text_here">';
+        echo '<span class="ellipsis_text">'.$status['text'].'</span>';
+        echo '</div>';
+        echo '</a>';
         echo '</li>';
       }
     ?>

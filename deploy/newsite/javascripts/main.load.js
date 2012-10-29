@@ -1,5 +1,6 @@
 var next_image; // used in main.ready.js so needs to be global
 $(window).load(function() {
+
   var Q = $({});
   
   if ($(".carousel-images").length > 0) {
