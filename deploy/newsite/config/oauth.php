@@ -23,10 +23,10 @@ function buildAuthorizationHeader($oauth)
 // configs
 $url = "https://api.twitter.com/1/statuses/user_timeline.json";
 
-$oauth_access_token = "894059593-qOf9gHWU2NcqZqVYAoGS9tXpyUYgPJsqUDd4HJyd";
-$oauth_access_token_secret = "bAHKvyurOrXvc8bOxiLgvUK63upt8AO6D6xn3tDkfI";
-$consumer_key = "pgxzuq0qOKLs0krpaiTdwQ";
-$consumer_secret = "2hKqcNwieBviRFIxci0Jpkvo6saosKLzCbGuRrMnsg";
+$oauth_access_token = "750348422-gR61JDz8dgoZ0HZiM9GcQQypCN9yWt4AkChXU2D9";
+$oauth_access_token_secret = "lL6sNtsXcTDhYEkWmsSaUUIUdP4Y8IrcgJG7f9rvNk";
+$consumer_key = "chTQ0VkdZubjl7WpHkyFOg";
+$consumer_secret = "z97ZXHosKpWQJczAH7dEoj6QKyBYloq0N1DPWG7JRQ";
 
 $oauth = array( 'oauth_consumer_key' => $consumer_key,
                 'oauth_nonce' => time(),
@@ -56,60 +56,62 @@ $json = curl_exec($feed);
 curl_close($feed);
 
 $twitter_feed = json_decode($json);
-
-// var_dump($json);
+// var_dump($json); exit;
+// var_dump($twitter_feed); exit;
 
 $combo_feed = array();
-// foreach($twitter_feed as $tweet) {
-//   array_push($combo_feed,
-//     array(
-//       'type' => 'twitter',
-//       'text' => $tweet->text,
-//       'link' => "https://twitter.com/topple_it/status/".$tweet->id_str
-//     )
-//   );
-// }
+$i = 0;
+foreach($twitter_feed as $tweet) {
+  if($i < 5) {
+    array_push($combo_feed,
+      array(
+        'type' => 'twitter',
+        'text' => $tweet->text,
+        'link' => "https://twitter.com/liveworkloft/status/".$tweet->id_str,
+        'date' => strtotime($tweet->created_at)
+      )
+    );    
+  }
+  $i++;
+}
 
-// 1. parse twitter date (of 5 lastest posts)
-// 2. parse facebook date of 5 latest posts
-// 3. merge arrays
-// 4. sort! base on date field
-// 5. chop 5
+// facebook
+$url = "http://www.facebook.com/feeds/page.php?format=atom10&id=209776365806467";
+$header = array('User-Agent: Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25');
+$options = array( CURLOPT_URL => $url,
+                  CURLOPT_RETURNTRANSFER => true,
+                  CURLOPT_HTTPHEADER => $header);
 
-// fake it for testing
-array_push($combo_feed,
-  array(
-    'type' => 'twitter',
-    'text' => 'the brown fox jumped over the lazy dog. the brown fox jumped over the lazy dog. the brown fox jumped over the lazy dog. the brown fox jumped over the lazy dog. the brown fox jumped over the lazy dog. the brown fox jumped over the lazy dog. the brown fox jumped over the lazy dog. the brown fox jumped over the lazy dog.',
-    'link' => "https://twitter.com/"
-  )
-);
-array_push($combo_feed,
-  array(
-    'type' => 'twitter',
-    'text' => 'Live Work Loft is dedicated to delivering top notch creative spaces in Los Angeles to the thought leaders of the world. We aim for the unique; anything that is comparable to the status quo is unacceptable.',
-    'link' => "https://twitter.com/"
-  )
-);
-array_push($combo_feed,
-  array(
-    'type' => 'twitter',
-    'text' => 'Live Work Loft is holymoly guacamlioe kung fu longwoooooooord to delivering top notch creative spaces in Los Angeles to the thought leaders of the world. We aim for the unique; anything that is comparable to the status quo is unacceptable.',
-    'link' => "https://twitter.com/"
-  )
-);
+$feed = curl_init();
+curl_setopt_array($feed, $options);
+$xml = curl_exec($feed);
+curl_close($feed);
+
+$fb_feed = simplexml_load_string($xml);
+
+$i = 0;
+foreach($fb_feed->entry as $status) {
+  if($i < 5) {
+    array_push($combo_feed,
+      array(
+        'type' => 'facebook',
+        'text' => strip_tags((string)$status->content),
+        'link' => (string)$status->link->attributes()->href,
+        'date' => strtotime((string)$status->published)
+      )
+    );    
+  }
+  $i++;
+}
+
+$dates = array();
+foreach ($combo_feed as $key => $row) {
+  $dates[$key] = $row['date']; 
+}
+
+array_multisort($dates, SORT_DESC, $combo_feed);
+$combo_feed = array_slice($combo_feed, 0, 5);
 
 
 // var_dump($combo_feed);
-
-
-// other testing stuff
-
-// var_dump($twitter_data[0]->created_at);
-// var_dump($twitter_data[0]->text);
-
-// combine to get top 5 feeds
-// $combo_feed = array_slice($twitter_feed, 0, 5);
-
-
 ?>

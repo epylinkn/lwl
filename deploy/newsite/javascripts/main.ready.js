@@ -1,12 +1,7 @@
 $(document).ready(function() {
-  
+
   // Truncate status feed texts
-  $('li.twitter').jTruncate({  
-      length: 120,
-      minTrail: 0,
-      moreText: '',
-      lessText: ''
-  }); 
+  $('.text_here').ThreeDots({max_rows: 3});
 
   // Obfuscate email addresses
   $('a.secure').each(function() {
