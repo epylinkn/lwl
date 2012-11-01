@@ -322,6 +322,10 @@ body {
           font-size: 26px;
           font-weight: bold;
           line-height: 26px; }
+        #header #social .contact a[href^=tel] {
+          color:inherit;
+          text-decoration:none;
+        }
 
 /* line 335, style.css.scss */
 .content {

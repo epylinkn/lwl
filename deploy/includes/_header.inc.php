@@ -7,6 +7,7 @@
   <!-- Use title if it's in the page YAML frontmatter -->
   <title><?php echo (isset($title)) ? $title : $meta_array['title']; ?></title>
   <meta content='width=device-width, initial-scale=1' name='viewport' />
+  <meta name="format-detection" content="telephone=no" />
   <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="/stylesheets/bp.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
