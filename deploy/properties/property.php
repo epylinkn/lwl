@@ -1,5 +1,6 @@
 <?php
 $rootdir = '../';
+$show_retail = true;
 include($rootdir.'config/config.inc.php');
 if (isset($_GET['key']) && array_key_exists($_GET['key'], $project_array)) {
   $this_key = $_GET['key'];
@@ -36,19 +37,19 @@ include($rootdir.'includes/_header.inc.php');
             <?php } else { ?>
               <div class="item-<?= $i ?> item">
             <?php } ?>            
-                <img src="/newsite/images/properties/<?= $this_key ?>/<?= $slides[$i-1] ?>" />
+                <img src="/images/properties/<?= $this_key ?>/<?= $slides[$i-1] ?>" />
               </div>
           <?php } ?>
         </div>
-        <img alt='Previous Slide' id='prev-slide' src='/newsite/images/slider_left.png' />
-        <img alt='Next Slide' id='next-slide' src='/newsite/images/slider_right.png' />
+        <img alt='Previous Slide' id='prev-slide' src='/images/slider_left.png' />
+        <img alt='Next Slide' id='next-slide' src='/images/slider_right.png' />
         <div class='carousel-title'>
           <span class="title <?= $project['theme'] ?>"><?= $project['title']; ?></span>
         </div>
       </div>
       <p>
         <span class='title black'>
-          Historical Landmark Meets Urban Chic
+          <?= $project['tagline']; ?>
         </span>
       </p>
       <div class='body'>
@@ -84,7 +85,7 @@ include($rootdir.'includes/_header.inc.php');
   <?php include($rootdir.'includes/_projects.inc.php'); ?>
   
   <div class='bottom clearfix'>
-    <a href="/newsite/schedule-a-viewing.php?key=<?= $this_key ?>">
+    <a href="/schedule-a-viewing/<?= $this_key ?>">
       <div class='bottom-schedule-a-viewing'>
         SCHEDULE A VIEWING
       </div>

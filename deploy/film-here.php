@@ -33,19 +33,16 @@ include('includes/_header.inc.php');
             <?php } else { ?>
               <div class="item-<?= $i ?> item">
             <?php } ?>
-                <img src="/newsite/images/properties/<?= $this_key ?>/<?= $slides[$i-1] ?>" />
+                <img src="/images/properties/<?= $this_key ?>/<?= $slides[$i-1] ?>" />
               </div>
           <?php } ?>
         </div>
-        <img alt='Previous Slide' id='prev-slide' src='/newsite/images/slider_left.png' />
-        <img alt='Next Slide' id='next-slide' src='/newsite/images/slider_right.png' />
+        <img alt='Previous Slide' id='prev-slide' src='/images/slider_left.png' />
+        <img alt='Next Slide' id='next-slide' src='/images/slider_right.png' />
       </div>
       <p class='body'>
-        Duis at lacus est, sed rhoncus risus. Maecenas ornare urna dolor, vitae luctus ligula. Sed blandit purus tempus diam tincidunt a vehicula velit pretium. Suspendisse vitae sapien ipsum. Nulla tortor enim, pulvinar quis vestibulum in, laoreet at est. Curabitur convallis dolor eget dui ornare pretium ut lacinia eros. Mauris eu dolor at nibh bibendum auctor.
-      </p>
-      <p class='body'>
         In addition to our live/work loft spaces, we also have several other
-        <a class='link-yellow underline' href='/newsite/properties/retail-and-warehouse.php'><strong>retail and warehouse locations</strong></a>
+        <a class='link-yellow underline' href='/properties/retail-and-warehouse'><strong>retail and warehouse locations</strong></a>
         available for filming and photo shoots. Doritos, Chris Brown, CSI:NY, Bones, Maxim and Cracked.com are just a few of the productions and clients that have filmed here.
       </p>
       <p class='body'>
@@ -62,16 +59,16 @@ include('includes/_header.inc.php');
     </span>
     <ul>
       <li>
-        <img alt='Food Network' src='/newsite/images/logo_food.png' />
+        <img alt='Food Network' src='/images/logo_food.png' />
       </li>
       <li>
-        <img alt='SyFy Network' src='/newsite/images/logo_syfy.png' />
+        <img alt='SyFy Network' src='/images/logo_syfy.png' />
       </li>
       <li>
-        <img alt='The Guild' src='/newsite/images/logo_guild.png' />
+        <img alt='The Guild' src='/images/logo_guild.png' />
       </li>
       <li>
-        <img alt='Audi' src='/newsite/images/logo_audi.png' />
+        <img alt='Audi' src='/images/logo_audi.png' />
       </li>
     </ul>
   </div>

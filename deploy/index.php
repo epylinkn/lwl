@@ -16,7 +16,7 @@ include('includes/_header.inc.php');
     </span>
     <p class='body'>
       Live Work Loft is dedicated to delivering
-      <a href="/newsite/about.php">
+      <a href="/about">
         <span class='fblue underline'>top notch creative spaces</span>
       </a>
       in Los Angeles to the thought leaders of the world. We aim

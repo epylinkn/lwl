@@ -1,8 +1,5 @@
 $(document).ready(function() {
 
-  // Truncate status feed texts
-  $('.text_here').ThreeDots({max_rows: 3});
-
   // Obfuscate email addresses
   $('a.secure').each(function() {
     el = $(this);
@@ -15,6 +12,16 @@ $(document).ready(function() {
       }else{
         el.html(mail);
       }
+    });
+  });
+  
+  // Obfsucate on href only
+  $('a.secure-notext').each(function() {
+    el = $(this);
+    var mail = el.attr('href').replace('(secure)','@').replace('{secure}','.').replace('NOSPAM','')
+      .replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+    el.each(function(){
+      el.attr('href','mailto:' + mail);
     });
   });
 
@@ -54,7 +61,7 @@ $(document).ready(function() {
   // *****************************  
   
   $("#tenant-links").hover(function(){
-    $(this).stop().animate({ top: -157 }, 300, "easeInOutQuart");
+    $(this).stop().animate({ top: -116/*-157*/ }, 300, "easeInOutQuart");
   }, function(){
     $(this).stop().animate({ top: -33 }, 300, "easeInOutQuart");
   });

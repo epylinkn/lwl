@@ -30,19 +30,19 @@ include($rootdir.'includes/_header.inc.php');
             <?php } else { ?>
               <div class="item-<?= $i ?> item">
             <?php } ?>
-                <img src="/newsite/images/properties/<?= $this_key ?>/<?= $slides[$i-1] ?>" />
+                <img src="/images/properties/<?= $this_key ?>/<?= $slides[$i-1] ?>" />
               </div>
           <?php } ?>
         </div>
-        <img alt='Previous Slide' id='prev-slide' src='/newsite/images/slider_left.png' />
-        <img alt='Next Slide' id='next-slide' src='/newsite/images/slider_right.png' />
+        <img alt='Previous Slide' id='prev-slide' src='/images/slider_left.png' />
+        <img alt='Next Slide' id='next-slide' src='/images/slider_right.png' />
         <div class='carousel-title'>
           <span class='title black'>Retail &amp; Warehouse Space</span>
         </div>
       </div>
       <p>
         <span class='title black'>
-          Go Beyond the Loft
+          Go Beyond the Loft.
         </span>
       </p>
       <p class='body'>
@@ -68,7 +68,7 @@ include($rootdir.'includes/_header.inc.php');
     
     <div class='bottom clearfix'>
     <div class='bottom-box'>
-      <a href='/newsite/schedule-a-viewing.php?key=melrose'>
+      <a href='/schedule-a-viewing/melrose'>
         <div class='bottom-box-square blue'>
           MELROSE STUDIOS
         </div>
@@ -76,14 +76,14 @@ include($rootdir.'includes/_header.inc.php');
       <p class='bottom-box-body'>
         Lorem ipsum dolor sit amet con ibe, consectetur adipiscing elit por das. Vestibulum rutrum, ante at pretium hendrerit, dolor nibh ullamcorper diam, ut volutpat diam odio ac lacus.
       </p>
-      <a href='/newsite/schedule-a-viewing.php?key=melrose'>
+      <a href='/schedule-a-viewing/melrose'>
         <div class='bottom-box-button blue'>
           SCHEDULE A VIEWING
         </div>
       </a>
     </div>
     <div class='bottom-box'>
-      <a href='/newsite/schedule-a-viewing.php?key=seeley'>
+      <a href='/schedule-a-viewing/seeley'>
         <div class='bottom-box-square orange'>
           SPRING
         </div>
@@ -91,7 +91,7 @@ include($rootdir.'includes/_header.inc.php');
       <p class='bottom-box-body'>
         Lorem ipsum dolor sit amet con ibe, consectetur adipiscing elit por das. Vestibulum rutrum, ante at pretium hendrerit, dolor nibh ullamcorper diam, ut volutpat diam odio ac lacus.
       </p>
-      <a href='/newsite/schedule-a-viewing.php?key=seeley'>
+      <a href='/schedule-a-viewing/seeley'>
         <div class='bottom-box-button orange'>
           SCHEDULE A VIEWING
         </div>

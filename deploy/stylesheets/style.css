@@ -177,10 +177,10 @@ input[type='checkbox'] {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
-  background: url("/newsite/images/cb_unchecked.png") no-repeat; }
+  background: url("/images/cb_unchecked.png") no-repeat; }
 /* line 179, style.css.scss */
 .checkbox input:checked + span {
-  background: url("/newsite/images/cb_checked.png") no-repeat; }
+  background: url("/images/cb_checked.png") no-repeat; }
 
 /* line 185, style.css.scss */
 .radio input {
@@ -192,10 +192,10 @@ input[type='checkbox'] {
   display: inline-block;
   text-align: center;
   vertical-align: middle;
-  background: url("/newsite/images/rad_unselected.png") no-repeat; }
+  background: url("/images/rad_unselected.png") no-repeat; }
 /* line 196, style.css.scss */
 .radio input:checked + span {
-  background: url("/newsite/images/rad_selected.png") no-repeat; }
+  background: url("/images/rad_selected.png") no-repeat; }
 
 /* === Layout === */
 /* line 203, style.css.scss */
@@ -209,10 +209,12 @@ body {
 /* line 214, style.css.scss */
 body {
   width: 100%;
-  background: url("/newsite/images/bg.jpg") no-repeat;
+  background: url("/images/bg.jpg") no-repeat;
   background-size: cover;
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+}
+
 
 /* line 223, style.css.scss */
 #bg-gradient {
@@ -221,7 +223,7 @@ body {
   height: 285px;
   position: absolute;
   top: 330px;
-  background: url("/newsite/images/bg_gradient.png") repeat-x;
+  background: url("/images/bg_gradient.png") repeat-x;
   z-index: 2; }
 
 /* line 233, style.css.scss */
@@ -300,18 +302,23 @@ body {
         vertical-align: top; }
     /* line 313, style.css.scss */
     #header #social .contact {
+      padding: 2px 5px;
+      margin-right: 5px;
+      background: black;
       float: left; }
       /* line 316, style.css.scss */
       #header #social .contact p {
         margin: 0;
-        padding-right: 20px;
+/*        padding-right: 20px;*/
         font-family: "HelveticaNeue", Helvetica, Arial, sans-serif; }
         /* line 321, style.css.scss */
         #header #social .contact p.office {
+          color: white;
           font-size: 14px;
           line-height: 14px; }
         /* line 325, style.css.scss */
         #header #social .contact p.phone-number {
+          color: white;
           font-size: 26px;
           font-weight: bold;
           line-height: 26px; }
@@ -412,7 +419,7 @@ body {
       font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
       line-height: 24px;
       vertical-align: bottom;
-      background: url("/newsite/images/list_bullet.png") no-repeat left;
+      background: url("/images/list_bullet.png") no-repeat left;
       padding: 3px 0 3px 21px; }
 
 /* line 450, style.css.scss */
@@ -479,7 +486,8 @@ body {
 
 /* line 506, style.css.scss */
 .events-list {
-  margin-top: 30px; }
+  margin-top: 30px;
+  clear: both; }
   /* line 508, style.css.scss */
   .events-list.first {
     margin-top: 55px; }
@@ -636,13 +644,13 @@ body {
       font-family: Arial, sans-serif; }
       /* line 692, style.css.scss */
       .bottom .bottom-social-buttons .button.facebook {
-        background: url("/newsite/images/button_facebook.png") no-repeat; }
+        background: url("/images/button_facebook.png") no-repeat; }
       /* line 693, style.css.scss */
       .bottom .bottom-social-buttons .button.twitter {
-        background: url("/newsite/images/button_twitter.png") no-repeat; }
+        background: url("/images/button_twitter.png") no-repeat; }
       /* line 694, style.css.scss */
       .bottom .bottom-social-buttons .button.yelp {
-        background: url("/newsite/images/button_yelp.png") no-repeat; }
+        background: url("/images/button_yelp.png") no-repeat; }
   /* line 698, style.css.scss */
   .bottom .bottom-box {
     width: 300px;
@@ -814,12 +822,15 @@ body {
     line-height: 20px; }
     /* line 824, style.css.scss */
     .status-feed ul li.twitter {
-      background: url("/newsite/images/bg_social_tw.png"); }
+      background: url("/images/bg_social_tw.png"); }
     /* line 827, style.css.scss */
     .status-feed ul li.facebook {
-      background: url("/newsite/images/bg_social_fb.png"); }
+      background: url("/images/bg_social_fb.png"); }
       .status-feed ul li span.ellipsis_text {
         color: black; }
+      .status-feed ul li span.ellipsis_text:hover {
+        color: #5cacc1; }
+      
   /* line 833, style.css.scss */
   .status-feed .social-buttons {
     color: white; }
@@ -1018,7 +1029,7 @@ body {
     text-align: center;
     line-height: 53px;
     vertical-align: middle;
-    background: url("/newsite/images/sendbutton.png") no-repeat;
+    background: url("/images/sendbutton.png") no-repeat;
     cursor: pointer; cursor: hand; }
   /* line 1041, style.css.scss */
   .schedule-a-viewing .schedule-form p {
@@ -1120,7 +1131,7 @@ body {
       text-align: center;
       line-height: 34px;
       vertical-align: middle;
-      background: url("/newsite/images/bg_tenant.jpg") repeat-x;
+      background: url("/images/bg_tenant.jpg") repeat-x;
       cursor: pointer; }
     /* line 1133, style.css.scss */
     #footer #tenant-links ul li {
@@ -1174,7 +1185,7 @@ body {
     width: 174px;
     height: 78px;
     padding: 20px 0 0 0;
-    background: url("/newsite/images/credits.png");
+    background: url("/images/credits.png");
     text-align: center;
     display: none; }
   /* line 1194, style.css.scss */
@@ -1186,7 +1197,7 @@ body {
   width: 600px;
   height: 280px;
   margin-bottom: 20px;
-  background: url("/newsite/images/bg_carousel.png") no-repeat;
+  background: url("/images/bg_carousel.png") no-repeat;
   position: relative; }
   /* line 1207, style.css.scss */
   .carousel .carousel-images {

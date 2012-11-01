@@ -1,0 +1,18 @@
+.checkbox input {
+  display: inline; }
+.checkbox span {
+  display: none;
+  background: none; }
+.checkbox input:checked + span {
+  background: none; }
+
+.radio input {
+  display: inline; }
+.radio span {
+  display: none;
+  background: none; }
+.radio input:checked + span {
+  background: none; }
+  
+#header #social {
+  width: 345px; }

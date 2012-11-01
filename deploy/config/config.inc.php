@@ -8,8 +8,9 @@
   $project_array = array(
     'lacy' => array(
       'title' => "Lacy Studio Lofts",
-      'small_image' => "/newsite/images/properties_lacy_sm.png",
-      'large_image' => "/newsite/images/properties_lacy.png",
+      'tagline' => "Modern Style Reaches New Heights.",
+      'small_image' => "/images/properties_lacy_sm.png",
+      'large_image' => "/images/properties_lacy.png",
       'theme' => 'green',
       'description' => "
       <p>Los Angeles lofts and urban environments are one of the city’s key attratctions in this day and age. Nestled in Lincoln Heights, one of Los Angeles County’s oldest districts, the urban Lacy Studio Lofts integrate new modern development to produce a truly intriguing loft style for both live and work environments.</p>
@@ -44,8 +45,9 @@
     ),
     'seeley' => array(
       'title' =>  "Seeley Studios",
-      'small_image' => "/newsite/images/properties_seeley_sm.png",
-      'large_image' => "/newsite/images/properties_seeley.png",
+      'tagline' => "Historical Landmark Meets Urban Chic.",
+      'small_image' => "/images/properties_seeley_sm.png",
+      'large_image' => "/images/properties_seeley.png",
       'theme' => "yellow",
       'description' => "
       <p>Seeley Studios was converted from an old furniture warehouse into prime real estate for office space and retail businesses. The Seeley building is historically one of Glendale’s landmarks, and the face of the building was preserved for the nostalgia and modern-chic look and feel. The units range from small live/work spaces to full scale entire floors with floor to ceiling windows, and perfect for any creative business.</p>",
@@ -74,9 +76,10 @@
       )
     ),
     'cosmo' => array(
-      'title' =>  "Cosmo Lofts.",
-      'small_image' => "/newsite/images/properties_cosmo_sm.png",
-      'large_image' => "/newsite/images/properties_cosmo.png",
+      'title' =>  "Cosmo Lofts",
+      'tagline' => "Luxury Lives in this Hollywood First.",
+      'small_image' => "/images/properties_cosmo_sm.png",
+      'large_image' => "/images/properties_cosmo.png",
       'theme' => "red",
       'description' => "
       <p>Cosmo Lofts is Hollywood’s first live work loft building. The use is up to you; a home or productive palace in the center of the Los Angeles’ film and entertainment district. <strong>Cosmo Lofts is a Los Angeles loft conversion</strong> of an existing 1920s furniture warehouse in Los Angeles. Modern Los Ageles lofts and creative offices celebrate the building’s functional past, highlighting the original concrete floors, high ceilings and fluted columns. Walking distance to many of the Los Angeles area’s main attractions and nightlife, the location of these Los Angeles lofts and areas of business are ideal for those in the entertainment industry, the arts and related businesses.</p>
@@ -109,8 +112,9 @@
     ),
     'beverly' => array(
       'title' =>  "Beverly Union Lofts",
-      'small_image' => "/newsite/images/properties_beverly_sm.png",
-      'large_image' => "/newsite/images/properties_beverly.png",
+      'tagline' => "Mid-Century Mod in the Middle of it All.",
+      'small_image' => "/images/properties_beverly_sm.png",
+      'large_image' => "/images/properties_beverly.png",
       'theme' => "purple",
       'description' => "
       <p>Los Angeles lofts have become an answer to live work and office space needs around LA. Beverly Union Lofts is an inventive collection of unique live work lofts and office space in Los Angeles, close to Downtown LA and Silver Lake. Originally a television studio, the property’s mid-century modern architecture is coupled with a raw industrial vibe. The pairing is immediately intriguing and the spaces are aptly flexible.</p>
@@ -140,8 +144,9 @@
     ),
     'melrose' => array(
       'title' =>  "Melrose Studios",
-      'small_image' => "/newsite/images/properties_melrose_sm.png",
-      'large_image' => "/newsite/images/properties_melrose.png",
+      'tagline' => "Artistic Vibe Sets this Melrose Place Apart.",
+      'small_image' => "/images/properties_melrose_sm.png",
+      'large_image' => "/images/properties_melrose.png",
       'theme' => "blue",
       'description' => "<p>Melrose Studios is a creative office and retail space located just south of Los Feliz, on the eastern border of Hollywood in Los Angeles, California. The area’s recent renaissance continues to attract industry and creative professionals whose artistic influence saturates the community.</p>
 
@@ -169,36 +174,9 @@
         'day' => '03',
         'month' => 'nov',
         'description' => 'Where the creative communities of Atwater Village, Los Feliz, Silverlake and Glendale meet.',
-        'image' => "/newsite/images/upcoming_placeholder.jpg",
+        'image' => "/images/upcoming_placeholder.jpg",
         'image_alt' => "Seeley Artwalk",
         'link' => "https://www.facebook.com/events/357779994311344/"
-      ),
-      array(
-        'title' => "LOFT PARTY",
-        'day' => '08',
-        'month' => 'nov',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'image' => "/newsite/images/upcoming_placeholder.jpg",
-        'image_alt' => "Upcoming Event 1",
-        'link' => "http://www.facebook.com"
-      ),
-      array(
-        'title' => "LOFT PARTY",
-        'day' => '08',
-        'month' => 'nov',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'image' => "/newsite/images/upcoming_placeholder.jpg",
-        'image_alt' => "Upcoming Event 1",
-        'link' => "http://www.facebook.com"
-      ),
-      array(
-        'title' => "LOFT PARTY",
-        'day' => '12',
-        'month' => 'nov',
-        'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-        'image' => "/newsite/images/upcoming_placeholder.jpg",
-        'image_alt' => "Upcoming Event 1",
-        'link' => "http://www.facebook.com"
       )
     ),
     'past' => array(
@@ -207,18 +185,18 @@
         'day' => '04',
         'month' => 'aug',
         'description' => 'This past Saturday we hosted a FANTASTIC event at Lacy Studios. the Mid-summer nights event had live music, food trucks, a DJ, and a ton of awesome people.',
-        'image' => "/newsite/images/past_midsummer.jpg",
+        'image' => "/images/past_midsummer.jpg",
         'image_alt' => "Mid-Summer Nights at Lacy Studio Lofts",
-        'link' => "http://liveworkloft.net/mid-summer-nights-at-lacy-studio-lofts/"
+        'link' => ""
       ),
       array(
         'title' => "LACY STUDIO LOFTS BBQ KICK-OFF",
         'day' => '06',
         'month' => '&nbsp;jul',
         'description' => 'The afternoon was off to a great start with residents, family and friends in attendance as LW Lofts hosted a celebration of the community at Lacy Studio Lofts. It was just one among many barbeques for which the community joins together throughout the year. Held in the newly upgraded courtyard, the barbeque featured freshly prepared food and an array of delicious snacks.',
-        'image' => "/newsite/images/past_bbq.jpg",
+        'image' => "/images/past_bbq.jpg",
         'image_alt' => "Lacy Studio Lofts BBQ Kick-Off",
-        'link' => "http://liveworkloft.net/lacy-studio-lofts-bbq-kick-off/"
+        'link' => ""
       )
     )
   );
@@ -238,7 +216,7 @@
 
       <p><strong>ABOUT THE SEELEY ARTWALK TEAM</strong></p>
 
-      <p>Curators Henry Priest, Julio Hechavarria Jr. and Emmeric Konrad as well as the <em>Seeley Studios</em> Management Live Work Loft, Inc. have come together to collaborate and create an event the entire city will remember. <a class='link-blue' href='http://dffla.com'>Henry</a> is the director of the Downtown Film Festival Los Angeles, and has thrown many art-centric events in Los Angeles. <a class='link-blue' href='http://fb.com/julio.hechavarria.jr'>Julio</a> has been a part of the art community for 16+ years and has thrown countless fundraisers and events. <a class='link-blue' href='http://emmerickonrad.co'>Emmeric</a> is a world renowned artist and former gallery owner whose works have been featured in numerous cities across the globe. Live Work Loft is the premier development, property management and creative community organizer in the greater Los Angeles area.</p>"
+      <p>Curators Henry Priest, Julio Hechavarria Jr. and Emmeric Konrad as well as the <em>Seeley Studios</em> Management Live Work Loft, Inc. have come together to collaborate and create an event the entire city will remember. <a class='link-blue' href='http://dffla.com' target='_blank'>Henry</a> is the director of the Downtown Film Festival Los Angeles, and has thrown many art-centric events in Los Angeles. <a class='link-blue' href='http://fb.com/julio.hechavarria.jr' target='_blank'>Julio</a> has been a part of the art community for 16+ years and has thrown countless fundraisers and events. <a class='link-blue' href='http://emmerickonrad.com' target='_blank'>Emmeric</a> is a world renowned artist and former gallery owner whose works have been featured in numerous cities across the globe. Live Work Loft is the premier development, property management and creative community organizer in the greater Los Angeles area.</p>"
     ),
     array(
       'title' => "Live Work Loft Opens Historical Seeley’s Furniture Building As Creative Space After $8MM In Renovations",

@@ -6,16 +6,20 @@
   <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
   <!-- Use title if it's in the page YAML frontmatter -->
   <title><?php echo (isset($title)) ? $title : $meta_array['title']; ?></title>
-  <meta content='width=device-width' name='viewport' />
-  <link href="/newsite/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="/newsite/stylesheets/bp.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="/newsite/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+  <meta content='width=device-width, initial-scale=1' name='viewport' />
+  <link href="/stylesheets/normalize.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/bp.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
   <script src='//use.typekit.net/cpj5inm.js' type='text/javascript'></script>
   <script type='text/javascript'>
   //<![CDATA[
   try{Typekit.load();}catch(e){}
   //]]>
   </script>
+  
+  <!--[if lt IE 9]> 
+    <link href="/stylesheets/ie8.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
 </head>
 <body>
   <div id='bg-gradient'></div>
@@ -24,33 +28,33 @@
     <div id='content-wrapper'>
       <div class='clearfix' id='header'>
         <div id='logo'>
-          <a href='/newsite/'>
-            <img alt='Live Work Lofts' src='/newsite/images/logo.png' />
+          <a href='/'>
+            <img alt='Live Work Lofts' src='/images/logo.png' />
           </a>
         </div>
         <div id='navigation'>
           <ul>
             <li>
-              <a href='/newsite/about.php'>About.</a>
+              <a href='/about'>About.</a>
             </li>
             <li>
-              <a href='/newsite/our-properties.php'>Our Properties.</a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href='/newsite/events.php'>Events.</a>
-            </li>
-            <li>
-              <a href='/newsite/film-here.php'>Film Here.</a>
+              <a href='/our-properties'>Our Properties.</a>
             </li>
           </ul>
           <ul>
             <li>
-              <a href='/newsite/press-room.php'>Press Room.</a>
+              <a href='/events'>Events.</a>
             </li>
             <li>
-              <a href='/newsite/schedule-a-viewing.php'>Schedule a Viewing.</a>
+              <a href='/film-here'>Film Here.</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href='/press-room'>Press Room.</a>
+            </li>
+            <li>
+              <a href='/schedule-a-viewing'>Schedule a Viewing.</a>
             </li>
           </ul>
         </div>
@@ -65,17 +69,17 @@
             </div>
             <div class='icon'>
               <a href='http://www.youtube.com/user/liveworkloft' target='_blank'>
-                <img src='/newsite/images/sb_youtube.png' />
+                <img src='/images/sb_youtube.png' />
               </a>
             </div>
             <div class='icon'>
               <a href='http://www.pinterest.com/liveworkloft' target='_blank'>
-                <img src='/newsite/images/sb_pinterest.png' />
+                <img src='/images/sb_pinterest.png' />
               </a>
             </div>
             <div class='icon'>
               <a href='http://www.instagram.com/liveworkloft' target='_blank'>
-                <img src='/newsite/images/sb_instagram.png' />
+                <img src='/images/sb_instagram.png' />
               </a>
             </div>
           </div>
@@ -85,7 +89,7 @@
           </div>
           <div class='contact'>
             <p class='office'>MAINTENANCE</p>
-            <p class='phone-number'>323.441.8694</p>
+            <p class='phone-number'>323.527.0794</p>
           </div>
         </div>
       </div>

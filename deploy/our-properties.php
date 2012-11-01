@@ -16,12 +16,12 @@ include('includes/_header.inc.php');
       <ul>
         <?php foreach( $project_array as $key => $project) { ?>
           <li class="project <?= $key ?>">
-            <a href="/newsite/properties/property.php?key=<?= $key ?>">
+            <a href="/properties/<?= $key ?>">
               <div class='project-background'>
                 <img alt="<?= $project['title'] ?>" src="<?= $project['large_image'] ?>" />
               </div>
               <div class='project-foreground'>
-                <img class='ribbon-end' src="/newsite/images/ribbon_<?= $project['theme'] ?>.png" />
+                <img class='ribbon-end' src="/images/ribbon_<?= $project['theme'] ?>.png" />
                 <div class="<?= $project['theme'] ?> ribbon">
                   <span><?= $project['title']; ?>.</span>
                 </div>
@@ -31,14 +31,14 @@ include('includes/_header.inc.php');
         <?php } ?>
         <!-- Retail and Warehouse is manual b/c so custom -->
         <li class='project warehouse'>
-          <a href='/newsite/properties/retail-and-warehouse.php'>
+          <a href='/properties/retail-and-warehouse'>
             <div class='project-background'>
-              <img alt='property image' src='/newsite/images/properties_warehouse.png' />
+              <img alt='property image' src='/images/properties_warehouse.png' />
             </div>
             <div class='project-foreground'>
-              <img class='ribbon-end' src='/newsite/images/ribbon_black.png' />
+              <img class='ribbon-end' src='/images/ribbon_black.png' />
               <div class='black ribbon'>
-                <span>Retail &amp; Warehouse Space</span>
+                <span>Retail &amp; Warehouse Space.</span>
               </div>
             </div>
           </a>

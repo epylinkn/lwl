@@ -4,7 +4,7 @@
 <div id='footer'>
   <div id='hypelife'>
     <a href='http://www.hypelifebrands.com/' target='_blank'>
-      <img alt='Hypelife Brands' src='/newsite/images/hypelife_logo.jpg' />
+      <img alt='Hypelife Brands' src='/images/hypelife_logo.jpg' />
       <div id='popup'>
         Branding Development
         <br />
@@ -22,17 +22,17 @@
     </div>
     <ul>
       <li>
-        <a href='#'>
+        <a class="secure-notext" href='maintenance(secure)liveworkloft{secure}net'>
           Got a Leak?
         </a>
       </li>
-      <li>
-        <a href='/newsite/faq.php'>
+      <!-- <li>
+        <a href='/frequently-asked-questions'>
           Frequently Asked Questions
         </a>
-      </li>
+      </li> -->
       <li>
-        <a href='#'>
+        <a class="secure-notext" href='leasing(secure)liveworkloft{secure}net'>
           Got a Question?
         </a>
       </li>
@@ -77,12 +77,19 @@
     window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.8.0.min.js"><\/script>')
     //]]>
   </script>
-  <script src="/newsite/javascripts/vendor/jquery.ui.effect.js" type="text/javascript"></script>
-  <script src="/newsite/javascripts/main.ready.js" type="text/javascript"></script>
-  <script src="/newsite/javascripts/main.load.js" type="text/javascript"></script>
-  <script src="/newsite/javascripts/vendor/jquery.threedots.min.js" type="text/javascript"></script>
-  <script src="/newsite/javascripts/vendor/placeholder.js" type="text/javascript"></script>
-  <script src="/newsite/javascripts/social.js" type="text/javascript"></script>
+  <script src="/javascripts/vendor/jquery.ui.effect.js" type="text/javascript"></script>
+  <script src="/javascripts/main.ready.js" type="text/javascript"></script>
+  <script src="/javascripts/main.load.js" type="text/javascript"></script>
+  <script src="/javascripts/vendor/jquery.threedots.min.js" type="text/javascript"></script>
+  <script src="/javascripts/vendor/placeholder.js" type="text/javascript"></script>
+  <script src="/javascripts/social.js" type="text/javascript"></script>
+  
+  <!--[if lt IE 9]> 
+    <script src="/javascripts/vendor/jquery.backgroundSize.js" type="text/javascript"></script>       
+    <script>
+      $("body").css("background-size", "cover");
+    </script>
+  <![endif]-->
 
   <!-- Google Analytics -->
   <script type='text/javascript'>

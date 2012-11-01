@@ -139,13 +139,14 @@ if (!empty($_POST['_submitted'])) {
   
   if(count($form_errors) == 0) {
     // sending email
-    $to = "testing@hypelifebrands.com";
+    $to = "leasing@liveworkloft.net";
     $subject = "New Pre-Application from LiveWorkLoft.net";
     $body = "";
     foreach($mail_body as $msg) {
       $body .= '<p>'.stripslashes($msg).'</p>' . "\n";
     }
     $headers  = 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Bcc:admin@hypelifebrands.com' . "\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
     $headers .= 'From: LiveWorkLoft.net <do-not-reply@liveworkloft.net>';
     
@@ -185,7 +186,7 @@ include('includes/_header.inc.php');
             <?php } ?>
           </ul>
         <?php } ?>
-        <form action='/newsite/schedule-a-viewing.php' class='schedule-form' method='POST'>
+        <form action='/schedule-a-viewing' class='schedule-form' method='POST'>
           <div class='group-info'>
             <input id='name' name='name' placeholder='Your name*' type='text' <?php if(isset($_POST['name'])) echo 'value="'.$_POST['name'].'"'; ?> />
             <input id='email' name='email' placeholder='Your email*' type='text' <?php if(isset($_POST['email'])) echo 'value="'.$_POST['email'].'"'; ?> />
@@ -432,7 +433,7 @@ include('includes/_header.inc.php');
       <div class="page-2">
         <p class="title black f19">
           Thanks for your pre-application submission to Live Work Loft. One of our leasing agents will review your submission and get in touch with you shortly! If you have any further questions, don't hesitate to
-          <a href="#">
+          <a class="secure-notext" href="leasing(secure)liveworkloft{secure}net">
             <span class="fblue underline">get in touch with us!</span>
           </a>
         </p>
