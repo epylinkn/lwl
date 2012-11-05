@@ -68,7 +68,7 @@ include($rootdir.'includes/_header.inc.php');
     
     <div class='bottom clearfix'>
     <div class='bottom-box'>
-      <a href='/schedule-a-viewing/melrose'>
+      <a href='/schedule-a-viewing/melrose-studios'>
         <div class='bottom-box-square blue'>
           MELROSE STUDIOS
         </div>
@@ -76,14 +76,14 @@ include($rootdir.'includes/_header.inc.php');
       <p class='bottom-box-body'>
         Lorem ipsum dolor sit amet con ibe, consectetur adipiscing elit por das. Vestibulum rutrum, ante at pretium hendrerit, dolor nibh ullamcorper diam, ut volutpat diam odio ac lacus.
       </p>
-      <a href='/schedule-a-viewing/melrose'>
+      <a href='/schedule-a-viewing/melrose-studios'>
         <div class='bottom-box-button blue'>
           SCHEDULE A VIEWING
         </div>
       </a>
     </div>
     <div class='bottom-box'>
-      <a href='/schedule-a-viewing/seeley'>
+      <a href='/schedule-a-viewing/seeley-studios'>
         <div class='bottom-box-square orange'>
           SPRING
         </div>
@@ -91,7 +91,7 @@ include($rootdir.'includes/_header.inc.php');
       <p class='bottom-box-body'>
         Lorem ipsum dolor sit amet con ibe, consectetur adipiscing elit por das. Vestibulum rutrum, ante at pretium hendrerit, dolor nibh ullamcorper diam, ut volutpat diam odio ac lacus.
       </p>
-      <a href='/schedule-a-viewing/seeley'>
+      <a href='/schedule-a-viewing/seeley-studios'>
         <div class='bottom-box-button orange'>
           SCHEDULE A VIEWING
         </div>

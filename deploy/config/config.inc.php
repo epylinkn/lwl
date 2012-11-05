@@ -6,7 +6,7 @@
   );
   
   $project_array = array(
-    'lacy' => array(
+    'lacy-studio-lofts' => array(
       'title' => "Lacy Studio Lofts",
       'tagline' => "Modern Style Reaches New Heights.",
       'small_image' => "/images/properties_lacy_sm.png",
@@ -43,7 +43,7 @@
         )
       )
     ),
-    'seeley' => array(
+    'seeley-studios' => array(
       'title' =>  "Seeley Studios",
       'tagline' => "Historical Landmark Meets Urban Chic.",
       'small_image' => "/images/properties_seeley_sm.png",
@@ -75,7 +75,7 @@
         )
       )
     ),
-    'cosmo' => array(
+    'cosmo-lofts' => array(
       'title' =>  "Cosmo Lofts",
       'tagline' => "Luxury Lives in this Hollywood First.",
       'small_image' => "/images/properties_cosmo_sm.png",
@@ -110,7 +110,7 @@
         )
       )
     ),
-    'beverly' => array(
+    'beverly-union-lofts' => array(
       'title' =>  "Beverly Union Lofts",
       'tagline' => "Mid-Century Mod in the Middle of it All.",
       'small_image' => "/images/properties_beverly_sm.png",
@@ -142,7 +142,7 @@
         )
       )
     ),
-    'melrose' => array(
+    'melrose-studios' => array(
       'title' =>  "Melrose Studios",
       'tagline' => "Artistic Vibe Sets this Melrose Place Apart.",
       'small_image' => "/images/properties_melrose_sm.png",

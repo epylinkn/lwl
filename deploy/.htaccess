@@ -333,6 +333,10 @@ FileETag None
   Options +FollowSymlinks
 # Options +SymLinksIfOwnerMatch
   RewriteEngine On
+  # backlinks from old site
+  RewriteRule ^seeley-studios/?$ /properties/seeley-studios [R=301,L]
+  RewriteRule ^beverly-union-lofts/?$ /properties/beverly-union-lofts [R=301,L]
+  RewriteRule ^lacy-studio-lofts/?$ /properties/lacy-studio-lofts [R=301,L]
   RewriteRule ^properties/retail-and-warehouse/?$ properties/retail-and-warehouse.php [L]
   RewriteRule ^properties/([A-Za-z0-9-]+)/?$ properties/property.php?key=$1 [L]
   RewriteRule ^schedule-a-viewing/([A-Za-z0-9-]+)/?$ schedule-a-viewing.php?key=$1 [L]

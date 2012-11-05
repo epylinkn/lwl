@@ -14,7 +14,7 @@ include('includes/_header.inc.php');
     </span>
     <div class='properties-list'>
       <ul>
-        <?php foreach( $project_array as $key => $project) { ?>
+        <?php foreach($project_array as $key => $project) { ?>
           <li class="project <?= $key ?>">
             <a href="/properties/<?= $key ?>">
               <div class='project-background'>

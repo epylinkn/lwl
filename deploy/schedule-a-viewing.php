@@ -300,14 +300,14 @@ include('includes/_header.inc.php');
               <tr>
                 <td>
                   <label class='checkbox'>
-                    <input name='lacy' type='checkbox' <?php if($this_key=='lacy') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['lacy']) && $_POST['lacy'] == '1') echo 'checked="checked"'; ?> />
+                    <input name='lacy' type='checkbox' <?php if($this_key=='lacy-studio-lofts') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['lacy']) && $_POST['lacy'] == '1') echo 'checked="checked"'; ?> />
                     <span></span>
                   </label>
                   <label for='lacy'>Lacy Studio Lofts</label>
                 </td>
                 <td>
                   <label class='checkbox'>
-                    <input name='seeley' type='checkbox' <?php if($this_key=='seeley') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['seeley']) && $_POST['seeley'] == '1') echo 'checked="checked"'; ?> />
+                    <input name='seeley' type='checkbox' <?php if($this_key=='seeley-studios') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['seeley']) && $_POST['seeley'] == '1') echo 'checked="checked"'; ?> />
                     <span></span>
                   </label>
                   <label for='seeley'>Seeley Studios</label>
@@ -327,21 +327,21 @@ include('includes/_header.inc.php');
               <tr>
                 <td>
                   <label class='checkbox'>
-                    <input name='beverly' type='checkbox' <?php if($this_key=='beverly') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['beverly']) && $_POST['beverly'] == '1') echo 'checked="checked"'; ?> />
+                    <input name='beverly' type='checkbox' <?php if($this_key=='beverly-union-lofts') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['beverly']) && $_POST['beverly'] == '1') echo 'checked="checked"'; ?> />
                     <span></span>
                   </label>
                   <label for='beverly'>Beverly Union Lofts</label>
                 </td>
                 <td>
                   <label class='checkbox'>
-                    <input name='melrose' type='checkbox' <?php if($this_key=='melrose') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['melrose']) && $_POST['melrose'] == '1') echo 'checked="checked"'; ?> />
+                    <input name='melrose' type='checkbox' <?php if($this_key=='melrose-studios') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['melrose']) && $_POST['melrose'] == '1') echo 'checked="checked"'; ?> />
                     <span></span>
                   </label>
                   <label for='melrose'>Melrose Studios</label>
                 </td>
                 <td>
                   <label class='checkbox'>
-                    <input name='cosmo' type='checkbox' <?php if($this_key=='cosmo') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['cosmo']) && $_POST['cosmo'] == '1') echo 'checked="checked"'; ?> />
+                    <input name='cosmo' type='checkbox' <?php if($this_key=='cosmo-lofts') { echo 'checked="checked"'; } ?> value='1' <?php if(isset($_POST['cosmo']) && $_POST['cosmo'] == '1') echo 'checked="checked"'; ?> />
                     <span></span>
                   </label>
                   <label for='cosmo'>Cosmo Lofts</label>
